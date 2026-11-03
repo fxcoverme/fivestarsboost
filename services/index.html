@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Done-For-You Review &amp; Social Management — FiveStarsBoost</title>
+<meta name="description" content="FiveStarsBoost done-for-you service: we build your Google, Facebook and Instagram accounts, post every week, and answer every review. Plans from $500/month. Month-to-month, no setup fee, fully FTC-compliant.">
+<style>
+  :root{
+    --navy:#0A2A52; --ink:#14213D; --gold:#E3A82B; --gold-soft:#F2C14E;
+    --green:#0E5941; --cream:#FFF8EC; --paper:#FFFDF8;
+    --muted:#5A6B82; --line:rgba(20,33,61,.10);
+    --shadow:0 10px 30px rgba(10,42,82,.10);
+    --shadow-lg:0 24px 60px rgba(10,42,82,.18);
+    --radius:18px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+  .stars{color:var(--gold);letter-spacing:2px;font-size:.95em;white-space:nowrap}
+
+  /* ---------- Header ---------- */
+  header{position:sticky;top:0;z-index:50;background:rgba(10,32,60,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(227,168,43,.25)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+  .brand{display:flex;align-items:center;gap:11px;color:#fff}
+  .brand img{width:42px;height:42px;border-radius:11px;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+  .brand .bname{font-size:20px;font-weight:800;letter-spacing:.2px;line-height:1.1}
+  .brand .bname span{color:var(--gold)}
+  .brand small{display:block;font-size:10px;font-weight:600;letter-spacing:2.4px;color:rgba(255,248,236,.65);text-transform:uppercase}
+  .nav-links{display:flex;gap:26px;font-size:14.5px;font-weight:600;color:rgba(255,248,236,.85)}
+  .nav-links a:hover{color:var(--gold-soft)}
+  .btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:700;font-size:15px;transition:transform .15s ease, box-shadow .15s ease, background .15s ease;cursor:pointer}
+  .btn-gold{background:linear-gradient(135deg,var(--gold-soft),var(--gold));color:var(--ink);box-shadow:0 8px 22px rgba(227,168,43,.35)}
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(227,168,43,.45)}
+  .btn-ghost{border:1.5px solid rgba(255,248,236,.45);color:#fff;background:rgba(255,255,255,.04)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold-soft)}
+  .btn-navy{background:var(--navy);color:#fff}
+  .btn-navy:hover{background:var(--ink);transform:translateY(-2px)}
+  .nav .btn{padding:10px 18px;font-size:14px}
+  @media(max-width:860px){.nav-links{display:none}}
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;overflow:hidden;color:#fff;background:
+      radial-gradient(900px 420px at 85% -10%, rgba(227,168,43,.22), transparent 60%),
+      radial-gradient(700px 500px at -10% 110%, rgba(14,89,65,.35), transparent 55%),
+      linear-gradient(150deg,#081F3D 0%, var(--navy) 48%, var(--ink) 100%)}
+  .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(ellipse 90% 70% at 50% 30%,#000 30%,transparent 75%)}
+  .hero-inner{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;padding:78px 0 84px;align-items:center}
+  @media(max-width:920px){.hero-inner{grid-template-columns:1fr;padding:56px 0 64px}}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold-soft);border:1px solid rgba(227,168,43,.4);background:rgba(227,168,43,.08);padding:7px 14px;border-radius:999px;margin-bottom:22px}
+  .hero h1{font-size:clamp(34px,4.6vw,54px);line-height:1.12;font-weight:800;letter-spacing:-.5px}
+  .hero h1 em{font-style:normal;color:var(--gold);background:linear-gradient(120deg,var(--gold-soft),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .hero p.sub{margin:22px 0 30px;font-size:18px;color:rgba(255,248,236,.82);max-width:34em}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+  .chip{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(6px);border-radius:999px;padding:8px 15px;font-size:13.5px;font-weight:600;color:rgba(255,248,236,.92)}
+  .chip b{color:var(--gold-soft)}
+
+  /* mock dashboard */
+  .dash{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:22px;padding:20px;backdrop-filter:blur(12px);box-shadow:0 30px 70px rgba(0,0,0,.35)}
+  .dash-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+  .dash-title{font-size:13px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:rgba(255,248,236,.7)}
+  .dash-live{font-size:12px;font-weight:700;color:#7EE2B8;display:flex;align-items:center;gap:6px}
+  .dash-live::before{content:"";width:8px;height:8px;border-radius:50%;background:#2ECC8F;box-shadow:0 0 0 4px rgba(46,204,143,.2)}
+  .trend{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:12px 16px;margin-bottom:14px}
+  .trend .from{font-size:22px;font-weight:800;color:rgba(255,248,236,.55)}
+  .trend .arrow{color:var(--gold);font-size:20px;font-weight:800}
+  .trend .to{font-size:26px;font-weight:800;color:#fff}
+  .trend .lbl{margin-left:auto;text-align:right;font-size:12px;color:rgba(255,248,236,.65);line-height:1.35}
+  .review{background:rgba(255,253,248,.97);color:var(--ink);border-radius:14px;padding:14px 16px;margin-bottom:12px;box-shadow:0 8px 20px rgba(0,0,0,.18)}
+  .review:last-child{margin-bottom:0}
+  .review-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+  .review-who{font-weight:700;font-size:14px}
+  .review-src{font-size:11.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+  .review p{font-size:13.5px;color:#33455E;margin:5px 0 0}
+  .reply{margin-top:10px;border-left:3px solid var(--green);background:#F1F7F3;border-radius:0 10px 10px 0;padding:8px 12px;font-size:13px;color:#24503E}
+  .reply b{color:var(--green)}
+  .answered{display:inline-block;margin-top:8px;font-size:11.5px;font-weight:700;color:var(--green);background:rgba(14,89,65,.1);padding:3px 9px;border-radius:999px}
+
+  /* ---------- Sections ---------- */
+  section{padding:76px 0}
+  .sec-head{max-width:720px;margin:0 auto 44px;text-align:center}
+  .sec-tag{font-size:12.5px;font-weight:800;letter-spacing:2.4px;text-transform:uppercase;color:var(--green);margin-bottom:10px}
+  h2{font-size:clamp(27px,3.4vw,38px);font-weight:800;letter-spacing:-.4px;line-height:1.2;color:var(--navy)}
+  .sec-head p{margin-top:12px;color:var(--muted);font-size:17px}
+
+  .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:920px){.cards3{grid-template-columns:1fr}}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;box-shadow:var(--shadow);transition:transform .18s ease, box-shadow .18s ease}
+  .card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+  .card .ic{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff;margin-bottom:18px}
+  .ic-g{background:linear-gradient(135deg,#123f74,var(--navy))}
+  .ic-f{background:linear-gradient(135deg,#1d5fb8,#0A2A52)}
+  .ic-i{background:linear-gradient(135deg,var(--gold),#b97e14)}
+  .card h3{font-size:20px;font-weight:800;color:var(--navy);margin-bottom:8px}
+  .card p{color:var(--muted);font-size:15.5px}
+  .card ul{list-style:none;margin-top:14px}
+  .card li{font-size:15px;padding:5px 0 5px 26px;position:relative;color:#33455E}
+  .card li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:800}
+
+  .strip{margin-top:26px;background:linear-gradient(120deg,var(--green),#0a4634);color:#EAF6F0;border-radius:var(--radius);padding:22px 30px;text-align:center;font-size:17px;font-weight:600;box-shadow:var(--shadow)}
+  .strip .stars{margin-right:8px}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  @media(max-width:920px){.steps{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.steps{grid-template-columns:1fr}}
+  .step{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow)}
+  .step .num{width:40px;height:40px;border-radius:50%;background:var(--navy);color:var(--gold-soft);font-weight:800;display:flex;align-items:center;justify-content:center;font-size:17px;margin-bottom:14px}
+  .step h3{font-size:17px;font-weight:800;color:var(--navy);margin-bottom:6px}
+  .step p{font-size:14.5px;color:var(--muted)}
+
+  /* ---------- Pricing ---------- */
+  #pricing{background:linear-gradient(180deg,#FDF3DC, var(--cream))}
+  .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+  .tiers-row2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:22px;max-width:760px;margin-left:auto;margin-right:auto}
+  @media(max-width:920px){.tiers,.tiers-row2{grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto}}
+  .tier{background:rgba(255,253,248,.92);border:1px solid var(--line);border-radius:20px;padding:30px 28px;box-shadow:var(--shadow);display:flex;flex-direction:column;position:relative;transition:transform .18s ease, box-shadow .18s ease}
+  .tier:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+  .tier .tname{font-size:13px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;color:var(--green)}
+  .tier .price{font-size:42px;font-weight:800;color:var(--navy);line-height:1.1;margin:8px 0 2px}
+  .tier .price small{font-size:16px;font-weight:600;color:var(--muted)}
+  .tier .tdesc{font-size:14.5px;color:var(--muted);margin-bottom:16px}
+  .tier ul{list-style:none;flex:1}
+  .tier li{font-size:14.5px;padding:5px 0 5px 26px;position:relative;color:#33455E}
+  .tier li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:800}
+  .tier.pop{background:linear-gradient(160deg,var(--navy),var(--ink));color:#F4EFE3;border:1px solid rgba(227,168,43,.5)}
+  .tier.pop .tname{color:var(--gold-soft)}
+  .tier.pop .price{color:#fff}
+  .tier.pop .price small,.tier.pop .tdesc{color:rgba(255,248,236,.7)}
+  .tier.pop li{color:rgba(255,248,236,.9)}
+  .tier.pop li::before{color:var(--gold)}
+  .tier-cta{margin-top:18px;text-align:center}
+  .badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--gold-soft),var(--gold));color:var(--ink);font-size:12px;font-weight:800;letter-spacing:1.4px;padding:6px 16px;border-radius:999px;box-shadow:0 8px 20px rgba(227,168,43,.4);white-space:nowrap}
+  .pricing-note{max-width:820px;margin:30px auto 0;text-align:center;color:var(--muted);font-size:15.5px}
+  .pricing-note b{color:var(--navy)}
+
+  /* ---------- DIY band ---------- */
+  .diy-band{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:30px 34px;box-shadow:var(--shadow);display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+  .diy-band img{width:74px;height:74px;border-radius:16px;box-shadow:var(--shadow)}
+  .diy-band .txt{flex:1;min-width:260px}
+  .diy-band h3{font-size:21px;font-weight:800;color:var(--navy);margin-bottom:4px}
+  .diy-band p{color:var(--muted);font-size:15.5px}
+
+  /* ---------- Trust ---------- */
+  .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:920px){.trust-grid{grid-template-columns:1fr}}
+  .trust{background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+  .trust h3{font-size:18px;font-weight:800;color:var(--navy);margin-bottom:8px}
+  .trust p{font-size:15px;color:var(--muted)}
+
+  /* ---------- FAQ ---------- */
+  .faq{max-width:820px;margin:0 auto}
+  details{background:var(--paper);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;box-shadow:0 4px 14px rgba(10,42,82,.06)}
+  summary{cursor:pointer;font-weight:700;font-size:16.5px;color:var(--navy);padding:18px 22px;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";float:right;color:var(--gold);font-weight:800;font-size:20px;line-height:1}
+  details[open ] summary::after{content:"–"}
+  details p{padding:0 22px 18px;color:var(--muted);font-size:15.5px}
+
+  /* ---------- Contact / footer ---------- */
+  .cta-band{background:linear-gradient(150deg,#081F3D,var(--navy) 55%,var(--ink));color:#fff;border-radius:24px;padding:52px 40px;text-align:center;position:relative;overflow:hidden}
+  .cta-band::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:44px 44px}
+  .cta-band h2{color:#fff;position:relative}
+  .cta-band p{color:rgba(255,248,236,.8);margin:14px auto 26px;max-width:36em;position:relative}
+  .cta-band .btn{position:relative}
+  footer{padding:38px 0 46px;text-align:center;color:var(--muted);font-size:14px}
+  footer .fbrand{font-weight:800;color:var(--navy);font-size:16px;margin-bottom:6px}
+  footer a.flink{color:var(--green);font-weight:700}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="https://fivestarsboost.com">
+      <img src="../logo-a.png" alt="FiveStarsBoost logo">
+      <span class="bname">FiveStars<span>Boost</span><small>Done-For-You Service</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#how">How It Works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="https://fivestarsboost.com">Free Tool</a>
+    </nav>
+    <a class="btn btn-gold" href="mailto:velagrid.technologies@gmail.com?subject=Free%20Review%20Check%20Request">Get a Free Review Check</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero" id="top">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="eyebrow">★ FiveStarsBoost Done-For-You Service</span>
+      <h1>Done-For-You Review &amp; Social <em>Management</em></h1>
+      <p class="sub">We build your Google, Facebook &amp; Instagram, post every week, and answer every review — so you never have to. You run your business; we run your reputation.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-gold" href="#pricing">See Plans &amp; Pricing</a>
+        <a class="btn btn-ghost" href="https://fivestarsboost.com">Try the Free Tool First</a>
+      </div>
+      <div class="hero-stats">
+        <span class="chip"><b>100%</b> of reviews answered</span>
+        <span class="chip">Replies within <b>1 business day</b></span>
+        <span class="chip">Reports by the <b>5th</b>, every month</span>
+      </div>
+    </div>
+    <div class="dash" aria-hidden="true">
+      <div class="dash-head">
+        <span class="dash-title">Review Inbox — Managed For You</span>
+        <span class="dash-live">Live</span>
+      </div>
+      <div class="trend">
+        <span class="from">4.2</span><span class="arrow">→</span><span class="to">4.8</span>
+        <span class="stars">★★★★★</span>
+        <span class="lbl">Average rating trend<br>after 6 months of replies</span>
+      </div>
+      <div class="review">
+        <div class="review-top"><span class="review-who">Maria G.</span><span class="review-src">Google</span></div>
+        <span class="stars">★★★★★</span>
+        <p>“Best noodles in town — and the owner actually reads the reviews. We come back every week.”</p>
+        <div class="reply"><b>Your reply:</b> Thank you, Maria! So glad the noodles hit the spot — see you next week.</div>
+        <span class="answered">✓ Answered in 3 hours</span>
+      </div>
+      <div class="review">
+        <div class="review-top"><span class="review-who">Daniel R.</span><span class="review-src">Facebook</span></div>
+        <span class="stars">★★★★☆</span>
+        <p>“Great food, a bit of a wait on Friday night.”</p>
+        <div class="reply"><b>Your reply:</b> Thanks, Daniel — Fridays get busy, and we're adding staff so the wait gets shorter.</div>
+        <span class="answered">✓ Answered same day</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-tag">What We Manage</div>
+      <h2>Three platforms. One team. Zero homework for you.</h2>
+      <p>We build your accounts from scratch or take over the ones you have — then we keep them active, accurate, and answered.</p>
+    </div>
+    <div class="cards3">
+      <div class="card">
+        <div class="ic ic-g">G</div>
+        <h3>Google Business Profile</h3>
+        <p>Where nearby customers find you first — in Search and Maps.</p>
+        <ul>
+          <li>Profile claimed, built &amp; kept current</li>
+          <li>Weekly Google posts</li>
+          <li>Every review answered</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="ic ic-f">f</div>
+        <h3>Facebook</h3>
+        <p>Your page stays active, friendly, and quick to respond.</p>
+        <ul>
+          <li>Page built &amp; fully completed</li>
+          <li>Weekly posts</li>
+          <li>Comments &amp; messages handled</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="ic ic-i">◎</div>
+        <h3>Instagram</h3>
+        <p>Food-first visuals that keep your regulars coming back.</p>
+        <ul>
+          <li>Profile built &amp; fully completed</li>
+          <li>Weekly posts &amp; story-format content</li>
+          <li>Comments handled</li>
+        </ul>
+      </div>
+    </div>
+    <div class="strip"><span class="stars">★★★★★</span>Every plan includes review management — no fake reviews, ever. Fully FTC-compliant.</div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-tag">How It Works</div>
+      <h2>Up and running in four simple steps</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h3>Simple agreement</h3><p>Sign a straightforward month-to-month agreement. No long contract, no setup fee.</p></div>
+      <div class="step"><div class="num">2</div><h3>We build your accounts</h3><p>We build or claim your Google, Facebook and Instagram accounts. You stay the owner — we work with manager access only.</p></div>
+      <div class="step"><div class="num">3</div><h3>We post, monitor &amp; reply</h3><p>Content goes out every week. We check for new reviews and messages daily and answer them for you.</p></div>
+      <div class="step"><div class="num">4</div><h3>You get a monthly report</h3><p>A plain-language report by the 5th of every month: new reviews, rating trend, response rate, and what's next.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-tag">Plans &amp; Pricing</div>
+      <h2>Honest pricing, by workload</h2>
+      <p>Pick the amount of activity that fits your business. Every plan includes review replies, and you can change plans as you grow.</p>
+    </div>
+    <div class="tiers">
+      <div class="tier">
+        <div class="tname">Single Platform</div>
+        <div class="price">$500<small>/mo</small></div>
+        <p class="tdesc">One platform, fully handled — a strong start for a single channel.</p>
+        <ul>
+          <li>Any one of Google, Facebook or Instagram</li>
+          <li>Account built &amp; completed for you</li>
+          <li>8 posts per month</li>
+          <li>All reviews on that platform answered</li>
+          <li>Checks Mon–Sat, replies within 1 business day</li>
+          <li>Up to 40 review replies / month</li>
+          <li>Monthly summary</li>
+        </ul>
+        <a class="btn btn-navy tier-cta" data-plan="single" href="#contact">Start — Single Platform</a>
+      </div>
+      <div class="tier">
+        <div class="tname">Three Platforms · Basic</div>
+        <div class="price">$799<small>/mo</small></div>
+        <p class="tdesc">All three platforms covered, with a steady weekly rhythm.</p>
+        <ul>
+          <li>Google + Facebook + Instagram</li>
+          <li>8 posts per month (FB/IG 6 + Google 2)</li>
+          <li>Review checks Mon–Fri</li>
+          <li>Every review answered within 1 business day</li>
+          <li>Up to 30 review replies / month</li>
+          <li>QR review cards for your counter &amp; tables</li>
+          <li>Simple monthly report</li>
+        </ul>
+        <a class="btn btn-navy tier-cta" data-plan="basic" href="#contact">Start with Basic</a>
+      </div>
+      <div class="tier">
+        <div class="tname">Three Platforms · Standard</div>
+        <div class="price">$999<small>/mo</small></div>
+        <p class="tdesc">More content, faster coverage, and same-day alerts on problems.</p>
+        <ul>
+          <li>Google + Facebook + Instagram</li>
+          <li>12 posts per month (FB/IG 8 + Google 4)</li>
+          <li>Review checks Mon–Sat</li>
+          <li>Up to 60 review replies / month</li>
+          <li>Same-day alert on negative reviews</li>
+          <li>QR review cards included</li>
+          <li>Full monthly report</li>
+        </ul>
+        <a class="btn btn-navy tier-cta" data-plan="standard" href="#contact">Start with Standard</a>
+      </div>
+    </div>
+    <div class="tiers-row2">
+      <div class="tier pop">
+        <span class="badge">★ MOST POPULAR</span>
+        <div class="tname">Three Platforms · Plus</div>
+        <div class="price">$1,299<small>/mo</small></div>
+        <p class="tdesc">Our full package — more content, video, and a website included.</p>
+        <ul>
+          <li>Google + Facebook + Instagram</li>
+          <li>16 posts per month, including 2 short videos</li>
+          <li>Review checks Mon–Sat</li>
+          <li>Up to 100 review replies / month</li>
+          <li>Same-day alert on negative reviews</li>
+          <li>One-page website included — built in month one</li>
+          <li>Monthly report + monthly strategy call</li>
+        </ul>
+        <a class="btn btn-gold tier-cta" data-plan="plus" href="#contact">Start with Plus</a>
+      </div>
+      <div class="tier">
+        <div class="tname">Three Platforms · Premium</div>
+        <div class="price">$1,599<small>/mo</small></div>
+        <p class="tdesc">Maximum presence for busy, growing businesses.</p>
+        <ul>
+          <li>Google + Facebook + Instagram</li>
+          <li>24 posts per month, including 4 short videos</li>
+          <li>Review checks every day, including Sunday</li>
+          <li>Same-day alert on negative reviews</li>
+          <li>Website included, with ongoing updates</li>
+          <li>Bi-weekly updates + monthly report</li>
+          <li>Quarterly menu &amp; photo refresh</li>
+        </ul>
+        <a class="btn btn-navy tier-cta" data-plan="premium" href="#contact">Start with Premium</a>
+      </div>
+    </div>
+    <p class="pricing-note">Add a platform (TikTok, YouTube…): <b>+$300/month each</b>. &nbsp;·&nbsp; Month-to-month — <b>no long contracts, no setup fee</b>, billing starts month one. &nbsp;·&nbsp; Your accounts and content are <b>100% yours</b>.</p>
+  </div>
+</section>
+
+<!-- DIY BAND -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="diy-band">
+      <img src="../logo-a.png" alt="FiveStarsBoost logo">
+      <div class="txt">
+        <h3>Prefer to do it yourself?</h3>
+        <p>Start with the free FiveStarsBoost reply tool — paste a review, get three polished replies in your voice. Template packs are there when you want more.</p>
+      </div>
+      <a class="btn btn-navy" href="https://fivestarsboost.com">Use the Free Tool</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-tag">Why FiveStarsBoost</div>
+      <h2>Built on trust — because reviews are trust</h2>
+    </div>
+    <div class="trust-grid">
+      <div class="trust">
+        <h3>Fully FTC-compliant, always</h3>
+        <p>We never buy, write, or fake reviews — for anyone. Under the FTC's review rule (16 CFR Part 465), fake reviews can cost a business up to $53,088 per violation. Our way is slower and it works: real customers, honest invitations, every review answered.</p>
+      </div>
+      <div class="trust">
+        <h3>Your accounts stay yours</h3>
+        <p>Every account is registered in your business's name. We hold manager access only — never ownership. Your pages, your reviews, your audience: 100% your asset, from day one.</p>
+      </div>
+      <div class="trust">
+        <h3>Leave anytime, cleanly</h3>
+        <p>Month-to-month service. Cancel with 30 days' notice and we hand over everything — credentials, content, files — and remove our access within 7 days. No hostage situations, no fine print.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-tag">FAQ</div>
+      <h2>Questions, answered straight</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Do I own my accounts?</summary>
+        <p>Yes — 100%. Your Google, Facebook and Instagram accounts are registered under your business name and information. We work as your manager; ownership never transfers to us.</p>
+      </details>
+      <details>
+        <summary>Do you guarantee a 5-star rating?</summary>
+        <p>No — and nobody honest can. Ratings come from real customers. What we guarantee is the work: every review answered within one business day, your profiles active every week, and a clear report every month.</p>
+      </details>
+      <details>
+        <summary>Can I cancel?</summary>
+        <p>Yes. Service is month-to-month; cancel anytime with 30 days' written notice (an email is fine). We hand over all credentials and content and remove our access within 7 days.</p>
+      </details>
+      <details>
+        <summary>Who writes the posts?</summary>
+        <p>Our team does — from your menu, your photos, and your specials. You approve the style at the start, and you can ask for changes to anything we publish at any time.</p>
+      </details>
+      <details>
+        <summary>What do you need from me to start?</summary>
+        <p>Just the basics, once: your business information (hours, menu, services), a few photos, and a one-time setup step — granting us manager access and passing along any verification code sent to your phone. After that, we run it.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta-band">
+      <span class="stars" style="font-size:20px">★★★★★</span>
+      <h2>Subscribe in 2 minutes: pick your plan above, then tell us your business name — we start building your accounts this week.</h2>
+      <p>Email us your business name and the plan you picked — we reply within one business day with the simple agreement and next steps. Still deciding? Ask for the free review check in the same email: we'll show you what customers see today — your rating, your unanswered reviews, and what we'd fix first.</p>
+      <a class="btn btn-gold" href="mailto:velagrid.technologies@gmail.com?subject=Subscribe%20—%20My%20Business">Email Us to Subscribe</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand">FiveStarsBoost — by VelaGrid Technologies</div>
+    <div>© 2026 FiveStarsBoost · A VelaGrid Technologies brand · <a class="flink" href="https://fivestarsboost.com">Free review reply tool</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

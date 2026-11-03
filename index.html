@@ -58,6 +58,10 @@
     color:var(--navy);padding:8px 13px;border-radius:999px;
   }
   nav.main button.navlink:hover{background:var(--gold-tint)}
+  nav.main a.navlink{
+    font-size:15.5px;font-weight:600;color:var(--navy);padding:8px 13px;border-radius:999px;text-decoration:none;
+  }
+  nav.main a.navlink:hover{background:var(--gold-tint)}
   nav.main button.navlink.active{background:var(--navy);color:#fff}
   .langtoggle{display:flex;border:1.5px solid var(--navy);border-radius:999px;overflow:hidden;margin-left:10px;flex:none}
   .langtoggle button{
@@ -327,6 +331,7 @@
     <nav class="main" aria-label="Main">
       <button type="button" class="navlink" data-nav="tool" data-i18n="nav_tool">Tool</button>
       <button type="button" class="navlink" data-nav="pricing" data-i18n="nav_pricing">Pricing</button>
+      <a class="navlink" href="/services" data-i18n="nav_dfy">Done-For-You</a>
       <button type="button" class="navlink" data-nav="privacy" data-i18n="nav_privacy">Privacy</button>
     </nav>
     <div class="langtoggle" role="group" aria-label="Language">
@@ -363,6 +368,16 @@
       <h2 class="sec-title" data-i18n="price_title">Simple pricing</h2>
       <p class="sec-sub" data-i18n="price_sub">Pick by replies per month and number of stores.</p>
       <div class="price-grid" data-pricegrid></div>
+    </section>
+
+    <!-- Done-For-You band -->
+    <section class="block" style="margin-top:26px">
+      <div style="background:linear-gradient(150deg,#081F3D,#0A2A52 55%,#14213D);border-radius:20px;padding:38px 34px;text-align:center;color:#fff;box-shadow:0 18px 44px rgba(10,42,82,.22)">
+        <div style="color:#E3A82B;letter-spacing:3px;font-size:15px">★★★★★</div>
+        <h2 style="font-size:clamp(23px,3vw,30px);font-weight:800;margin:10px 0 8px" data-i18n="dfy_t">No time to reply yourself? We manage it for you.</h2>
+        <p style="color:rgba(255,248,236,.82);font-size:16.5px;max-width:40em;margin:0 auto 22px" data-i18n="dfy_p">Accounts built, posts every week, every review answered — done-for-you management of your Google, Facebook and Instagram, from $500/month.</p>
+        <a href="/services" style="display:inline-block;background:linear-gradient(135deg,#F2C14E,#E3A82B);color:#14213D;font-weight:700;font-size:16px;padding:13px 26px;border-radius:999px;text-decoration:none" data-i18n="dfy_btn">See Done-For-You Plans</a>
+      </div>
     </section>
   </div>
 </section>
@@ -513,6 +528,7 @@ var I18N = {
 en:{
   brand_zh:"回评",
   nav_home:"Home", nav_tool:"Free Tool", nav_pricing:"Pricing", nav_privacy:"Privacy",
+  nav_dfy:"Done-For-You", dfy_t:"No time to reply yourself? We manage it for you.", dfy_p:"Accounts built, posts every week, every review answered — done-for-you management of your Google, Facebook and Instagram, from $500/month.", dfy_btn:"See Done-For-You Plans",
   slogan:"Every review answered. In your voice.",
   hero_h1:"Reply to a review in 30 seconds",
   hero_sub:"For restaurants anywhere in the US — paste a customer review below. Get 3 ready replies. Copy one and post it on Google — that's it.",
@@ -617,6 +633,7 @@ en:{
 es:{
   brand_zh:"回评",
   nav_home:"Inicio", nav_tool:"Herramienta gratis", nav_pricing:"Precios", nav_privacy:"Privacidad",
+  nav_dfy:"Gestión Total", dfy_t:"¿Sin tiempo para responder usted mismo? Nosotros lo gestionamos por usted.", dfy_p:"Cuentas creadas, publicaciones cada semana y cada reseña respondida — gestión total de su Google, Facebook e Instagram, desde $500/mes.", dfy_btn:"Ver planes de Gestión Total",
   slogan:"Cada reseña respondida. Con tu voz.",
   hero_h1:"Responde una reseña en 30 segundos",
   hero_sub:"Para restaurantes en cualquier parte de EE. UU.: pega abajo la reseña de un cliente. Recibe 3 respuestas listas. Copia una y publícala en Google. Eso es todo.",
@@ -721,6 +738,7 @@ es:{
 zh:{
   brand_zh:"回评",
   nav_home:"首页", nav_tool:"免费工具", nav_pricing:"价格", nav_privacy:"隐私",
+  nav_dfy:"代运营服务", dfy_t:"没时间自己回评价？我们替您管。", dfy_p:"账号帮您建好、每周发帖、每条评价都回复 — Google、Facebook、Instagram 全托管，每月 $500 起。", dfy_btn:"查看代运营套餐",
   slogan:"回评：每条评价，都有回音。",
   hero_h1:"30 秒回好一条评论",
   hero_sub:"全美任何地方的餐馆都能用：把顾客的评论粘贴到下面，马上得到 3 条现成回复。挑一条复制，贴回 Google 就行了——就这么简单。",
