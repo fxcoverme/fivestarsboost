@@ -80,11 +80,19 @@
     background:var(--navy);
   }
   .slogan{
-    display:inline-flex;align-items:center;gap:8px;
+    display:inline-flex;align-items:center;gap:8px;white-space:nowrap;line-height:1.2;
     font-weight:700;color:#fff;font-size:15px;letter-spacing:.02em;
     background:transparent;border:1px solid rgba(255,255,255,.35);padding:6px 14px;border-radius:999px;
   }
-  .slogan .star{color:var(--gold);font-size:15px}
+  .slogan .star{color:var(--gold);font-size:15px;line-height:1;flex:none}
+  @media (max-width:640px){
+    .slogan{font-size:13px;letter-spacing:0;padding:6px 12px;gap:6px}
+    .slogan .star{font-size:13px}
+  }
+  @media (max-width:360px){
+    .slogan{font-size:12px;padding:5px 10px;gap:5px}
+    .slogan .star{font-size:12px}
+  }
   h1.hero-title{
     font-size:clamp(30px,5.2vw,50px);line-height:1.15;color:#fff;
     margin:18px auto 14px;max-width:20em;font-weight:800;letter-spacing:-.01em;
@@ -232,7 +240,7 @@
   .why-strip .point span{font-size:14.5px;color:rgba(255,248,236,.78)}
 
   /* ---------- pricing ---------- */
-  .price-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:stretch}
+  .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
   .plan-line{font-size:16.5px;font-weight:700;color:var(--navy);padding:7px 0;border-top:1px solid var(--line)}
   .plan-feat{font-size:14.5px;color:#39445F;margin:10px 0 18px}
   .plan-soon{align-self:flex-start;font-size:12.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:var(--cream-2);border:1px dashed var(--gold);border-radius:999px;padding:5px 12px;margin-top:auto}
@@ -322,6 +330,12 @@
     .tool-card{padding:19px}
     .hero{padding:44px 22px 42px;margin-top:16px}
     .footer-in nav{margin-left:0}
+  }
+  @media (min-width:1024px){
+    section.block{padding:72px 0 16px}
+    .hero{padding:72px 40px 64px}
+    h1.hero-title{font-size:56px}
+    .price-grid{gap:22px}
   }
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
@@ -544,7 +558,7 @@ en:{
   pt1:"More reviews, honestly earned — invite every customer to share their experience.", pt2:"Every review answered — a polished reply, in your voice.", pt3:"Two ways to work with us: do it yourself with our tool, or we run it all for you.",
   bar_a_p:"Ready-made replies for every review — you do it yourself.", bar_b_p:"Accounts, website, three platforms — we run it all for you.",
   price_dfy:"Want it all done for you? See Technology Service →",
-  reg_title:"Create your free tool account", reg_note:"Tap Register to open our short registration form in a new tab — it asks for your first name, last name, phone, email, and restaurant address. Come back here and tap “I've registered” to unlock the tool.",
+  reg_title:"Create your free tool account", reg_note:"Tap Register, fill in the short form (name, phone, email, restaurant address), then come back and tap “I've registered” to unlock the tool.",
   reg_first:"First name", reg_last:"Last name", reg_phone:"Phone", reg_email:"Email", reg_addr:"Restaurant address",
   reg_btn:"Register — free", reg_confirm:"I've registered — unlock the tool", reg_done:"Registered. The tool below is ready.",
   reg_error:"Please fill in every field, with a real email and phone.",
@@ -574,12 +588,12 @@ en:{
   copy:"Copy", copy_en:"Copy English", copy_zh:"Copy Chinese", copy_es:"Copy Spanish", copied:"Copied ✓",
   tag_reply:"Reply", tag_en:"English", tag_zh:"Chinese", tag_es:"Spanish",
   limit_h:"You've reached the free limit",
-  limit_p:"Free generations are limited to 2 a week, up to 10 a month — your weekly allowance resets next week and the monthly count resets next month. In the meantime, the template packs give you 80 ready-to-paste replies for every situation — no waiting, no limit.",
+  limit_p:"Free: 2 generations a week, up to 10 a month. The template packs give you 80 ready-to-paste replies — no waiting, no limit.",
   limit_btn_pricing:"See the packs",
   limit_btn_tool:"Open the full tool",
   need_review:"Paste a review first, then hit Generate.",
   ba_title:"See an example",
-  ba_sub:"This is what you get — a bad review (left) and a good review (right), each with a ready reply.",
+  ba_sub:"A bad review and a good review — each with a ready reply.",
   ba_reply_tag:"FiveStarsBoost reply",
   ba1_who:"1-star review · Golden Dumpling House (fictional)",
   ba1_review:"“Waited 45 minutes and our dumplings finally arrived cold. Nobody checked on us once. Really disappointing — we used to love this place.”",
@@ -589,14 +603,14 @@ en:{
   ba2_reply:"Thank you for the 5-star review! We're so glad you enjoyed the dumplings. For a small, independent restaurant, words like yours carry real weight — they keep the kitchen humming and the whole team smiling. I'll be sure to share your review with everyone here. We hope to welcome you back soon.",
   how_title:"How it works",
   how_sub:"From a new review to a posted reply in about 30 seconds.",
-  step1_t:"Paste the review", step1_p:"Copy any review from Google, Yelp, or Facebook and paste it into the tool — good, bad, or in between.",
+  step1_t:"Paste the review", step1_p:"Copy any review — good, bad, or in between — and paste it in.",
   step2_t:"Pick tone & language", step2_p:"Choose Grateful, Professional, or Warm, and whether the reply should be in English, Chinese, or both side by side.",
-  step3_t:"Copy & post", step3_p:"You get three ready-to-post versions — short, standard, and warm. Pick one, copy it, and post it.",
+  step3_t:"Copy & post", step3_p:"Three ready versions — short, standard, warm. Pick one, copy, post.",
   why_title:"Why replies matter",
-  why_p:"A thoughtful reply is read by far more people than the reviewer. Future guests read how you respond before they ever read your menu — and a calm, specific answer to a hard review says more about your restaurant than a page of praise.",
-  why1_t:"Every review, answered", why1_p:"Guests notice when an owner shows up. A reply on every review — not just the good ones — signals a kitchen that cares.",
-  why2_t:"In your voice, not a robot's", why2_p:"Replies name the dish, the moment, the exact problem. They read like you wrote them at the end of a long shift — because that's the point.",
-  why3_t:"Hard reviews, handled well", why3_p:"One apology, one concrete fix, and an invitation to talk directly. No arguing, no excuses — just a gracious door left open.",
+  why_p:"More people read your reply than the review itself. Guests judge how you respond before they read your menu — a calm, specific answer to a hard review says more than a page of praise.",
+  why1_t:"Every review, answered", why1_p:"Guests notice when the owner shows up. Replying to every review — not just the good ones — shows you care.",
+  why2_t:"In your voice, not a robot's", why2_p:"Replies name the dish, the moment, the exact problem — they read like you wrote them yourself.",
+  why3_t:"Hard reviews, handled well", why3_p:"One apology, one concrete fix, one open door. No arguing, no excuses.",
   price_title:"Simple pricing",
   price_sub:"Pick by replies per month and number of stores.",
   free_tag:"Free tool", free_name:"Free Reply Generator",
@@ -617,9 +631,9 @@ en:{
   pack_li5:"A printable QR review-request card",
   buy_gumroad:"Buy on Gumroad", buy_etsy:"Buy on Etsy",
   shop_note:"Etsy shop: HuiPingStudio",
-  member_line:"<b>FiveStarsBoost Membership</b> — a monthly plan with more generations and every pack included — is <b>coming soon</b>. Nothing to buy yet.",
+  member_line:"<b>FiveStarsBoost Membership</b> — more generations, every pack included — <b>coming soon</b>.",
   toolpage_h1:"The free reply generator",
-  toolpage_sub:"Paste a review below, tap the big button, copy a reply, and post it on Google. That's all.",
+  toolpage_sub:"Paste a review below, tap the big button, copy a reply, post it on Google.",
   pricingpage_h1:"Pricing",
   pricingpage_sub:"Create a free account — 10 replies/month free, no card.",
   priv_h1:"Privacy, in plain words",
@@ -627,17 +641,17 @@ en:{
   priv1_t:"Your reviews stay on your device",
   priv1_p:"The generator runs in your browser. Reviews you paste are not sent or stored.",
   priv2_t:"Registration",
-  priv2_p:"Registration is collected through our Google Form — it asks for your first name, last name, phone, email, and restaurant address — and kept in the FiveStarsBoost registration list. Tapping “I've registered” on this page only unlocks the tool during your visit; this page itself doesn't store what you entered in the form.",
+  priv2_p:"Registration runs through our Google Form (name, phone, email, restaurant address) and is kept in the FiveStarsBoost registration list. Tapping “I've registered” only unlocks the tool for your visit — this page stores nothing you entered.",
   priv3_t:"We never sell personal data",
-  priv3_p:"We don't sell personal data. Paid plans are sold through Gumroad and Etsy, which handle payment.",
+  priv3_p:"Paid plans are sold through Gumroad and Etsy, which handle payment.",
   priv4_t:"Buying a template pack",
-  priv4_p:"Template packs are sold through Gumroad and Etsy. Checkout and payment are handled by Gumroad or Etsy under their own privacy policies — we never see or store your card details.",
+  priv4_p:"Packs are sold through Gumroad and Etsy; they handle checkout under their own privacy policies. We never see or store your card details.",
   priv5_t:"We never sell personal data",
   priv5_p:"We don't sell personal data. Full stop.",
   priv6_t:"Questions",
   priv6_p:"Questions about privacy? Reach us through the Gumroad or Etsy store you bought from, and we'll answer there.",
   footer_name:"FiveStarsBoost · VelaGrid Technologies",
-  footer_desc:"FiveStarsBoost by VelaGrid Technologies — paste a Google review, get a reply in your own voice in about 30 seconds."
+  footer_desc:"FiveStarsBoost by VelaGrid Technologies — review replies in your own voice, in about 30 seconds."
 },
 es:{
   brand_zh:"回评",
@@ -653,7 +667,7 @@ es:{
   pt1:"Más reseñas, ganadas honestamente — invita a cada cliente a compartir su experiencia.", pt2:"Cada reseña respondida — una respuesta cuidada, con tu voz.", pt3:"Dos formas de trabajar con nosotros: hazlo tú mismo con nuestra herramienta, o nosotros lo gestionamos todo.",
   bar_a_p:"Respuestas listas para cada reseña — hazlo tú mismo.", bar_b_p:"Cuentas, sitio web, tres plataformas — lo gestionamos todo por ti.",
   price_dfy:"¿Prefieres que lo gestionemos todo por ti? Ver Servicio de Tecnología →",
-  reg_title:"Crea tu cuenta gratuita de la herramienta", reg_note:"Toca Registrarme para abrir nuestro formulario corto de registro en una pestaña nueva: pide tu nombre, apellido, teléfono, correo y la dirección de tu restaurante. Vuelve aquí y toca «Ya me registré» para desbloquear la herramienta.",
+  reg_title:"Crea tu cuenta gratuita de la herramienta", reg_note:"Toca Registrarme, completa el formulario corto (nombre, teléfono, correo, dirección del restaurante) y vuelve aquí para tocar «Ya me registré» y desbloquear la herramienta.",
   reg_first:"Nombre", reg_last:"Apellido", reg_phone:"Teléfono", reg_email:"Correo electrónico", reg_addr:"Dirección del restaurante",
   reg_btn:"Registrarme — gratis", reg_confirm:"Ya me registré — desbloquear la herramienta", reg_done:"Registrado. La herramienta de abajo está lista.",
   reg_error:"Completa todos los campos, con un correo y un teléfono reales.",
@@ -677,18 +691,18 @@ es:{
   rlang_en:"Inglés", rlang_zh:"Chino + Inglés", rlang_es:"Español + Inglés",
   gen_btn:"Obtener 3 respuestas →",
   gen_hint:"Reglas de la casa: nunca discutas con quien deja la reseña, nunca ofrezcas nada a cambio de que la cambie y siempre invita a los clientes descontentos a hablar contigo directamente.",
-  quota_left:function(w,m){return "Te quedan "+w+" gratis esta semana · "+w+" free left this week · "+m+" este mes · "+m+" left this month";},
+  quota_left:function(w,m){return "Te quedan "+w+" gratis esta semana · "+m+" este mes";},
   quota_none:"Sin generaciones gratis: alcanzaste el límite semanal o mensual",
   kind_short:"Corta", kind_standard:"Estándar", kind_warm:"Cálida",
   copy:"Copiar", copy_en:"Copiar en inglés", copy_zh:"Copiar en chino", copy_es:"Copiar en español", copied:"Copiado ✓",
   tag_reply:"Respuesta", tag_en:"Inglés", tag_zh:"Chino", tag_es:"Español",
   limit_h:"Alcanzaste el límite gratis",
-  limit_p:"Las generaciones gratis están limitadas a 2 por semana, hasta 10 al mes: tu cupo semanal se renueva la próxima semana y el conteo mensual se reinicia el próximo mes. Mientras tanto, los paquetes de plantillas te dan 80 respuestas listas para pegar, para cada situación, sin esperas ni límites.",
+  limit_p:"Gratis: 2 generaciones por semana, hasta 10 al mes. Los paquetes de plantillas te dan 80 respuestas listas para pegar — sin esperas ni límites.",
   limit_btn_pricing:"Ver los paquetes",
   limit_btn_tool:"Abrir la herramienta completa",
   need_review:"Primero pega una reseña y luego pulsa Generar.",
   ba_title:"Mira un ejemplo",
-  ba_sub:"Esto es lo que recibes: una reseña mala (izquierda) y una buena (derecha), cada una con su respuesta lista.",
+  ba_sub:"Una reseña mala y una buena — cada una con su respuesta lista.",
   ba_reply_tag:"Respuesta de FiveStarsBoost",
   ba1_who:"Reseña de 1 estrella · Golden Dumpling House (ficticio)",
   ba1_review:"“Esperamos 45 minutos y los dumplings llegaron fríos. Nadie se acercó a preguntarnos nada. Muy decepcionante: antes nos encantaba este lugar.”",
@@ -698,14 +712,14 @@ es:{
   ba2_reply:"¡Gracias por tu reseña de 5 estrellas! Nos alegra mucho que hayas disfrutado los dumplings. Para un restaurante pequeño e independiente, palabras como las tuyas valen muchísimo: mantienen la cocina en marcha y a todo el equipo sonriendo. Compartiré tu reseña con todos aquí. Esperamos verte de nuevo muy pronto.",
   how_title:"Cómo funciona",
   how_sub:"De una reseña nueva a una respuesta publicada en unos 30 segundos.",
-  step1_t:"Pega la reseña", step1_p:"Copia cualquier reseña de Google, Yelp o Facebook y pégala en la herramienta: buena, mala o regular.",
+  step1_t:"Pega la reseña", step1_p:"Copia cualquier reseña — buena, mala o regular — y pégala aquí.",
   step2_t:"Elige el tono y el idioma", step2_p:"Elige Agradecido, Profesional o Cálido, y si la respuesta va en inglés, en chino o en ambos, lado a lado.",
-  step3_t:"Copia y publica", step3_p:"Recibes tres versiones listas para publicar: corta, estándar y cálida. Elige una, cópiala y publícala.",
+  step3_t:"Copia y publica", step3_p:"Tres versiones listas: corta, estándar y cálida. Elige una, cópiala y publícala.",
   why_title:"Por qué importan las respuestas",
-  why_p:"Una respuesta bien pensada la leen muchas más personas que quien escribió la reseña. Los futuros clientes leen cómo respondes antes de leer tu menú, y una respuesta tranquila y concreta a una reseña difícil dice más de tu restaurante que una página de elogios.",
-  why1_t:"Cada reseña, respondida", why1_p:"Los clientes notan cuando el dueño aparece. Responder cada reseña, no solo las buenas, muestra una cocina a la que le importa.",
-  why2_t:"Con tu voz, no la de un robot", why2_p:"Las respuestas nombran el plato, el momento y el problema exacto. Suenan como si las hubieras escrito al final de un turno largo, porque de eso se trata.",
-  why3_t:"Reseñas difíciles, bien manejadas", why3_p:"Una disculpa, una solución concreta y una invitación a hablar directamente. Sin discusiones ni excusas: solo una puerta abierta con amabilidad.",
+  why_p:"Más personas leen tu respuesta que la reseña misma. Los clientes juzgan cómo respondes antes de leer tu menú — y una respuesta tranquila y concreta a una reseña difícil dice más que una página de elogios.",
+  why1_t:"Cada reseña, respondida", why1_p:"Los clientes notan cuando el dueño aparece. Responder cada reseña — no solo las buenas — muestra que te importa.",
+  why2_t:"Con tu voz, no la de un robot", why2_p:"Las respuestas nombran el plato, el momento y el problema exacto — suenan como si las hubieras escrito tú.",
+  why3_t:"Reseñas difíciles, bien manejadas", why3_p:"Una disculpa, una solución concreta y una puerta abierta. Sin discusiones ni excusas.",
   price_title:"Precios simples",
   price_sub:"Elige según respuestas por mes y número de locales.",
   free_tag:"Herramienta gratis", free_name:"Generador de respuestas gratis",
@@ -726,9 +740,9 @@ es:{
   pack_li5:"Una tarjeta imprimible con código QR para pedir reseñas",
   buy_gumroad:"Comprar en Gumroad", buy_etsy:"Comprar en Etsy",
   shop_note:"Tienda de Etsy: HuiPingStudio",
-  member_line:"<b>La membresía de FiveStarsBoost</b> — un plan mensual con más generaciones y todos los paquetes incluidos — <b>llega pronto</b>. Todavía no hay nada que comprar.<br><b>FiveStarsBoost Membership</b> — a monthly plan with more generations and every pack included — is <b>coming soon</b>. Nothing to buy yet.",
+  member_line:"<b>La membresía de FiveStarsBoost</b> — más generaciones y todos los paquetes incluidos — <b>llega pronto</b>.<br><b>FiveStarsBoost Membership</b> — more generations, every pack included — is <b>coming soon</b>.",
   toolpage_h1:"El generador de respuestas gratis",
-  toolpage_sub:"Pega una reseña abajo, toca el botón grande, copia una respuesta y publícala en Google. Eso es todo.",
+  toolpage_sub:"Pega una reseña abajo, toca el botón grande, copia una respuesta y publícala en Google.",
   pricingpage_h1:"Precios",
   pricingpage_sub:"Crea una cuenta gratis — 10 respuestas al mes gratis, sin tarjeta.",
   priv_h1:"Privacidad, en palabras simples",
@@ -736,17 +750,17 @@ es:{
   priv1_t:"Tus reseñas se quedan en tu dispositivo",
   priv1_p:"El generador funciona en tu navegador. Las reseñas que pegas no se envían ni se guardan.",
   priv2_t:"Registro",
-  priv2_p:"El registro se recoge a través de nuestro formulario de Google — pide tu nombre, apellido, teléfono, correo y la dirección de tu restaurante — y se guarda en la lista de registros de FiveStarsBoost. Tocar «Ya me registré» en esta página solo desbloquea la herramienta durante tu visita; esta página no guarda lo que escribiste en el formulario.",
+  priv2_p:"El registro se recoge con nuestro formulario de Google (nombre, teléfono, correo, dirección del restaurante) y se guarda en la lista de registros de FiveStarsBoost. Tocar «Ya me registré» solo desbloquea la herramienta durante tu visita; esta página no guarda lo que escribiste.",
   priv3_t:"Nunca vendemos datos personales",
-  priv3_p:"No vendemos datos personales. Los planes de pago se venden a través de Gumroad y Etsy, que procesan el pago.",
+  priv3_p:"Los planes de pago se venden a través de Gumroad y Etsy, que procesan el pago.",
   priv4_t:"Comprar un paquete de plantillas",
-  priv4_p:"Los paquetes de plantillas se venden a través de Gumroad y Etsy. El pago y la compra los procesan Gumroad o Etsy según sus propias políticas de privacidad: nosotros nunca vemos ni guardamos los datos de tu tarjeta.",
+  priv4_p:"Los paquetes se venden a través de Gumroad y Etsy; ellos procesan el pago según sus propias políticas de privacidad. Nunca vemos ni guardamos los datos de tu tarjeta.",
   priv5_t:"Nunca vendemos datos personales",
   priv5_p:"No vendemos datos personales. Punto.",
   priv6_t:"Preguntas",
   priv6_p:"¿Preguntas sobre privacidad? Escríbenos a través de la tienda de Gumroad o Etsy donde compraste y te respondemos ahí.",
   footer_name:"FiveStarsBoost · VelaGrid Technologies",
-  footer_desc:"FiveStarsBoost, de VelaGrid Technologies: pega una reseña de Google y recibe tu respuesta, con tu propia voz, en unos 30 segundos."
+  footer_desc:"FiveStarsBoost, de VelaGrid Technologies: respuestas a reseñas con tu propia voz, en unos 30 segundos."
 },
 zh:{
   brand_zh:"回评",
@@ -762,7 +776,7 @@ zh:{
   pt1:"好评越来越多 — 邀请每位顾客留下真实感受。", pt2:"每条评价必回 — 回得体面，用你的语气。", pt3:"两种做法：用我们的工具自己做，或者交给我们全托管。",
   bar_a_p:"每条评价都有现成回复 — 自己动手就行。", bar_b_p:"建号、网站、三平台运营 — 我们全包。",
   price_dfy:"想全部交给我们？看看技术服务 →",
-  reg_title:"先开通免费工具账号", reg_note:"点「免费注册」会在新标签页打开我们的简短注册表，需要填名、姓、电话、邮箱和餐馆地址。填完回到这里，点「我已注册」就能解锁工具。",
+  reg_title:"先开通免费工具账号", reg_note:"点「免费注册」，填好简短注册表（姓名、电话、邮箱、餐馆地址），回到这里点「我已注册」即可解锁工具。",
   reg_first:"名", reg_last:"姓", reg_phone:"电话", reg_email:"邮箱", reg_addr:"餐馆地址",
   reg_btn:"免费注册", reg_confirm:"我已注册 — 解锁工具", reg_done:"注册完成，下面的工具可以用了。",
   reg_error:"请把每一项都填好，邮箱和电话要真实。",
@@ -786,18 +800,18 @@ zh:{
   rlang_en:"英文", rlang_zh:"中文 + 英文", rlang_es:"西班牙文 + 英文",
   gen_btn:"生成 3 条回复 →",
   gen_hint:"回复守规矩：不跟顾客争辩、不拿好处换改评、差评一律引导顾客直接联系店里沟通。",
-  quota_left:function(w,m){return "本周还剩 "+w+" 次 · "+w+" free left this week · 本月还剩 "+m+" 次 · "+m+" left this month";},
+  quota_left:function(w,m){return "本周还剩 "+w+" 次 · 本月还剩 "+m+" 次";},
   quota_none:"免费生成已用完（已达每周或每月上限）",
   kind_short:"简短版", kind_standard:"标准版", kind_warm:"亲切版",
   copy:"复制", copy_en:"复制英文", copy_zh:"复制中文", copy_es:"复制西班牙文", copied:"已复制 ✓",
   tag_reply:"回复", tag_en:"英文", tag_zh:"中文", tag_es:"西班牙文",
   limit_h:"免费次数已用完",
-  limit_p:"免费生成每周 2 次、每月最多 10 次：每周额度下周恢复，每月计数下月重置。想随时都能回，可以看看模板包：80 条现成回复，好评差评全覆盖，没有次数上限。",
+  limit_p:"免费生成每周 2 次、每月最多 10 次。模板包有 80 条现成回复，好评差评全覆盖，没有次数上限。",
   limit_btn_pricing:"看看模板包",
   limit_btn_tool:"打开完整工具",
   need_review:"先把评论粘贴进来，再点生成。",
   ba_title:"看看示例",
-  ba_sub:"这就是你会拿到的东西——左边一条差评、右边一条好评，每条都配好现成回复。",
+  ba_sub:"一条差评、一条好评——各配一条现成回复。",
   ba_reply_tag:"回评生成的回复",
   ba1_who:"1 星差评 · 金饺子馆（虚构）",
   ba1_review:"“等了 45 分钟，饺子端上来都凉了。全程没人过来问一句。太失望了，以前我们很喜欢这家店的。”",
@@ -807,14 +821,14 @@ zh:{
   ba2_reply:"非常感谢您的 5 星好评！饺子得到您的认可，后厨和前厅的伙伴们都特别受鼓舞。我们是社区里的小店，靠的就是街坊们的口碑，您这条评价对我们意义特别大。我会把您的评价分享给全店的伙伴们。欢迎您下次再来。",
   how_title:"三步搞定",
   how_sub:"从收到新评论到发布回复，大约 30 秒。",
-  step1_t:"粘贴评论", step1_p:"把 Google、Yelp 或 Facebook 上的评论复制下来，粘贴进工具里——好评、差评都可以。",
+  step1_t:"粘贴评论", step1_p:"把任何评论复制下来，粘贴进工具——好评、差评都可以。",
   step2_t:"选语气和语言", step2_p:"语气选感恩、专业或亲切；回复语言可以是英文、中文，或者中英对照。",
-  step3_t:"复制发布", step3_p:"一次生成三条现成回复：简短版、标准版、亲切版。挑一条，复制，发布。",
+  step3_t:"复制发布", step3_p:"一次生成三条：简短版、标准版、亲切版。挑一条，复制，发布。",
   why_title:"为什么每条评论都值得回",
-  why_p:"一条用心写的回复，看到的人远不止写评论的那位。未来的顾客在看菜单之前，会先看你怎么回应——面对差评时一条冷静、具体的回复，比一整页好评更能说明这家店的态度。",
-  why1_t:"每条都回", why1_p:"顾客能看出来老板在不在场。每条评论都有回复——不只是好评——就是一家店在乎顾客的证明。",
-  why2_t:"像你亲手写的", why2_p:"回复里会点到具体的菜、具体的瞬间、具体的问题。读起来就像你忙完一整天亲手写的那样——这正是我们要的效果。",
-  why3_t:"差评也能体面收尾", why3_p:"一次道歉、一个具体的改进、一个直接联系的邀请。不争辩、不找借口，把门留着。",
+  why_p:"看到你回复的人，远比写评论的人多。顾客在看菜单之前，先看你怎么回应——面对差评时一条冷静、具体的回复，比一整页好评更能说明态度。",
+  why1_t:"每条都回", why1_p:"顾客能看出来老板在不在场。每条都回——不只是好评——就是在乎顾客的证明。",
+  why2_t:"像你亲手写的", why2_p:"回复里点到具体的菜、具体的瞬间、具体的问题——读起来就像你亲手写的。",
+  why3_t:"差评也能体面收尾", why3_p:"一次道歉、一个具体的改进、一个敞开的门。不争辩、不找借口。",
   price_title:"价格简单透明",
   price_sub:"按每月回复量和门店数选就行。",
   free_tag:"免费工具", free_name:"免费回复生成器",
@@ -835,9 +849,9 @@ zh:{
   pack_li5:"可打印的求评二维码卡",
   buy_gumroad:"在 Gumroad 购买", buy_etsy:"在 Etsy 购买",
   shop_note:"Etsy 店铺：HuiPingStudio",
-  member_line:"<b>回评会员</b>——月度计划，生成次数更多、全部模板包都包含——<b>即将推出</b>，现在还买不了。<br><b>FiveStarsBoost Membership</b> — a monthly plan with more generations and every pack included — is <b>coming soon</b>. Nothing to buy yet.",
+  member_line:"<b>回评会员</b>——生成次数更多、全部模板包都包含——<b>即将推出</b>。<br><b>FiveStarsBoost Membership</b> — more generations, every pack included — <b>coming soon</b>.",
   toolpage_h1:"免费回复生成器",
-  toolpage_sub:"把评论粘贴到下面，点大按钮，复制一条回复，贴回 Google 就行了。就这么简单。",
+  toolpage_sub:"把评论粘贴到下面，点大按钮，复制一条回复，贴回 Google。",
   pricingpage_h1:"价格",
   pricingpage_sub:"创建免费账号 — 每月 10 条回复免费，无需绑卡。",
   priv_h1:"隐私，说人话版",
@@ -845,37 +859,28 @@ zh:{
   priv1_t:"评论只留在你的设备上",
   priv1_p:"生成器在你的浏览器里运行，你粘贴的评论不会被发送，也不会被保存。",
   priv2_t:"注册信息",
-  priv2_p:"注册通过我们的 Google 表格收集，需要填名、姓、电话、邮箱和餐馆地址，并保存在 FiveStarsBoost 的注册名单里。在本页点「我已注册」只是解锁本次访问的工具，本页本身不保存你在表格里填的内容。",
+  priv2_p:"注册通过我们的 Google 表格收集（姓名、电话、邮箱、餐馆地址），保存在 FiveStarsBoost 注册名单里。点「我已注册」只是解锁本次访问，本页不保存你填的内容。",
   priv3_t:"我们绝不出售个人数据",
-  priv3_p:"我们不出售个人数据。付费套餐通过 Gumroad 和 Etsy 销售，由它们处理付款。",
+  priv3_p:"付费套餐通过 Gumroad 和 Etsy 销售，由它们处理付款。",
   priv4_t:"购买模板包",
-  priv4_p:"模板包通过 Gumroad 和 Etsy 销售。结账和付款由 Gumroad 或 Etsy 按它们自己的隐私政策处理——我们看不到、也不保存你的银行卡信息。",
+  priv4_p:"模板包通过 Gumroad 和 Etsy 销售，结账和付款由它们按自己的隐私政策处理——我们看不到、也不保存你的银行卡信息。",
   priv5_t:"我们绝不出售个人数据",
   priv5_p:"我们不出售个人数据。就这一句。",
   priv6_t:"有问题找我们",
   priv6_p:"对隐私有疑问？通过你购买时用的 Gumroad 或 Etsy 店铺联系我们，我们会在那里回复你。",
   footer_name:"回评 · FiveStarsBoost · VelaGrid Technologies",
-  footer_desc:"回评：把顾客评价贴进来，30 秒生成合你口气的回复——每条都回，条条像你亲手写的。"
+  footer_desc:"回评：把顾客评价贴进来，30 秒生成合你口气的回复。"
 }};
 var LANG = "en";
 function T(key){ var d=I18N[LANG]; return (key in d)? d[key] : I18N.en[key]; }
-/* Bilingual display text: English view stays pure English; Spanish and
-   Chinese views always pair the local language with English. */
+/* Single-language display: every view renders only its own language —
+   no appended English anywhere (owner language-purity rule). */
 function TB(key){
-  var v=T(key); if(typeof v!=="string") return v;
-  if(LANG==="en") return v;
-  var en=I18N.en[key]; if(typeof en!=="string"||!en||en===v||v.indexOf(en)>=0) return v;
-  return v+" · "+en;
+  return T(key);
 }
 function setBilingual(el,key){
   var v=T(key); if(typeof v!=="string"){return;}
-  if(LANG==="en"||typeof I18N.en[key]!=="string"||!I18N.en[key]||I18N.en[key]===v||v.indexOf(I18N.en[key])>=0){ el.textContent=v; return; }
-  var en=I18N.en[key];
-  if(v.length<=45 && en.length<=55){ el.textContent=v+" · "+en; return; }
-  el.textContent="";
-  el.appendChild(document.createTextNode(v));
-  var s=document.createElement("span"); s.className="en-sub"; s.textContent=en;
-  el.appendChild(s);
+  el.textContent=v;
 }
 
 /* ---------- quota: 2 free generations per week, max 10 per month, browser-local ---------- */
