@@ -41,10 +41,8 @@
   /* ---------- header ---------- */
   header.site{
     position:sticky;top:0;z-index:50;
-    background:linear-gradient(120deg,#081F3D,var(--navy) 55%,var(--ink));
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid rgba(227,168,43,.4);
-    box-shadow:0 6px 24px rgba(7,30,60,.28);
+    background:var(--navy);
+    border-bottom:1px solid rgba(255,255,255,.14);
   }
   .header-in{display:flex;align-items:center;gap:18px;padding:12px 0;flex-wrap:wrap}
   .brandlock{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;flex:none;flex-wrap:nowrap}
@@ -53,19 +51,19 @@
   .brandwords[hidden]{display:none}
   .brandwords img.wordmark{height:64px;width:auto;object-fit:contain;object-position:left center;background:var(--cream);border-radius:10px;padding:4px 8px}
   .brandwords .zhname{font-size:44px;font-weight:800;color:#fff;letter-spacing:.06em;line-height:1.05;white-space:nowrap}
-  .brandwords .subname{font-size:16px;color:var(--gold-soft);letter-spacing:.02em;white-space:nowrap}
+  .brandwords .subname{font-size:16px;color:rgba(255,248,236,.85);letter-spacing:.02em;white-space:nowrap}
   nav.main{display:flex;gap:4px;margin-left:auto;align-items:center;flex-wrap:wrap}
   nav.main button.navlink{
     background:none;border:0;cursor:pointer;font:inherit;font-size:15.5px;font-weight:600;
     color:rgba(255,248,236,.88);padding:8px 13px;border-radius:999px;
   }
-  nav.main button.navlink:hover{background:rgba(227,168,43,.16);color:var(--gold-soft)}
+  nav.main button.navlink:hover{background:rgba(255,255,255,.10);color:#fff}
   nav.main a.navlink{
     font-size:15.5px;font-weight:600;color:rgba(255,248,236,.88);padding:8px 13px;border-radius:999px;text-decoration:none;
   }
-  nav.main a.navlink:hover{background:rgba(227,168,43,.16);color:var(--gold-soft)}
-  nav.main button.navlink.active{background:var(--gold);color:var(--navy-deep)}
-  .langtoggle{display:flex;border:1.5px solid rgba(227,168,43,.55);border-radius:999px;overflow:hidden;margin-left:10px;flex:none}
+  nav.main a.navlink:hover{background:rgba(255,255,255,.10);color:#fff}
+  nav.main button.navlink.active{background:#fff;color:var(--navy)}
+  .langtoggle{display:flex;border:1.5px solid rgba(255,255,255,.35);border-radius:999px;overflow:hidden;margin-left:10px;flex:none}
   .langtoggle button{
     background:transparent;border:0;cursor:pointer;font:inherit;font-size:13.5px;font-weight:700;
     color:rgba(255,248,236,.85);padding:7px 12px;
@@ -81,24 +79,12 @@
   .hero{
     position:relative;overflow:hidden;text-align:center;color:#fff;
     margin-top:26px;padding:56px 30px 48px;border-radius:24px;
-    background:
-      radial-gradient(900px 420px at 85% -10%, rgba(227,168,43,.22), transparent 60%),
-      radial-gradient(700px 500px at -10% 110%, rgba(14,89,65,.35), transparent 55%),
-      linear-gradient(150deg,#081F3D 0%, var(--navy) 48%, var(--ink) 100%);
-    box-shadow:0 24px 60px rgba(10,42,82,.18);
+    background:var(--navy);
   }
-  .hero::before{
-    content:"";position:absolute;inset:0;
-    background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
-    background-size:44px 44px;
-    -webkit-mask-image:radial-gradient(ellipse 90% 70% at 50% 30%,#000 30%,transparent 75%);
-    mask-image:radial-gradient(ellipse 90% 70% at 50% 30%,#000 30%,transparent 75%);
-  }
-  .hero > *{position:relative}
   .slogan{
     display:inline-flex;align-items:center;gap:8px;
-    font-weight:700;color:var(--gold-soft);font-size:15px;letter-spacing:.02em;
-    background:rgba(227,168,43,.10);border:1px solid rgba(227,168,43,.45);padding:6px 14px;border-radius:999px;
+    font-weight:700;color:#fff;font-size:15px;letter-spacing:.02em;
+    background:transparent;border:1px solid rgba(255,255,255,.35);padding:6px 14px;border-radius:999px;
   }
   .slogan .star{color:var(--gold);font-size:15px}
   h1.hero-title{
@@ -107,15 +93,14 @@
   }
   .hero-sub{font-size:clamp(16px,2.2vw,19px);color:rgba(255,248,236,.85);max-width:44em;margin:0 auto}
   .hero .microcopy{color:rgba(255,248,236,.65)}
-  .hero .quick-steps span{box-shadow:0 8px 20px rgba(0,0,0,.18)}
   .cta-block{margin-top:26px}
   .btn{
     display:inline-block;border:0;cursor:pointer;text-decoration:none;font:inherit;
     font-weight:700;border-radius:14px;padding:15px 28px;font-size:17px;
     transition:transform .12s ease, box-shadow .12s ease;
   }
-  .btn-gold{background:var(--gold);color:var(--navy-deep);box-shadow:0 6px 18px rgba(227,168,43,.35)}
-  .btn-gold:hover{transform:translateY(-1px);box-shadow:0 9px 22px rgba(227,168,43,.45)}
+  .btn-gold{background:var(--gold);color:var(--navy-deep)}
+  .btn-gold:hover{background:var(--gold-soft)}
   .btn-navy{background:var(--navy);color:#fff}
   .btn-navy:hover{background:var(--navy-deep)}
   .btn-green{background:var(--green);color:#fff}
@@ -189,8 +174,8 @@
   .limitbox .btn{padding:11px 20px;font-size:15px}
 
   /* ---------- simple 3-step flow ---------- */
-  .quick-steps{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:22px auto 0;max-width:640px}
-  .quick-steps span{background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:9px 16px;font-weight:700;font-size:15px;color:var(--navy);display:inline-flex;align-items:center;gap:8px}
+  .quick-steps{display:flex;flex-direction:column;gap:10px;align-items:flex-start;margin:26px auto 0;max-width:320px;text-align:left}
+  .quick-steps span{font-weight:600;font-size:16.5px;color:#fff;display:inline-flex;align-items:center;gap:10px}
   .quick-steps b{background:var(--gold);color:var(--navy-deep);width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:14px;flex:none}
   .quick-steps i{font-style:normal;color:var(--muted);font-weight:400}
   .simple-note{max-width:640px;margin:28px auto 0;text-align:center;background:#E4F0EA;border:1px solid #BFDCD0;color:var(--green-deep);border-radius:14px;padding:16px 20px;font-size:16.5px;font-weight:600}
@@ -203,7 +188,7 @@
   .opt-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 22px}
   .optional-box{margin-top:20px;background:#FFFDF8;border:1.5px dashed var(--line);border-radius:12px;padding:4px 14px 14px}
   .big-after{font-size:14.5px;color:var(--muted);text-align:center;margin-top:10px}
-  @media (max-width:640px){.opt-grid{grid-template-columns:1fr}.quick-steps{flex-direction:column;align-items:stretch}.quick-steps span{justify-content:flex-start}}
+  @media (max-width:640px){.opt-grid{grid-template-columns:1fr}}
 
   .en-sub{display:block;font-size:.74em;font-weight:500;color:var(--muted);line-height:1.4;margin-top:3px;letter-spacing:0;text-transform:none}
   .btn .en-sub,.gen .en-sub{color:inherit;opacity:.75}
@@ -349,10 +334,10 @@
       </span>
     </a>
     <nav class="main" aria-label="Main">
-      <button type="button" class="navlink" data-nav="tool" data-i18n="nav_tool">Tool</button>
-      <button type="button" class="navlink" data-nav="pricing" data-i18n="nav_pricing">Pricing</button>
-      <a class="navlink" href="/services" data-i18n="nav_dfy">Done-For-You</a>
-      <button type="button" class="navlink" data-nav="privacy" data-i18n="nav_privacy">Privacy</button>
+      <button type="button" class="navlink" data-nav="tool" data-i18n="nav_tool" data-mono>Tool</button>
+      <button type="button" class="navlink" data-nav="pricing" data-i18n="nav_pricing" data-mono>Pricing</button>
+      <a class="navlink" href="/services" data-i18n="nav_dfy" data-mono>Done-For-You</a>
+      <button type="button" class="navlink" data-nav="privacy" data-i18n="nav_privacy" data-mono>Privacy</button>
     </nav>
     <div class="langtoggle" role="group" aria-label="Language">
       <button type="button" data-lang="en" class="active">EN</button>
@@ -367,17 +352,17 @@
 <section class="view active" id="view-home">
   <div class="wrap">
     <div class="hero">
-      <span class="slogan"><span class="star">★</span><span data-i18n="slogan">Every review answered. In your voice.</span></span>
-      <h1 class="hero-title" data-i18n="hero_h1">Reply to a review in 30 seconds</h1>
-      <p class="hero-sub" data-i18n="hero_sub">For restaurants anywhere in the US — paste a customer review below. Get 3 ready replies. Copy one and post it on Google — that's it.</p>
+      <span class="slogan"><span class="star">★</span><span data-i18n="slogan" data-mono>Every review answered. In your voice.</span></span>
+      <h1 class="hero-title" data-i18n="hero_h1" data-mono>Reply to a review in 30 seconds</h1>
+      <p class="hero-sub" data-i18n="hero_sub" data-mono>For restaurants anywhere in the US — paste a customer review below.</p>
       <div class="quick-steps" aria-label="3 easy steps">
-        <span><b>1</b> <span data-i18n="qs1">Paste the review</span></span>
-        <span><b>2</b> <span data-i18n="qs2">Tap the big button</span></span>
-        <span><b>3</b> <span data-i18n="qs3">Copy &amp; post it</span></span>
+        <span><b>1</b> <span data-i18n="qs1" data-mono>Paste the review</span></span>
+        <span><b>2</b> <span data-i18n="qs2" data-mono>Tap the big button</span></span>
+        <span><b>3</b> <span data-i18n="qs3" data-mono>Copy &amp; post it</span></span>
       </div>
       <div class="cta-block">
-        <button type="button" class="btn btn-gold" id="heroCta" data-i18n="hero_cta">Start — it's free ↓</button>
-        <p class="microcopy" data-i18n="hero_micro">Free · One short registration · No card required</p>
+        <button type="button" class="btn btn-gold" id="heroCta" data-i18n="hero_cta" data-mono>Start — it's free ↓</button>
+        <p class="microcopy" data-i18n="hero_micro" data-mono>Free · One short registration · No card required</p>
       </div>
     </div>
 
@@ -392,11 +377,10 @@
 
     <!-- Done-For-You band -->
     <section class="block" style="margin-top:26px">
-      <div style="background:linear-gradient(150deg,#081F3D,#0A2A52 55%,#14213D);border-radius:20px;padding:38px 34px;text-align:center;color:#fff;box-shadow:0 18px 44px rgba(10,42,82,.22)">
-        <div style="color:#E3A82B;letter-spacing:3px;font-size:15px">★★★★★</div>
-        <h2 style="font-size:clamp(23px,3vw,30px);font-weight:800;margin:10px 0 8px" data-i18n="dfy_t">No time to reply yourself? We manage it for you.</h2>
-        <p style="color:rgba(255,248,236,.82);font-size:16.5px;max-width:40em;margin:0 auto 22px" data-i18n="dfy_p">Accounts built, posts every week, every review answered — done-for-you management of your Google, Facebook and Instagram, from $500/month.</p>
-        <a href="/services" style="display:inline-block;background:linear-gradient(135deg,#F2C14E,#E3A82B);color:#14213D;font-weight:700;font-size:16px;padding:13px 26px;border-radius:999px;text-decoration:none" data-i18n="dfy_btn">See Done-For-You Plans</a>
+      <div style="background:#0A2A52;border-radius:20px;padding:38px 34px;text-align:center;color:#fff">
+        <h2 style="font-size:clamp(23px,3vw,30px);font-weight:800;margin:0 0 8px" data-i18n="dfy_t" data-mono>No time to reply yourself? We manage it for you.</h2>
+        <p style="color:rgba(255,248,236,.82);font-size:16.5px;max-width:40em;margin:0 auto 22px" data-i18n="dfy_p" data-mono>Accounts built, posts every week, every review answered — done-for-you management of your Google, Facebook and Instagram, from $500/month.</p>
+        <a href="/services" style="display:inline-block;background:#E3A82B;color:#14213D;font-weight:700;font-size:16px;padding:13px 26px;border-radius:999px;text-decoration:none" data-i18n="dfy_btn" data-mono>See Done-For-You Plans</a>
       </div>
     </section>
   </div>
@@ -454,10 +438,10 @@
         <div class="fname" data-i18n="footer_name">FiveStarsBoost · VelaGrid Technologies</div>
       </div>
       <nav aria-label="Footer">
-        <button type="button" data-nav="home" data-i18n="nav_home">Home</button>
-        <button type="button" data-nav="tool" data-i18n="nav_tool">Tool</button>
-        <button type="button" data-nav="pricing" data-i18n="nav_pricing">Pricing</button>
-        <button type="button" data-nav="privacy" data-i18n="nav_privacy">Privacy</button>
+        <button type="button" data-nav="home" data-i18n="nav_home" data-mono>Home</button>
+        <button type="button" data-nav="tool" data-i18n="nav_tool" data-mono>Tool</button>
+        <button type="button" data-nav="pricing" data-i18n="nav_pricing" data-mono>Pricing</button>
+        <button type="button" data-nav="privacy" data-i18n="nav_privacy" data-mono>Privacy</button>
       </nav>
     </div>
     <div class="footer-bottom">© 2026 FiveStarsBoost · VelaGrid Technologies</div>
@@ -551,7 +535,7 @@ en:{
   nav_dfy:"Done-For-You", dfy_t:"No time to reply yourself? We manage it for you.", dfy_p:"Accounts built, posts every week, every review answered — done-for-you management of your Google, Facebook and Instagram, from $500/month.", dfy_btn:"See Done-For-You Plans",
   slogan:"Every review answered. In your voice.",
   hero_h1:"Reply to a review in 30 seconds",
-  hero_sub:"For restaurants anywhere in the US — paste a customer review below. Get 3 ready replies. Copy one and post it on Google — that's it.",
+  hero_sub:"For restaurants anywhere in the US — paste a customer review below.",
   hero_cta:"Start — it's free ↓",
   hero_micro:"Free · One short registration · No card required",
   qs1:"Paste the review", qs2:"Tap the big button", qs3:"Copy & post it",
@@ -652,14 +636,14 @@ en:{
 },
 es:{
   brand_zh:"回评",
-  nav_home:"Inicio", nav_tool:"Herramienta gratis", nav_pricing:"Precios", nav_privacy:"Privacidad",
+  nav_home:"Inicio", nav_tool:"Herramienta Gratis", nav_pricing:"Precios", nav_privacy:"Privacidad",
   nav_dfy:"Gestión Total", dfy_t:"¿Sin tiempo para responder usted mismo? Nosotros lo gestionamos por usted.", dfy_p:"Cuentas creadas, publicaciones cada semana y cada reseña respondida — gestión total de su Google, Facebook e Instagram, desde $500/mes.", dfy_btn:"Ver planes de Gestión Total",
-  slogan:"Cada reseña respondida. Con tu voz.",
+  slogan:"Cada reseña, respondida. Con tu voz.",
   hero_h1:"Responde una reseña en 30 segundos",
-  hero_sub:"Para restaurantes en cualquier parte de EE. UU.: pega abajo la reseña de un cliente. Recibe 3 respuestas listas. Copia una y publícala en Google. Eso es todo.",
+  hero_sub:"Para restaurantes en cualquier parte de EE. UU.: pega abajo la reseña de un cliente.",
   hero_cta:"Empezar — es gratis ↓",
   hero_micro:"Gratis · Un registro corto · Sin tarjeta",
-  qs1:"Pega la reseña", qs2:"Toca el botón grande", qs3:"Copia y publica",
+  qs1:"Pega la reseña", qs2:"Toca el botón grande", qs3:"Copia y publícala",
   reg_title:"Crea tu cuenta gratuita de la herramienta", reg_note:"Toca Registrarme para abrir nuestro formulario corto de registro en una pestaña nueva: pide tu nombre, apellido, teléfono, correo y la dirección de tu restaurante. Vuelve aquí y toca «Ya me registré» para desbloquear la herramienta.",
   reg_first:"Nombre", reg_last:"Apellido", reg_phone:"Teléfono", reg_email:"Correo electrónico", reg_addr:"Dirección del restaurante",
   reg_btn:"Registrarme — gratis", reg_confirm:"Ya me registré — desbloquear la herramienta", reg_done:"Registrado. La herramienta de abajo está lista.",
@@ -759,9 +743,9 @@ zh:{
   brand_zh:"回评",
   nav_home:"首页", nav_tool:"免费工具", nav_pricing:"价格", nav_privacy:"隐私",
   nav_dfy:"代运营服务", dfy_t:"没时间自己回评价？我们替您管。", dfy_p:"账号帮您建好、每周发帖、每条评价都回复 — Google、Facebook、Instagram 全托管，每月 $500 起。", dfy_btn:"查看代运营套餐",
-  slogan:"回评：每条评价，都有回音。",
-  hero_h1:"30 秒回好一条评论",
-  hero_sub:"全美任何地方的餐馆都能用：把顾客的评论粘贴到下面，马上得到 3 条现成回复。挑一条复制，贴回 Google 就行了——就这么简单。",
+  slogan:"每条评价，都有回音。",
+  hero_h1:"30 秒回好一条评价",
+  hero_sub:"全美任何地方的餐馆都能用：把顾客的评论粘贴到下面，马上得到 3 条现成回复。",
   hero_cta:"开始 — 免费 ↓",
   hero_micro:"免费 · 注册一次 · 无需绑卡",
   qs1:"粘贴评论", qs2:"点大按钮", qs3:"复制、贴回去",
@@ -1368,7 +1352,9 @@ function applyLang(lang){
   document.getElementById("brandWordsEN").hidden = (lang==="zh");
   document.getElementById("brandWordsZH").hidden = (lang!=="zh");
   document.querySelectorAll("[data-i18n]").forEach(function(el){
-    setBilingual(el, el.getAttribute("data-i18n"));
+    var k=el.getAttribute("data-i18n");
+    if(el.hasAttribute("data-mono")){ var mv=T(k); if(typeof mv==="string") el.textContent=mv; }
+    else setBilingual(el, k);
   });
   document.querySelectorAll("[data-i18n-html]").forEach(function(el){
     var v=T(el.getAttribute("data-i18n-html"));
