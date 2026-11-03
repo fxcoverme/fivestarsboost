@@ -176,6 +176,14 @@
   .quick-steps span{font-weight:600;font-size:16.5px;color:#fff;display:inline-flex;align-items:center;gap:10px}
   .quick-steps b{background:var(--gold);color:var(--navy-deep);width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:14px;flex:none}
   .quick-steps i{font-style:normal;color:var(--muted);font-weight:400}
+  .hero-points{display:flex;flex-direction:column;gap:12px;align-items:flex-start;margin:28px auto 0;max-width:680px;text-align:left}
+  .hero-points>span{font-weight:600;font-size:16.5px;color:#fff;display:inline-flex;align-items:flex-start;gap:10px;line-height:1.45}
+  .hero-points b{background:var(--gold);color:var(--navy-deep);width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:14px;flex:none;margin-top:2px}
+  .entry-bars{display:flex;flex-direction:column;gap:14px;margin:30px auto 0;max-width:680px}
+  .entry-bar{display:block;width:100%;text-align:left;background:var(--gold);color:var(--navy-deep);border:0;cursor:pointer;font:inherit;text-decoration:none;border-radius:16px;padding:18px 22px;min-height:52px;transition:background .12s ease}
+  .entry-bar:hover{background:var(--gold-soft)}
+  .entry-bar .eb-t{display:block;font-weight:800;font-size:19px;line-height:1.25}
+  .entry-bar .eb-p{display:block;font-weight:600;font-size:15px;margin-top:3px;opacity:.85;line-height:1.4}
   .simple-note{max-width:640px;margin:28px auto 0;text-align:center;background:var(--cream);border:1px solid var(--line);color:var(--navy);border-radius:14px;padding:16px 20px;font-size:16.5px;font-weight:600}
   .tstep{display:flex;align-items:center;gap:10px;margin:22px 0 8px}
   .tstep:first-child{margin-top:6px}
@@ -294,6 +302,11 @@
     padding:6px 10px;border-radius:8px;font-size:14.5px;
   }
   .footer-in nav button:hover{color:#fff;background:rgba(255,255,255,.08)}
+  .footer-in nav a{
+    color:#C9D6EA;font-weight:600;text-decoration:none;
+    padding:6px 10px;border-radius:8px;font-size:14.5px;
+  }
+  .footer-in nav a:hover{color:#fff;background:rgba(255,255,255,.08)}
   .footer-bottom{border-top:1px solid rgba(255,255,255,.14);padding:14px 0 20px;font-size:13px;color:#8FA5C4}
 
   @media (max-width:860px){
@@ -332,9 +345,8 @@
       </span>
     </a>
     <nav class="main" aria-label="Main">
-      <button type="button" class="navlink" data-nav="tool" data-i18n="nav_tool" data-mono>Tool</button>
-      <button type="button" class="navlink" data-nav="pricing" data-i18n="nav_pricing" data-mono>Pricing</button>
-      <a class="navlink" href="/services" data-i18n="nav_dfy" data-mono>Done-For-You</a>
+      <button type="button" class="navlink" data-nav="pricing" data-i18n="nav_reviews" data-mono>Review Replies</button>
+      <a class="navlink" href="/services" data-i18n="nav_tech" data-mono>Technology Service</a>
       <button type="button" class="navlink" data-nav="privacy" data-i18n="nav_privacy" data-mono>Privacy</button>
     </nav>
     <div class="langtoggle" role="group" aria-label="Language">
@@ -352,35 +364,25 @@
     <div class="hero">
       <span class="slogan"><span class="star">★</span><span data-i18n="slogan" data-mono>Every review answered. In your voice.</span></span>
       <h1 class="hero-title" data-i18n="hero_h1" data-mono>Reply to a review in 30 seconds</h1>
-      <p class="hero-sub" data-i18n="hero_sub" data-mono>For restaurants anywhere in the US — paste a customer review below.</p>
-      <div class="quick-steps" aria-label="3 easy steps">
-        <span><b>1</b> <span data-i18n="qs1" data-mono>Paste the review</span></span>
-        <span><b>2</b> <span data-i18n="qs2" data-mono>Tap the big button</span></span>
-        <span><b>3</b> <span data-i18n="qs3" data-mono>Copy &amp; post it</span></span>
+      <div class="hero-points" aria-label="What we do">
+        <span><b>1</b> <span data-i18n="pt1" data-mono>More reviews, honestly earned — invite every customer to share their experience.</span></span>
+        <span><b>2</b> <span data-i18n="pt2" data-mono>Every review answered — a polished reply, in your voice.</span></span>
+        <span><b>3</b> <span data-i18n="pt3" data-mono>Two ways to work with us: do it yourself with our tool, or we run it all for you.</span></span>
       </div>
-      <div class="cta-block">
-        <button type="button" class="btn btn-gold" id="heroCta" data-i18n="hero_cta" data-mono>Start — it's free ↓</button>
-        <p class="microcopy" data-i18n="hero_micro" data-mono>Free · One short registration · No card required</p>
+      <div class="entry-bars">
+        <button type="button" class="entry-bar" data-nav="pricing">
+          <span class="eb-t" data-i18n="nav_reviews" data-mono>Review Replies</span>
+          <span class="eb-p" data-i18n="bar_a_p" data-mono>Ready-made replies for every review — you do it yourself.</span>
+        </button>
+        <a class="entry-bar" href="/services">
+          <span class="eb-t" data-i18n="nav_tech" data-mono>Technology Service</span>
+          <span class="eb-p" data-i18n="bar_b_p" data-mono>Accounts, website, three platforms — we run it all for you.</span>
+        </a>
       </div>
     </div>
 
     <div class="tool-frame" id="homeToolSlot"></div>
 
-    <!-- Pricing preview -->
-    <section class="block">
-      <h2 class="sec-title" data-i18n="price_title">Simple pricing</h2>
-      <p class="sec-sub" data-i18n="price_sub">Pick by replies per month and number of stores.</p>
-      <div class="price-grid" data-pricegrid></div>
-    </section>
-
-    <!-- Done-For-You band -->
-    <section class="block" style="margin-top:26px">
-      <div style="background:#0A2A52;border-radius:20px;padding:38px 34px;text-align:center;color:#fff">
-        <h2 style="font-size:clamp(23px,3vw,30px);font-weight:800;margin:0 0 8px" data-i18n="dfy_t" data-mono>No time to reply yourself? We manage it for you.</h2>
-        <p style="color:rgba(255,248,236,.82);font-size:16.5px;max-width:40em;margin:0 auto 22px" data-i18n="dfy_p" data-mono>Accounts built, posts every week, every review answered — done-for-you management of your Google, Facebook and Instagram, from $500/month.</p>
-        <a href="/services" style="display:inline-block;background:#E3A82B;color:#14213D;font-weight:700;font-size:16px;padding:13px 26px;border-radius:999px;text-decoration:none" data-i18n="dfy_btn" data-mono>See Done-For-You Plans</a>
-      </div>
-    </section>
   </div>
 </section>
 
@@ -405,6 +407,7 @@
     <div style="margin-top:30px">
       <div class="price-grid" data-pricegrid></div>
     </div>
+    <p style="text-align:center;margin-top:28px;font-size:16px"><a href="/services" data-i18n="price_dfy" style="font-weight:700">Want it all done for you? See Technology Service →</a></p>
   </div>
 </section>
 
@@ -437,8 +440,8 @@
       </div>
       <nav aria-label="Footer">
         <button type="button" data-nav="home" data-i18n="nav_home" data-mono>Home</button>
-        <button type="button" data-nav="tool" data-i18n="nav_tool" data-mono>Tool</button>
-        <button type="button" data-nav="pricing" data-i18n="nav_pricing" data-mono>Pricing</button>
+        <button type="button" data-nav="pricing" data-i18n="nav_reviews" data-mono>Review Replies</button>
+        <a href="/services" data-i18n="nav_tech" data-mono>Technology Service</a>
         <button type="button" data-nav="privacy" data-i18n="nav_privacy" data-mono>Privacy</button>
       </nav>
     </div>
@@ -537,6 +540,10 @@ en:{
   hero_cta:"Start — it's free ↓",
   hero_micro:"Free · One short registration · No card required",
   qs1:"Paste the review", qs2:"Tap the big button", qs3:"Copy & post it",
+  nav_reviews:"Review Replies", nav_tech:"Technology Service",
+  pt1:"More reviews, honestly earned — invite every customer to share their experience.", pt2:"Every review answered — a polished reply, in your voice.", pt3:"Two ways to work with us: do it yourself with our tool, or we run it all for you.",
+  bar_a_p:"Ready-made replies for every review — you do it yourself.", bar_b_p:"Accounts, website, three platforms — we run it all for you.",
+  price_dfy:"Want it all done for you? See Technology Service →",
   reg_title:"Create your free tool account", reg_note:"Tap Register to open our short registration form in a new tab — it asks for your first name, last name, phone, email, and restaurant address. Come back here and tap “I've registered” to unlock the tool.",
   reg_first:"First name", reg_last:"Last name", reg_phone:"Phone", reg_email:"Email", reg_addr:"Restaurant address",
   reg_btn:"Register — free", reg_confirm:"I've registered — unlock the tool", reg_done:"Registered. The tool below is ready.",
@@ -614,7 +621,7 @@ en:{
   toolpage_h1:"The free reply generator",
   toolpage_sub:"Paste a review below, tap the big button, copy a reply, and post it on Google. That's all.",
   pricingpage_h1:"Pricing",
-  pricingpage_sub:"Four plans. Pick by replies per month and number of stores.",
+  pricingpage_sub:"Create a free account — 10 replies/month free, no card.",
   priv_h1:"Privacy, in plain words",
   priv_sub:"Short version: the tool runs on your device, and what you paste stays on your device.",
   priv1_t:"Your reviews stay on your device",
@@ -642,6 +649,10 @@ es:{
   hero_cta:"Empezar — es gratis ↓",
   hero_micro:"Gratis · Un registro corto · Sin tarjeta",
   qs1:"Pega la reseña", qs2:"Toca el botón grande", qs3:"Copia y publícala",
+  nav_reviews:"Respuestas", nav_tech:"Tecnología",
+  pt1:"Más reseñas, ganadas honestamente — invita a cada cliente a compartir su experiencia.", pt2:"Cada reseña respondida — una respuesta cuidada, con tu voz.", pt3:"Dos formas de trabajar con nosotros: hazlo tú mismo con nuestra herramienta, o nosotros lo gestionamos todo.",
+  bar_a_p:"Respuestas listas para cada reseña — hazlo tú mismo.", bar_b_p:"Cuentas, sitio web, tres plataformas — lo gestionamos todo por ti.",
+  price_dfy:"¿Prefieres que lo gestionemos todo por ti? Ver Servicio de Tecnología →",
   reg_title:"Crea tu cuenta gratuita de la herramienta", reg_note:"Toca Registrarme para abrir nuestro formulario corto de registro en una pestaña nueva: pide tu nombre, apellido, teléfono, correo y la dirección de tu restaurante. Vuelve aquí y toca «Ya me registré» para desbloquear la herramienta.",
   reg_first:"Nombre", reg_last:"Apellido", reg_phone:"Teléfono", reg_email:"Correo electrónico", reg_addr:"Dirección del restaurante",
   reg_btn:"Registrarme — gratis", reg_confirm:"Ya me registré — desbloquear la herramienta", reg_done:"Registrado. La herramienta de abajo está lista.",
@@ -719,7 +730,7 @@ es:{
   toolpage_h1:"El generador de respuestas gratis",
   toolpage_sub:"Pega una reseña abajo, toca el botón grande, copia una respuesta y publícala en Google. Eso es todo.",
   pricingpage_h1:"Precios",
-  pricingpage_sub:"Cuatro planes. Elige según respuestas por mes y número de locales.",
+  pricingpage_sub:"Crea una cuenta gratis — 10 respuestas al mes gratis, sin tarjeta.",
   priv_h1:"Privacidad, en palabras simples",
   priv_sub:"En resumen: la herramienta funciona en tu dispositivo, y lo que pegas se queda en tu dispositivo.",
   priv1_t:"Tus reseñas se quedan en tu dispositivo",
@@ -747,6 +758,10 @@ zh:{
   hero_cta:"开始 — 免费 ↓",
   hero_micro:"免费 · 注册一次 · 无需绑卡",
   qs1:"粘贴评论", qs2:"点大按钮", qs3:"复制、贴回去",
+  nav_reviews:"评价回复", nav_tech:"技术服务",
+  pt1:"好评越来越多 — 邀请每位顾客留下真实感受。", pt2:"每条评价必回 — 回得体面，用你的语气。", pt3:"两种做法：用我们的工具自己做，或者交给我们全托管。",
+  bar_a_p:"每条评价都有现成回复 — 自己动手就行。", bar_b_p:"建号、网站、三平台运营 — 我们全包。",
+  price_dfy:"想全部交给我们？看看技术服务 →",
   reg_title:"先开通免费工具账号", reg_note:"点「免费注册」会在新标签页打开我们的简短注册表，需要填名、姓、电话、邮箱和餐馆地址。填完回到这里，点「我已注册」就能解锁工具。",
   reg_first:"名", reg_last:"姓", reg_phone:"电话", reg_email:"邮箱", reg_addr:"餐馆地址",
   reg_btn:"免费注册", reg_confirm:"我已注册 — 解锁工具", reg_done:"注册完成，下面的工具可以用了。",
@@ -824,7 +839,7 @@ zh:{
   toolpage_h1:"免费回复生成器",
   toolpage_sub:"把评论粘贴到下面，点大按钮，复制一条回复，贴回 Google 就行了。就这么简单。",
   pricingpage_h1:"价格",
-  pricingpage_sub:"四个套餐，按每月回复量和门店数选就行。",
+  pricingpage_sub:"创建免费账号 — 每月 10 条回复免费，无需绑卡。",
   priv_h1:"隐私，说人话版",
   priv_sub:"一句话：工具在你的设备上运行，你粘贴的内容也只留在你的设备上。",
   priv1_t:"评论只留在你的设备上",
@@ -1186,7 +1201,6 @@ function generateReplies(input){
 
 /* ---------- pricing cards: price, replies/month, stores, one core feature ---------- */
 var PLANS=[
-  {id:"free", price:"$0"},
   {id:"799", price:"$7.99", gumroad:"https://flyhome5.gumroad.com/l/jrbklu"},
   {id:"1999", price:"$19.99"},
   {id:"2999", price:"$29.99"}
@@ -1194,9 +1208,7 @@ var PLANS=[
 function priceCardHTML(p){
   var k="plan_"+p.id;
   var foot;
-  if(p.id==="free"){
-    foot='<div class="buys"><button type="button" class="btn btn-green" data-nav="tool">'+TB("plan_start")+'</button></div>';
-  }else if(p.gumroad){
+  if(p.gumroad){
     foot='<div class="buys"><a class="btn btn-gold" href="'+p.gumroad+'" target="_blank" rel="noopener">'+TB("plan_buy")+'</a></div>';
   }else{
     foot='<span class="plan-soon">'+TB("plan_soon")+'</span>';
@@ -1405,12 +1417,6 @@ document.addEventListener("DOMContentLoaded",function(){
   document.getElementById("brandHome").addEventListener("click",function(ev){ev.preventDefault();showView("home");});
   document.querySelectorAll(".langtoggle button").forEach(function(b){
     b.addEventListener("click",function(){applyLang(b.getAttribute("data-lang"));});
-  });
-  document.getElementById("heroCta").addEventListener("click",function(){
-    var card=document.querySelector("#homeToolSlot .tool-card")||document.querySelector(".tool-card");
-    if(card){ card.scrollIntoView({behavior:"smooth",block:"start"});
-      var target=card.querySelector("[data-register-link]")||card.querySelector("[data-review]");
-      if(target) setTimeout(function(){target.focus({preventScroll:true});},450); }
   });
   moveTool("home");
   applyLang("en");
