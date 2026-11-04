@@ -870,7 +870,7 @@ zh:{
   footer_name:"回评 · FiveStarsBoost · VelaGrid Technologies",
   footer_desc:"回评：把顾客评价贴进来，30 秒生成合你口气的回复。"
 }};
-var LANG = "en";
+var LANG = (function(){ try{ var p=new URLSearchParams(location.search).get("lang"); if(p==="en"||p==="es"||p==="zh") return p; var s=localStorage.getItem("fsb_lang"); if(s==="en"||s==="es"||s==="zh") return s; }catch(e){} return "en"; })();
 function T(key){ var d=I18N[LANG]; return (key in d)? d[key] : I18N.en[key]; }
 /* Single-language display: every view renders only its own language —
    no appended English anywhere (owner language-purity rule). */
@@ -1359,6 +1359,7 @@ function wireTool(root){
 /* ---------- language ---------- */
 function applyLang(lang){
   LANG=lang;
+  lsSet("fsb_lang",lang);
   document.documentElement.lang = lang==="zh" ? "zh-CN" : lang;
   document.querySelectorAll(".langtoggle button").forEach(function(b){
     b.classList.toggle("active", b.getAttribute("data-lang")===lang);
@@ -1423,7 +1424,7 @@ document.addEventListener("DOMContentLoaded",function(){
     b.addEventListener("click",function(){applyLang(b.getAttribute("data-lang"));});
   });
   moveTool("home");
-  applyLang("en");
+  applyLang(LANG);
   showView("home");
 });
 </script>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Done-For-You Review &amp; Social Management — FiveStarsBoost</title>
+<title>Done-For-You Review & Social Management — FiveStarsBoost</title>
 <meta name="description" content="FiveStarsBoost done-for-you multi-platform service: we build your accounts, post every week, and answer every review. Plans from $500/month. Month-to-month, no setup fee, fully FTC-compliant.">
 <style>
   :root{
@@ -140,25 +140,36 @@
   footer{padding:38px 0 46px;text-align:center;color:var(--muted);font-size:14px}
   footer .fbrand{font-weight:800;color:var(--navy);font-size:16px;margin-bottom:6px}
   footer a.flink{color:var(--navy);font-weight:700}
+
+  .langtoggle{display:flex;border:1.5px solid rgba(255,255,255,.35);border-radius:999px;overflow:hidden;margin-left:10px;flex:none}
+  .langtoggle button{background:transparent;border:0;color:rgba(255,248,236,.85);font-weight:700;font-size:12.5px;padding:7px 11px;cursor:pointer;font-family:inherit}
+  .langtoggle button.active{background:var(--gold);color:var(--navy)}
+  .langtoggle button + button{border-left:1px solid rgba(255,248,236,.25)}
+  @media(max-width:700px){.nav .btn{display:none}}
+
 </style>
 </head>
 <body>
-
 <header>
   <div class="wrap nav">
     <a class="brand" href="https://fivestarsboost.com">
       <img src="../logo-a.png" alt="FiveStarsBoost logo">
-      <span class="bname">FiveStars<span>Boost</span><small>Technology Service</small></span>
+      <span class="bname">FiveStars<span>Boost</span><small data-i18n="brand_small">Technology Service</small></span>
     </a>
     <nav class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#pricing">Subscribe</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
-      <a href="https://fivestarsboost.com">Review Replies</a>
+      <a href="#services" data-i18n="nav_services">Services</a>
+      <a href="#pricing" data-i18n="nav_subscribe">Subscribe</a>
+      <a href="#faq" data-i18n="nav_faq">FAQ</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+      <a href="https://fivestarsboost.com" data-i18n="nav_reviews">Review Replies</a>
     </nav>
+    <div class="langtoggle" role="group" aria-label="Language">
+      <button type="button" data-lang="en" class="active">EN</button>
+      <button type="button" data-lang="es">ES</button>
+      <button type="button" data-lang="zh">ZH</button>
+    </div>
     <!-- INTERIM (2026-11-03): contact email temporarily flyautohome@gmail.com — velagrid.technologies@gmail.com is unreachable; swap back once the velagridtech mailbox is live. -->
-    <a class="btn btn-gold" href="mailto:flyautohome@gmail.com?subject=Free%20Review%20Check%20Request">Get a Free Review Check</a>
+    <a class="btn btn-gold" href="mailto:flyautohome@gmail.com?subject=Free%20Review%20Check%20Request" data-i18n="header_cta">Get a Free Review Check</a>
   </div>
 </header>
 
@@ -166,17 +177,17 @@
 <div class="hero" id="top">
   <div class="wrap hero-inner">
     <div>
-      <span class="eyebrow">FIVESTARSBOOST · MULTI-PLATFORM SERVICE</span>
-      <h1>Done-For-You Review &amp; Social <em>Management</em></h1>
-      <p class="sub">Multi-platform service — you don't have to do a thing. We run them all for you.</p>
+      <span class="eyebrow" data-i18n="eyebrow">FIVESTARSBOOST · MULTI-PLATFORM SERVICE</span>
+      <h1 data-i18n-html="hero_h1">Done-For-You Review &amp; Social <em>Management</em></h1>
+      <p class="sub" data-i18n="hero_sub">Multi-platform service — you don't have to do a thing. We run them all for you.</p>
       <div class="hero-ctas">
-        <a class="btn btn-gold" href="#pricing">See the Plans</a>
-        <a class="btn btn-ghost" href="https://fivestarsboost.com">Try the Free Tool First</a>
+        <a class="btn btn-gold" href="#pricing" data-i18n="cta_plans">See the Plans</a>
+        <a class="btn btn-ghost" href="https://fivestarsboost.com" data-i18n="cta_tool">Try the Free Tool First</a>
       </div>
       <div class="hero-stats">
-        <span class="chip"><b>100%</b> of reviews answered</span>
-        <span class="chip">Replies within <b>1 business day</b></span>
-        <span class="chip">Reports by the <b>5th</b>, every month</span>
+        <span class="chip" data-i18n-html="chip1"><b>100%</b> of reviews answered</span>
+        <span class="chip" data-i18n-html="chip2">Replies within <b>1 business day</b></span>
+        <span class="chip" data-i18n-html="chip3">Reports by the <b>5th</b>, every month</span>
       </div>
     </div>
   </div>
@@ -186,16 +197,16 @@
 <section id="services">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-tag">Multi-Platform Service</div>
-      <h2>What We Do</h2>
+      <div class="sec-tag" data-i18n="what_tag">Multi-Platform Service</div>
+      <h2 data-i18n="h2_what">What We Do</h2>
     </div>
     <div class="rows">
-      <div class="row"><span class="n">1</span><span><b>We build your accounts</b> — set up and completed for you.</span></div>
-      <div class="row"><span class="n">2</span><span><b>We post every week</b> — content written and published for you.</span></div>
-      <div class="row"><span class="n">3</span><span><b>We answer every review</b> — in your voice, within 1 business day.</span></div>
-      <div class="row"><span class="n">4</span><span><b>You get a monthly report</b> — in your inbox by the 5th.</span></div>
+      <div class="row"><span class="n">1</span><span data-i18n-html="row1"><b>We build your accounts</b> — set up and completed for you.</span></div>
+      <div class="row"><span class="n">2</span><span data-i18n-html="row2"><b>We post every week</b> — content written and published for you.</span></div>
+      <div class="row"><span class="n">3</span><span data-i18n-html="row3"><b>We answer every review</b> — in your voice, within 1 business day.</span></div>
+      <div class="row"><span class="n">4</span><span data-i18n-html="row4"><b>You get a monthly report</b> — in your inbox by the 5th.</span></div>
     </div>
-    <p class="agree-line">Simple month-to-month agreement — no setup fee, no long contract.</p>
+    <p class="agree-line" data-i18n="agree_line">Simple month-to-month agreement — no setup fee, no long contract.</p>
   </div>
 </section>
 
@@ -203,88 +214,88 @@
 <section id="pricing">
   <div class="wrap">
     <div class="sec-head">
-      <h2>Subscribe — we run it all for you.</h2>
-      <p>Pick your activity level. Every plan includes review replies.</p>
+      <h2 data-i18n="h2_pricing">Subscribe — we run it all for you.</h2>
+      <p data-i18n="pricing_sub">Pick your activity level. Every plan includes review replies.</p>
     </div>
     <div class="tiers">
       <div class="tier">
-        <div class="tname">Single Platform</div>
-        <div class="price">$500<small>/mo</small></div>
-        <p class="tdesc">One platform — we build it and run it.</p>
+        <div class="tname" data-i18n="t1_name">Single Platform</div>
+        <div class="price">$500<small data-i18n="per_mo">/mo</small></div>
+        <p class="tdesc" data-i18n="t1_desc">One platform — we build it and run it.</p>
         <ul>
-          <li>8 posts per month</li>
-          <li>All reviews on that platform answered</li>
-          <li>Checks Mon–Sat, replies within 1 business day</li>
-          <li>Up to 40 review replies / month</li>
-          <li>Monthly summary</li>
+          <li data-i18n="f_posts8">8 posts per month</li>
+          <li data-i18n="f_t1_reviews">All reviews on that platform answered</li>
+          <li data-i18n="f_t1_checks">Checks Mon–Sat, replies within 1 business day</li>
+          <li data-i18n="f_up40">Up to 40 review replies / month</li>
+          <li data-i18n="f_monthly_summary">Monthly summary</li>
         </ul>
-        <a class="btn btn-navy tier-cta" data-plan="single" href="#contact">Start — Single Platform</a>
+        <a class="btn btn-navy tier-cta" data-plan="single" href="#contact" data-i18n="cta_single">Start — Single Platform</a>
       </div>
       <div class="tier">
-        <div class="tname">Three Platforms · Basic</div>
-        <div class="price">$799<small>/mo</small></div>
-        <p class="tdesc">All three platforms, steady weekly rhythm.</p>
+        <div class="tname" data-i18n="t2_name">Three Platforms · Basic</div>
+        <div class="price">$799<small data-i18n="per_mo">/mo</small></div>
+        <p class="tdesc" data-i18n="t2_desc">All three platforms, steady weekly rhythm.</p>
         <ul>
-          <li>Three platforms included</li>
-          <li>8 posts per month</li>
-          <li>Review checks Mon–Fri</li>
-          <li>Every review answered within 1 business day</li>
-          <li>Up to 30 review replies / month</li>
-          <li>QR review cards for your counter &amp; tables</li>
-          <li>Simple monthly report</li>
+          <li data-i18n="f_three">Three platforms included</li>
+          <li data-i18n="f_posts8">8 posts per month</li>
+          <li data-i18n="f_checks_fri">Review checks Mon–Fri</li>
+          <li data-i18n="f_every_1bd">Every review answered within 1 business day</li>
+          <li data-i18n="f_up30">Up to 30 review replies / month</li>
+          <li data-i18n="f_qr_counter">QR review cards for your counter &amp; tables</li>
+          <li data-i18n="f_simple_report">Simple monthly report</li>
         </ul>
-        <a class="btn btn-navy tier-cta" data-plan="basic" href="#contact">Start with Basic</a>
+        <a class="btn btn-navy tier-cta" data-plan="basic" href="#contact" data-i18n="cta_basic">Start with Basic</a>
       </div>
       <div class="tier">
-        <div class="tname">Three Platforms · Standard</div>
-        <div class="price">$999<small>/mo</small></div>
-        <p class="tdesc">More content, faster coverage, same-day alerts.</p>
+        <div class="tname" data-i18n="t3_name">Three Platforms · Standard</div>
+        <div class="price">$999<small data-i18n="per_mo">/mo</small></div>
+        <p class="tdesc" data-i18n="t3_desc">More content, faster coverage, same-day alerts.</p>
         <ul>
-          <li>Three platforms included</li>
-          <li>12 posts per month</li>
-          <li>Review checks Mon–Sat</li>
-          <li>Up to 60 review replies / month</li>
-          <li>Same-day alert on negative reviews</li>
-          <li>QR review cards included</li>
-          <li>Full monthly report</li>
+          <li data-i18n="f_three">Three platforms included</li>
+          <li data-i18n="f_posts12">12 posts per month</li>
+          <li data-i18n="f_checks_sat">Review checks Mon–Sat</li>
+          <li data-i18n="f_up60">Up to 60 review replies / month</li>
+          <li data-i18n="f_alert">Same-day alert on negative reviews</li>
+          <li data-i18n="f_qr_incl">QR review cards included</li>
+          <li data-i18n="f_full_report">Full monthly report</li>
         </ul>
-        <a class="btn btn-navy tier-cta" data-plan="standard" href="#contact">Start with Standard</a>
+        <a class="btn btn-navy tier-cta" data-plan="standard" href="#contact" data-i18n="cta_standard">Start with Standard</a>
       </div>
     </div>
     <div class="tiers-row2">
       <div class="tier pop">
-        <span class="badge">★ MOST POPULAR</span>
-        <div class="tname">Three Platforms · Plus</div>
-        <div class="price">$1,299<small>/mo</small></div>
-        <p class="tdesc">The full package — video and a website included.</p>
+        <span class="badge" data-i18n="badge_pop">★ MOST POPULAR</span>
+        <div class="tname" data-i18n="t4_name">Three Platforms · Plus</div>
+        <div class="price">$1,299<small data-i18n="per_mo">/mo</small></div>
+        <p class="tdesc" data-i18n="t4_desc">The full package — video and a website included.</p>
         <ul>
-          <li>Three platforms included</li>
-          <li>16 posts per month, including 2 short videos</li>
-          <li>Review checks Mon–Sat</li>
-          <li>Up to 100 review replies / month</li>
-          <li>Same-day alert on negative reviews</li>
-          <li>One-page website included — built in month one</li>
-          <li>Monthly report + monthly strategy call</li>
+          <li data-i18n="f_three">Three platforms included</li>
+          <li data-i18n="f_posts16v2">16 posts per month, including 2 short videos</li>
+          <li data-i18n="f_checks_sat">Review checks Mon–Sat</li>
+          <li data-i18n="f_up100">Up to 100 review replies / month</li>
+          <li data-i18n="f_alert">Same-day alert on negative reviews</li>
+          <li data-i18n="f_website1">One-page website included — built in month one</li>
+          <li data-i18n="f_report_call">Monthly report + monthly strategy call</li>
         </ul>
-        <a class="btn btn-gold tier-cta" data-plan="plus" href="#contact">Start with Plus</a>
+        <a class="btn btn-gold tier-cta" data-plan="plus" href="#contact" data-i18n="cta_plus">Start with Plus</a>
       </div>
       <div class="tier">
-        <div class="tname">Three Platforms · Premium</div>
-        <div class="price">$1,599<small>/mo</small></div>
-        <p class="tdesc">Maximum presence for busy, growing businesses.</p>
+        <div class="tname" data-i18n="t5_name">Three Platforms · Premium</div>
+        <div class="price">$1,599<small data-i18n="per_mo">/mo</small></div>
+        <p class="tdesc" data-i18n="t5_desc">Maximum presence for busy, growing businesses.</p>
         <ul>
-          <li>Three platforms included</li>
-          <li>24 posts per month, including 4 short videos</li>
-          <li>Review checks every day, including Sunday</li>
-          <li>Same-day alert on negative reviews</li>
-          <li>Website included, with ongoing updates</li>
-          <li>Bi-weekly updates + monthly report</li>
-          <li>Quarterly menu &amp; photo refresh</li>
+          <li data-i18n="f_three">Three platforms included</li>
+          <li data-i18n="f_posts24v4">24 posts per month, including 4 short videos</li>
+          <li data-i18n="f_checks_daily">Review checks every day, including Sunday</li>
+          <li data-i18n="f_alert">Same-day alert on negative reviews</li>
+          <li data-i18n="f_website_upd">Website included, with ongoing updates</li>
+          <li data-i18n="f_biweekly">Bi-weekly updates + monthly report</li>
+          <li data-i18n="f_quarterly">Quarterly menu &amp; photo refresh</li>
         </ul>
-        <a class="btn btn-navy tier-cta" data-plan="premium" href="#contact">Start with Premium</a>
+        <a class="btn btn-navy tier-cta" data-plan="premium" href="#contact" data-i18n="cta_premium">Start with Premium</a>
       </div>
     </div>
-    <p class="pricing-note">Add another platform: <b>+$300/month</b> each. &nbsp;·&nbsp; Month-to-month — <b>no long contracts, no setup fee</b>, billing starts month one. &nbsp;·&nbsp; Your accounts and content are <b>100% yours</b>.</p>
+    <p class="pricing-note" data-i18n-html="pricing_note">Add another platform: <b>+$300/month</b> each. &nbsp;·&nbsp; Month-to-month — <b>no long contracts, no setup fee</b>, billing starts month one. &nbsp;·&nbsp; Your accounts and content are <b>100% yours</b>.</p>
   </div>
 </section>
 
@@ -294,10 +305,10 @@
     <div class="diy-band">
       <img src="../logo-a.png" alt="FiveStarsBoost logo">
       <div class="txt">
-        <h3>Prefer to do it yourself?</h3>
-        <p>Paste a review, get three polished replies in your voice — free. Template packs when you want more.</p>
+        <h3 data-i18n="diy_h">Prefer to do it yourself?</h3>
+        <p data-i18n="diy_p">Paste a review, get three polished replies in your voice — free. Template packs when you want more.</p>
       </div>
-      <a class="btn btn-navy" href="https://fivestarsboost.com">Use the Free Tool</a>
+      <a class="btn btn-navy" href="https://fivestarsboost.com" data-i18n="diy_btn">Use the Free Tool</a>
     </div>
   </div>
 </section>
@@ -306,13 +317,13 @@
 <section id="why" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-tag">Why FiveStarsBoost</div>
-      <h2>Built on trust — because reviews are trust</h2>
+      <div class="sec-tag" data-i18n="why_tag">Why FiveStarsBoost</div>
+      <h2 data-i18n="h2_why">Built on trust — because reviews are trust</h2>
     </div>
     <div class="rows gold-top">
-      <div class="row"><span><b>Fully FTC-compliant</b> — we never buy, write, or fake reviews. Under the FTC review rule (16 CFR Part 465), fake reviews can cost up to $53,088 per violation.</span></div>
-      <div class="row"><span><b>Your accounts stay 100% yours</b> — registered in your name; we hold manager access only.</span></div>
-      <div class="row"><span><b>Cancel anytime</b> — 30 days' notice, full handover within 7 days.</span></div>
+      <div class="row"><span data-i18n-html="why1"><b>Fully FTC-compliant</b> — we never buy, write, or fake reviews. Under the FTC review rule (16 CFR Part 465), fake reviews can cost up to $53,088 per violation.</span></div>
+      <div class="row"><span data-i18n-html="why2"><b>Your accounts stay 100% yours</b> — registered in your name; we hold manager access only.</span></div>
+      <div class="row"><span data-i18n-html="why3"><b>Cancel anytime</b> — 30 days' notice, full handover within 7 days.</span></div>
     </div>
   </div>
 </section>
@@ -321,29 +332,29 @@
 <section id="faq" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-tag">FAQ</div>
-      <h2>Questions, answered straight</h2>
+      <div class="sec-tag" data-i18n="faq_tag">FAQ</div>
+      <h2 data-i18n="h2_faq">Questions, answered straight</h2>
     </div>
     <div class="faq">
       <details>
-        <summary>Do I own my accounts?</summary>
-        <p>Yes — 100%. Accounts are registered in your business's name; we work as manager only.</p>
+        <summary data-i18n="faq1_q">Do I own my accounts?</summary>
+        <p data-i18n="faq1_a">Yes — 100%. Accounts are registered in your business's name; we work as manager only.</p>
       </details>
       <details>
-        <summary>Do you guarantee a 5-star rating?</summary>
-        <p>No — ratings come from real customers. What we guarantee is the work: every review answered within one business day, weekly activity, a monthly report.</p>
+        <summary data-i18n="faq2_q">Do you guarantee a 5-star rating?</summary>
+        <p data-i18n="faq2_a">No — ratings come from real customers. What we guarantee is the work: every review answered within one business day, weekly activity, a monthly report.</p>
       </details>
       <details>
-        <summary>Can I cancel?</summary>
-        <p>Yes. Month-to-month — cancel with 30 days' notice (email is fine). We hand over everything and remove our access within 7 days.</p>
+        <summary data-i18n="faq3_q">Can I cancel?</summary>
+        <p data-i18n="faq3_a">Yes. Month-to-month — cancel with 30 days' notice (email is fine). We hand over everything and remove our access within 7 days.</p>
       </details>
       <details>
-        <summary>Who writes the posts?</summary>
-        <p>Our team — from your menu, photos, and specials. You approve the style at the start and can request changes anytime.</p>
+        <summary data-i18n="faq4_q">Who writes the posts?</summary>
+        <p data-i18n="faq4_a">Our team — from your menu, photos, and specials. You approve the style at the start and can request changes anytime.</p>
       </details>
       <details>
-        <summary>What do you need from me to start?</summary>
-        <p>Just once: business information, a few photos, a manager-access grant, and any setup code sent to your phone. Then we run it.</p>
+        <summary data-i18n="faq5_q">What do you need from me to start?</summary>
+        <p data-i18n="faq5_a">Just once: business information, a few photos, a manager-access grant, and any setup code sent to your phone. Then we run it.</p>
       </details>
     </div>
   </div>
@@ -354,10 +365,10 @@
   <div class="wrap">
     <div class="cta-band">
       <span class="stars" style="font-size:20px">★★★★★</span>
-      <h2>Subscribe in 2 minutes: pick your plan above, then tell us your business name — we start building your accounts this week.</h2>
-      <p>Email us your business name and plan — we reply within one business day with the agreement and next steps. Still deciding? Ask for a free review check: your rating, unanswered reviews, and what we'd fix first.</p>
+      <h2 data-i18n="cta_h">Subscribe in 2 minutes: pick your plan above, then tell us your business name — we start building your accounts this week.</h2>
+      <p data-i18n="cta_p">Email us your business name and plan — we reply within one business day with the agreement and next steps. Still deciding? Ask for a free review check: your rating, unanswered reviews, and what we'd fix first.</p>
       <!-- INTERIM (2026-11-03): contact email temporarily flyautohome@gmail.com — velagrid.technologies@gmail.com is unreachable; swap back once the velagridtech mailbox is live. -->
-    <a class="btn btn-gold" href="mailto:flyautohome@gmail.com?subject=Subscribe%20—%20My%20Business">Email Us to Subscribe</a>
+    <a class="btn btn-gold" href="mailto:flyautohome@gmail.com?subject=Subscribe%20—%20My%20Business" data-i18n="cta_btn">Email Us to Subscribe</a>
     </div>
   </div>
 </section>
@@ -365,9 +376,343 @@
 <footer>
   <div class="wrap">
     <div class="fbrand">FiveStarsBoost — by VelaGrid Technologies</div>
-    <div>© 2026 FiveStarsBoost · A VelaGrid Technologies brand · <a class="flink" href="https://fivestarsboost.com">Free review reply tool</a></div>
+    <div>© 2026 FiveStarsBoost · A VelaGrid Technologies brand · <a class="flink" href="https://fivestarsboost.com" data-i18n="foot_tool">Free review reply tool</a></div>
   </div>
 </footer>
+
+<script>
+/* Language: shared with the homepage - same localStorage key "fsb_lang".
+   Resolution order: ?lang= URL param -> localStorage fsb_lang -> "en". */
+var I18N = {
+ "en": {
+  "page_title": "Done-For-You Review & Social Management — FiveStarsBoost",
+  "page_desc": "FiveStarsBoost done-for-you multi-platform service: we build your accounts, post every week, and answer every review. Plans from $500/month. Month-to-month, no setup fee, fully FTC-compliant.",
+  "brand_small": "Technology Service",
+  "nav_services": "Services",
+  "nav_subscribe": "Subscribe",
+  "nav_faq": "FAQ",
+  "nav_contact": "Contact",
+  "nav_reviews": "Review Replies",
+  "header_cta": "Get a Free Review Check",
+  "eyebrow": "FIVESTARSBOOST · MULTI-PLATFORM SERVICE",
+  "hero_h1": "Done-For-You Review &amp; Social <em>Management</em>",
+  "hero_sub": "Multi-platform service — you don't have to do a thing. We run them all for you.",
+  "cta_plans": "See the Plans",
+  "cta_tool": "Try the Free Tool First",
+  "chip1": "<b>100%</b> of reviews answered",
+  "chip2": "Replies within <b>1 business day</b>",
+  "chip3": "Reports by the <b>5th</b>, every month",
+  "what_tag": "Multi-Platform Service",
+  "h2_what": "What We Do",
+  "row1": "<b>We build your accounts</b> — set up and completed for you.",
+  "row2": "<b>We post every week</b> — content written and published for you.",
+  "row3": "<b>We answer every review</b> — in your voice, within 1 business day.",
+  "row4": "<b>You get a monthly report</b> — in your inbox by the 5th.",
+  "agree_line": "Simple month-to-month agreement — no setup fee, no long contract.",
+  "h2_pricing": "Subscribe — we run it all for you.",
+  "pricing_sub": "Pick your activity level. Every plan includes review replies.",
+  "per_mo": "/mo",
+  "badge_pop": "★ MOST POPULAR",
+  "t1_name": "Single Platform",
+  "t1_desc": "One platform — we build it and run it.",
+  "t2_name": "Three Platforms · Basic",
+  "t2_desc": "All three platforms, steady weekly rhythm.",
+  "t3_name": "Three Platforms · Standard",
+  "t3_desc": "More content, faster coverage, same-day alerts.",
+  "t4_name": "Three Platforms · Plus",
+  "t4_desc": "The full package — video and a website included.",
+  "t5_name": "Three Platforms · Premium",
+  "t5_desc": "Maximum presence for busy, growing businesses.",
+  "f_t1_reviews": "All reviews on that platform answered",
+  "f_t1_checks": "Checks Mon–Sat, replies within 1 business day",
+  "f_up40": "Up to 40 review replies / month",
+  "f_monthly_summary": "Monthly summary",
+  "f_three": "Three platforms included",
+  "f_posts8": "8 posts per month",
+  "f_posts12": "12 posts per month",
+  "f_posts16v2": "16 posts per month, including 2 short videos",
+  "f_posts24v4": "24 posts per month, including 4 short videos",
+  "f_checks_fri": "Review checks Mon–Fri",
+  "f_checks_sat": "Review checks Mon–Sat",
+  "f_checks_daily": "Review checks every day, including Sunday",
+  "f_every_1bd": "Every review answered within 1 business day",
+  "f_up30": "Up to 30 review replies / month",
+  "f_up60": "Up to 60 review replies / month",
+  "f_up100": "Up to 100 review replies / month",
+  "f_qr_counter": "QR review cards for your counter &amp; tables",
+  "f_qr_incl": "QR review cards included",
+  "f_simple_report": "Simple monthly report",
+  "f_full_report": "Full monthly report",
+  "f_alert": "Same-day alert on negative reviews",
+  "f_website1": "One-page website included — built in month one",
+  "f_website_upd": "Website included, with ongoing updates",
+  "f_report_call": "Monthly report + monthly strategy call",
+  "f_biweekly": "Bi-weekly updates + monthly report",
+  "f_quarterly": "Quarterly menu &amp; photo refresh",
+  "cta_single": "Start — Single Platform",
+  "cta_basic": "Start with Basic",
+  "cta_standard": "Start with Standard",
+  "cta_plus": "Start with Plus",
+  "cta_premium": "Start with Premium",
+  "pricing_note": "Add another platform: <b>+$300/month</b> each. &nbsp;·&nbsp; Month-to-month — <b>no long contracts, no setup fee</b>, billing starts month one. &nbsp;·&nbsp; Your accounts and content are <b>100% yours</b>.",
+  "diy_h": "Prefer to do it yourself?",
+  "diy_p": "Paste a review, get three polished replies in your voice — free. Template packs when you want more.",
+  "diy_btn": "Use the Free Tool",
+  "why_tag": "Why FiveStarsBoost",
+  "h2_why": "Built on trust — because reviews are trust",
+  "why1": "<b>Fully FTC-compliant</b> — we never buy, write, or fake reviews. Under the FTC review rule (16 CFR Part 465), fake reviews can cost up to $53,088 per violation.",
+  "why2": "<b>Your accounts stay 100% yours</b> — registered in your name; we hold manager access only.",
+  "why3": "<b>Cancel anytime</b> — 30 days' notice, full handover within 7 days.",
+  "faq_tag": "FAQ",
+  "h2_faq": "Questions, answered straight",
+  "faq1_q": "Do I own my accounts?",
+  "faq1_a": "Yes — 100%. Accounts are registered in your business's name; we work as manager only.",
+  "faq2_q": "Do you guarantee a 5-star rating?",
+  "faq2_a": "No — ratings come from real customers. What we guarantee is the work: every review answered within one business day, weekly activity, a monthly report.",
+  "faq3_q": "Can I cancel?",
+  "faq3_a": "Yes. Month-to-month — cancel with 30 days' notice (email is fine). We hand over everything and remove our access within 7 days.",
+  "faq4_q": "Who writes the posts?",
+  "faq4_a": "Our team — from your menu, photos, and specials. You approve the style at the start and can request changes anytime.",
+  "faq5_q": "What do you need from me to start?",
+  "faq5_a": "Just once: business information, a few photos, a manager-access grant, and any setup code sent to your phone. Then we run it.",
+  "cta_h": "Subscribe in 2 minutes: pick your plan above, then tell us your business name — we start building your accounts this week.",
+  "cta_p": "Email us your business name and plan — we reply within one business day with the agreement and next steps. Still deciding? Ask for a free review check: your rating, unanswered reviews, and what we'd fix first.",
+  "cta_btn": "Email Us to Subscribe",
+  "foot_tool": "Free review reply tool"
+ },
+ "es": {
+  "page_title": "Gestión total de reseñas y redes sociales — FiveStarsBoost",
+  "page_desc": "Servicio multiplataforma integral de FiveStarsBoost: creamos sus cuentas, publicamos cada semana y respondemos cada reseña. Planes desde $500/mes. Mes a mes, sin cuota de instalación, totalmente conforme con la FTC.",
+  "brand_small": "Tecnología",
+  "nav_services": "Servicios",
+  "nav_subscribe": "Suscribirse",
+  "nav_faq": "FAQ",
+  "nav_contact": "Contacto",
+  "nav_reviews": "Respuestas",
+  "header_cta": "Revisión gratuita de reseñas",
+  "eyebrow": "FIVESTARSBOOST · SERVICIO MULTIPLATAFORMA",
+  "hero_h1": "<em>Gestión completa</em> de reseñas y redes sociales",
+  "hero_sub": "Servicio multiplataforma: usted no tiene que hacer nada. Nosotros lo gestionamos todo por usted.",
+  "cta_plans": "Ver los planes",
+  "cta_tool": "Pruebe primero la herramienta gratis",
+  "chip1": "<b>100%</b> de reseñas respondidas",
+  "chip2": "Respuestas en <b>1 día laborable</b>",
+  "chip3": "Informes el día <b>5</b> de cada mes",
+  "what_tag": "Servicio multiplataforma",
+  "h2_what": "Qué hacemos",
+  "row1": "<b>Creamos sus cuentas</b> — configuradas y completas por nosotros.",
+  "row2": "<b>Publicamos cada semana</b> — contenido redactado y publicado por nosotros.",
+  "row3": "<b>Respondemos cada reseña</b> — con su voz, en 1 día laborable.",
+  "row4": "<b>Recibe un informe mensual</b> — en su correo el día 5.",
+  "agree_line": "Acuerdo simple mes a mes — sin cuota de instalación ni contratos largos.",
+  "h2_pricing": "Suscríbase — nosotros lo gestionamos todo por usted.",
+  "pricing_sub": "Elija su nivel de actividad. Todos los planes incluyen respuestas a reseñas.",
+  "per_mo": "/mes",
+  "badge_pop": "★ EL MÁS POPULAR",
+  "t1_name": "Una plataforma",
+  "t1_desc": "Una plataforma: la creamos y la gestionamos.",
+  "t2_name": "Tres plataformas · Básico",
+  "t2_desc": "Las tres plataformas, con ritmo semanal constante.",
+  "t3_name": "Tres plataformas · Estándar",
+  "t3_desc": "Más contenido, cobertura más rápida y alertas el mismo día.",
+  "t4_name": "Tres plataformas · Plus",
+  "t4_desc": "El paquete completo: video y un sitio web incluidos.",
+  "t5_name": "Tres plataformas · Premium",
+  "t5_desc": "Presencia máxima para negocios con mucho movimiento y en crecimiento.",
+  "f_t1_reviews": "Todas las reseñas de esa plataforma respondidas",
+  "f_t1_checks": "Revisiones de lunes a sábado, respuestas en 1 día laborable",
+  "f_up40": "Hasta 40 respuestas a reseñas / mes",
+  "f_monthly_summary": "Resumen mensual",
+  "f_three": "Tres plataformas incluidas",
+  "f_posts8": "8 publicaciones al mes",
+  "f_posts12": "12 publicaciones al mes",
+  "f_posts16v2": "16 publicaciones al mes, incluidos 2 videos cortos",
+  "f_posts24v4": "24 publicaciones al mes, incluidos 4 videos cortos",
+  "f_checks_fri": "Revisión de reseñas de lunes a viernes",
+  "f_checks_sat": "Revisión de reseñas de lunes a sábado",
+  "f_checks_daily": "Revisión de reseñas todos los días, incluido el domingo",
+  "f_every_1bd": "Cada reseña respondida en 1 día laborable",
+  "f_up30": "Hasta 30 respuestas a reseñas / mes",
+  "f_up60": "Hasta 60 respuestas a reseñas / mes",
+  "f_up100": "Hasta 100 respuestas a reseñas / mes",
+  "f_qr_counter": "Tarjetas QR de reseñas para su mostrador y mesas",
+  "f_qr_incl": "Tarjetas QR de reseñas incluidas",
+  "f_simple_report": "Informe mensual sencillo",
+  "f_full_report": "Informe mensual completo",
+  "f_alert": "Alerta el mismo día ante reseñas negativas",
+  "f_website1": "Sitio web de una página incluido — creado el primer mes",
+  "f_website_upd": "Sitio web incluido, con actualizaciones continuas",
+  "f_report_call": "Informe mensual + llamada mensual de estrategia",
+  "f_biweekly": "Actualizaciones cada dos semanas + informe mensual",
+  "f_quarterly": "Renovación trimestral de menú y fotos",
+  "cta_single": "Empezar — Una plataforma",
+  "cta_basic": "Empezar con Básico",
+  "cta_standard": "Empezar con Estándar",
+  "cta_plus": "Empezar con Plus",
+  "cta_premium": "Empezar con Premium",
+  "pricing_note": "Añada otra plataforma: <b>+$300/mes</b> cada una. &nbsp;·&nbsp; Mes a mes — <b>sin contratos largos ni cuota de instalación</b>, la facturación empieza el primer mes. &nbsp;·&nbsp; Sus cuentas y su contenido son <b>100% suyos</b>.",
+  "diy_h": "¿Prefiere hacerlo usted mismo?",
+  "diy_p": "Pegue una reseña y reciba tres respuestas pulidas con su voz — gratis. Paquetes de plantillas cuando quiera más.",
+  "diy_btn": "Usar la herramienta gratis",
+  "why_tag": "Por qué FiveStarsBoost",
+  "h2_why": "Construido sobre la confianza — porque las reseñas son confianza",
+  "why1": "<b>Totalmente conforme con la FTC</b> — nunca compramos, escribimos ni falsificamos reseñas. Según la norma de reseñas de la FTC (16 CFR Parte 465), las reseñas falsas pueden costar hasta $53,088 por infracción.",
+  "why2": "<b>Sus cuentas siguen siendo 100% suyas</b> — registradas a su nombre; nosotros solo tenemos acceso de administrador.",
+  "why3": "<b>Cancele cuando quiera</b> — aviso de 30 días y entrega completa en 7 días.",
+  "faq_tag": "FAQ",
+  "h2_faq": "Preguntas, respondidas sin rodeos",
+  "faq1_q": "¿Las cuentas son mías?",
+  "faq1_a": "Sí — 100%. Las cuentas se registran a nombre de su negocio; nosotros trabajamos solo como administradores.",
+  "faq2_q": "¿Garantizan una calificación de 5 estrellas?",
+  "faq2_a": "No — las calificaciones vienen de clientes reales. Lo que garantizamos es el trabajo: cada reseña respondida en un día laborable, actividad semanal y un informe mensual.",
+  "faq3_q": "¿Puedo cancelar?",
+  "faq3_a": "Sí. Mes a mes — cancele con 30 días de aviso (por correo basta). Entregamos todo y retiramos nuestro acceso en 7 días.",
+  "faq4_q": "¿Quién escribe las publicaciones?",
+  "faq4_a": "Nuestro equipo — a partir de su menú, fotos y promociones. Usted aprueba el estilo al principio y puede pedir cambios cuando quiera.",
+  "faq5_q": "¿Qué necesitan de mí para empezar?",
+  "faq5_a": "Solo una vez: información de su negocio, algunas fotos, un permiso de acceso de administrador y cualquier código de configuración que llegue a su teléfono. Después, nosotros lo gestionamos.",
+  "cta_h": "Suscríbase en 2 minutos: elija su plan arriba y díganos el nombre de su negocio — empezamos a crear sus cuentas esta semana.",
+  "cta_p": "Envíenos por correo el nombre de su negocio y el plan — respondemos en un día laborable con el acuerdo y los pasos siguientes. ¿Aún lo está pensando? Pida una revisión gratuita de sus reseñas: su calificación, las reseñas sin responder y qué corregiríamos primero.",
+  "cta_btn": "Escríbanos para suscribirse",
+  "foot_tool": "Herramienta gratis de respuestas a reseñas"
+ },
+ "zh": {
+  "page_title": "评价与社交账号全托管 — FiveStarsBoost",
+  "page_desc": "FiveStarsBoost 多平台全托管服务：账号帮您建、每周发内容、每条评价都回复。套餐每月 $500 起。按月合作、不收开户费、完全遵守 FTC 规定。",
+  "brand_small": "技术服务",
+  "nav_services": "服务内容",
+  "nav_subscribe": "订阅",
+  "nav_faq": "FAQ",
+  "nav_contact": "联系我们",
+  "nav_reviews": "评价回复",
+  "header_cta": "免费评价检查",
+  "eyebrow": "FIVESTARSBOOST · 多平台服务",
+  "hero_h1": "评价与社交账号<em>全托管</em>",
+  "hero_sub": "多平台服务 — 您什么都不用做，全部由我们来运营。",
+  "cta_plans": "查看套餐",
+  "cta_tool": "先试试免费工具",
+  "chip1": "评价回复率 <b>100%</b>",
+  "chip2": "<b>1 个工作日</b>内回复",
+  "chip3": "每月 <b>5 号</b>前发月报",
+  "what_tag": "多平台服务",
+  "h2_what": "我们做什么",
+  "row1": "<b>账号我们来建</b> — 从注册到完善，全部替您做好。",
+  "row2": "<b>每周发内容</b> — 文案我们写、我们发。",
+  "row3": "<b>每条评价都回复</b> — 用您的口吻，1 个工作日内。",
+  "row4": "<b>每月一份报告</b> — 5 号前发到您的邮箱。",
+  "agree_line": "简单的按月协议 — 不收开户费，不签长约。",
+  "h2_pricing": "订阅 — 全部交给我们运营。",
+  "pricing_sub": "按您需要的活跃度选。每个套餐都含评价回复。",
+  "per_mo": "/月",
+  "badge_pop": "★ 最受欢迎",
+  "t1_name": "单平台",
+  "t1_desc": "一个平台 — 我们建好并运营。",
+  "t2_name": "三平台 · 基础版",
+  "t2_desc": "三个平台全包，保持稳定的每周节奏。",
+  "t3_name": "三平台 · 标准版",
+  "t3_desc": "内容更多、覆盖更快、差评当天提醒。",
+  "t4_name": "三平台 · 进阶版",
+  "t4_desc": "全套服务 — 含短视频和一个网站。",
+  "t5_name": "三平台 · 旗舰版",
+  "t5_desc": "为忙碌成长中的商家打造的最强存在感。",
+  "f_t1_reviews": "该平台的评价全部回复",
+  "f_t1_checks": "周一至周六检查，1 个工作日内回复",
+  "f_up40": "每月最多 40 条评价回复",
+  "f_monthly_summary": "每月小结",
+  "f_three": "含三个平台",
+  "f_posts8": "每月 8 条内容",
+  "f_posts12": "每月 12 条内容",
+  "f_posts16v2": "每月 16 条内容，含 2 条短视频",
+  "f_posts24v4": "每月 24 条内容，含 4 条短视频",
+  "f_checks_fri": "周一至周五检查评价",
+  "f_checks_sat": "周一至周六检查评价",
+  "f_checks_daily": "每天检查评价，周日也查",
+  "f_every_1bd": "每条评价 1 个工作日内回复",
+  "f_up30": "每月最多 30 条评价回复",
+  "f_up60": "每月最多 60 条评价回复",
+  "f_up100": "每月最多 100 条评价回复",
+  "f_qr_counter": "柜台和桌面用的评价二维码卡",
+  "f_qr_incl": "含评价二维码卡",
+  "f_simple_report": "简版月报",
+  "f_full_report": "完整月报",
+  "f_alert": "差评当天提醒",
+  "f_website1": "含一页式网站 — 第一个月建好",
+  "f_website_upd": "含网站，并持续更新",
+  "f_report_call": "月报 + 每月一次策略通话",
+  "f_biweekly": "每两周进度更新 + 月报",
+  "f_quarterly": "每季度更新一次菜单与照片",
+  "cta_single": "开始 — 单平台",
+  "cta_basic": "从基础版开始",
+  "cta_standard": "从标准版开始",
+  "cta_plus": "从进阶版开始",
+  "cta_premium": "从旗舰版开始",
+  "pricing_note": "再加一个平台：每个 <b>+$300/月</b>。&nbsp;·&nbsp; 按月合作 — <b>不签长约、不收开户费</b>，第一个月开始计费。&nbsp;·&nbsp; 您的账号和内容 <b>100% 归您所有</b>。",
+  "diy_h": "想自己动手？",
+  "diy_p": "粘贴一条评价，免费得到三条用您口吻写好的回复。想要更多，现成模板包等着您。",
+  "diy_btn": "用免费工具",
+  "why_tag": "为什么选 FiveStarsBoost",
+  "h2_why": "以信任为本 — 因为评价就是信任",
+  "why1": "<b>完全遵守 FTC 规定</b> — 我们从不购买、代写或伪造评价。按 FTC 评价规则（16 CFR Part 465），虚假评价每条最高可罚 $53,088。",
+  "why2": "<b>账号 100% 归您</b> — 用您的名义注册；我们只持有管理员权限。",
+  "why3": "<b>随时可取消</b> — 提前 30 天通知，7 天内完整交接。",
+  "faq_tag": "FAQ",
+  "h2_faq": "有问必答，直来直去",
+  "faq1_q": "账号是我的吗？",
+  "faq1_a": "是的 — 100% 是您的。账号以您商家的名义注册；我们只以管理员身份操作。",
+  "faq2_q": "你们保证五星评分吗？",
+  "faq2_a": "不保证 — 评分来自真实顾客。我们保证的是工作本身：每条评价一个工作日内回复、每周持续运营、每月一份报告。",
+  "faq3_q": "可以取消吗？",
+  "faq3_a": "可以。按月合作 — 提前 30 天通知即可（邮件就行）。我们交接全部内容，并在 7 天内移除我们的权限。",
+  "faq4_q": "内容是谁写的？",
+  "faq4_a": "我们的团队 — 根据您的菜单、照片和优惠活动来写。风格一开始由您确认，之后随时可以要求调整。",
+  "faq5_q": "开始前需要我提供什么？",
+  "faq5_a": "只需要一次：商家信息、几张照片、管理员权限授权，还有发到您手机上的设置验证码。之后就交给我们运营。",
+  "cta_h": "2 分钟完成订阅：在上面选好套餐，再告诉我们您的店名 — 本周就开始为您建账号。",
+  "cta_p": "把店名和想选的套餐发邮件给我们 — 我们会在一个工作日内回复协议和下一步。还没拿定主意？先要一份免费评价检查：您的评分、未回复的评价，以及我们最先会改什么。",
+  "cta_btn": "发邮件订阅",
+  "foot_tool": "免费评价回复工具"
+ }
+};
+var SUPPORTED = ["en", "es", "zh"];
+function lsGet(k){try{return localStorage.getItem(k);}catch(e){return null;}}
+function lsSet(k,v){try{localStorage.setItem(k,v);}catch(e){}}
+function resolveLang(){
+  var p = null;
+  try{ p = new URLSearchParams(window.location.search).get("lang"); }catch(e){}
+  if(SUPPORTED.indexOf(p) >= 0) return p;
+  var s = lsGet("fsb_lang");
+  if(SUPPORTED.indexOf(s) >= 0) return s;
+  return "en";
+}
+var LANG = resolveLang();
+function T(key){ var d = I18N[LANG]; return (key in d) ? d[key] : I18N.en[key]; }
+function applyLang(lang){
+  if(SUPPORTED.indexOf(lang) < 0) lang = "en";
+  LANG = lang;
+  lsSet("fsb_lang", lang);
+  document.documentElement.lang = (lang === "zh") ? "zh-CN" : lang;
+  document.title = T("page_title");
+  var md = document.querySelector('meta[name="description"]');
+  if(md) md.setAttribute("content", T("page_desc"));
+  document.querySelectorAll(".langtoggle button").forEach(function(b){
+    b.classList.toggle("active", b.getAttribute("data-lang") === lang);
+  });
+  document.querySelectorAll("[data-i18n]").forEach(function(el){
+    var v = T(el.getAttribute("data-i18n"));
+    if(typeof v === "string") el.textContent = v;
+  });
+  document.querySelectorAll("[data-i18n-html]").forEach(function(el){
+    var v = T(el.getAttribute("data-i18n-html"));
+    if(typeof v === "string") el.innerHTML = v;
+  });
+}
+document.addEventListener("DOMContentLoaded", function(){
+  document.querySelectorAll(".langtoggle button").forEach(function(b){
+    b.addEventListener("click", function(){ applyLang(b.getAttribute("data-lang")); });
+  });
+  applyLang(LANG);
+});
+</script>
 
 </body>
 </html>
