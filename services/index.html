@@ -382,7 +382,8 @@
 
 <script>
 /* Language: shared with the homepage - same localStorage key "fsb_lang".
-   Resolution order: ?lang= URL param -> localStorage fsb_lang -> "en". */
+   Resolution order: ?lang= URL param -> localStorage fsb_lang (manual choice) -> browser language -> "en".
+   Browser-detected language is NOT saved; only a manual toggle click writes fsb_lang. */
 var I18N = {
  "en": {
   "page_title": "Done-For-You Review & Social Management — FiveStarsBoost",
@@ -679,20 +680,29 @@ var I18N = {
 var SUPPORTED = ["en", "es", "zh"];
 function lsGet(k){try{return localStorage.getItem(k);}catch(e){return null;}}
 function lsSet(k,v){try{localStorage.setItem(k,v);}catch(e){}}
+function detectBrowserLang(){
+  try{
+    var n = (navigator.language || (navigator.languages && navigator.languages[0]) || "").toLowerCase();
+    if(n.indexOf("es") === 0) return "es";
+    if(n.indexOf("zh") === 0) return "zh";
+    if(n.indexOf("en") === 0) return "en";
+  }catch(e){}
+  return "en";
+}
 function resolveLang(){
   var p = null;
   try{ p = new URLSearchParams(window.location.search).get("lang"); }catch(e){}
   if(SUPPORTED.indexOf(p) >= 0) return p;
   var s = lsGet("fsb_lang");
   if(SUPPORTED.indexOf(s) >= 0) return s;
-  return "en";
+  return detectBrowserLang();
 }
 var LANG = resolveLang();
 function T(key){ var d = I18N[LANG]; return (key in d) ? d[key] : I18N.en[key]; }
-function applyLang(lang){
+function applyLang(lang, persist){
   if(SUPPORTED.indexOf(lang) < 0) lang = "en";
   LANG = lang;
-  lsSet("fsb_lang", lang);
+  if(persist) lsSet("fsb_lang", lang);
   document.documentElement.lang = (lang === "zh") ? "zh-CN" : lang;
   document.title = T("page_title");
   var md = document.querySelector('meta[name="description"]');
@@ -711,7 +721,7 @@ function applyLang(lang){
 }
 document.addEventListener("DOMContentLoaded", function(){
   document.querySelectorAll(".langtoggle button").forEach(function(b){
-    b.addEventListener("click", function(){ applyLang(b.getAttribute("data-lang")); });
+    b.addEventListener("click", function(){ applyLang(b.getAttribute("data-lang"), true); });
   });
   applyLang(LANG);
 });
