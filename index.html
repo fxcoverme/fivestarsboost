@@ -326,7 +326,12 @@
     .brandlock{gap:10px}
     .header-in{gap:10px;padding:10px 0}
     header.site .wrap{padding:0 12px}
-    nav.main{margin-left:0;order:3;width:100%}
+    .header-in{gap:10px;padding:10px 0}
+    .brandlock .mark{width:48px;height:48px;border-radius:12px}
+    .brandwords img.wordmark{height:40px}
+    nav.main{margin-left:0;order:3;width:100%;flex-wrap:nowrap;overflow-x:auto;gap:2px;padding:4px 0 2px;scrollbar-width:none}
+    nav.main::-webkit-scrollbar{display:none}
+    nav.main .navlink{white-space:nowrap;font-size:14px;padding:7px 10px}
     .langtoggle{margin-left:auto}
     .tool-card{padding:19px}
     .hero{padding:44px 22px 42px;margin-top:16px}
@@ -360,6 +365,7 @@
       </span>
     </a>
     <nav class="main" aria-label="Main">
+      <button type="button" class="navlink" data-nav="home" data-i18n="nav_home" data-mono>Home</button>
       <button type="button" class="navlink" data-nav="pricing" data-i18n="nav_reviews" data-mono>Review Replies</button>
       <a class="navlink" href="/services" data-i18n="nav_tech" data-mono>Technology Service</a>
         <a class="navlink" href="/industries" data-i18n="nav_industries" data-mono>Industries</a>
