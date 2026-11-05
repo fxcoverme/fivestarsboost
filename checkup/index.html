@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Google Review Checkup — FiveStarsBoost</title>
+<meta name="description" content="Free one-page checkup of your Google reviews: rating, review count, unanswered reviews and reply rate. Checked by hand, emailed within 1 business day.">
+<link rel="icon" href="/logo-a.png">
+<style>
+  :root{--navy:#0A2A52;--navy-deep:#071E3C;--gold:#E3A82B;--gold-deep:#C78F1B;--cream:#FFF8EC;--paper:#FFFDF8;--ink:#14213D;--muted:#5A6B82;--line:rgba(20,33,61,.10);--radius:18px}
+  *{box-sizing:border-box}
+  html,body{overflow-x:hidden}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;background:var(--cream);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+  header.site{position:sticky;top:0;z-index:50;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.14)}
+  .header-in{display:flex;align-items:center;gap:16px;padding:11px 0;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .brand img{height:42px;width:auto;border-radius:9px;background:var(--cream);padding:3px 7px}
+  .brand .bsub{font-size:11px;letter-spacing:.16em;color:var(--gold);font-weight:700}
+  nav.nav-links{display:flex;gap:4px;margin-left:auto;align-items:center;flex-wrap:wrap}
+  nav.nav-links a{font-size:14.5px;font-weight:600;color:rgba(255,248,236,.88);padding:7px 11px;border-radius:999px;text-decoration:none}
+  nav.nav-links a:hover{background:rgba(255,255,255,.10);color:#fff}
+  nav.nav-links a.current{background:#fff;color:var(--navy)}
+  nav.nav-links .soon{font-size:14.5px;font-weight:600;color:rgba(255,248,236,.45);padding:7px 11px}
+  nav.nav-links .soon em{font-style:normal;font-size:10px;background:rgba(227,168,43,.25);color:var(--gold);border-radius:999px;padding:2px 7px;margin-left:5px;vertical-align:2px}
+  .langtoggle{display:flex;border:1.5px solid rgba(255,255,255,.35);border-radius:999px;overflow:hidden;flex:none}
+  .langtoggle button{background:transparent;border:0;cursor:pointer;font:inherit;font-size:12.5px;font-weight:700;color:rgba(255,248,236,.85);padding:6px 10px}
+  .langtoggle button.active{background:var(--gold);color:var(--navy-deep)}
+  .langtoggle button + button{border-left:1px solid rgba(255,248,236,.25)}
+  .hero{background:var(--navy);color:#fff;border-radius:0 0 28px 28px;padding:52px 0 46px;text-align:center}
+  .eyebrow{font-size:12px;letter-spacing:.22em;color:var(--gold);font-weight:800}
+  .hero h1{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:-.5px;margin:14px auto 12px;max-width:20em;line-height:1.15}
+  .hero p{color:rgba(255,248,236,.85);font-size:17px;max-width:40em;margin:0 auto}
+  section{padding:44px 0 6px}
+  .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1060px;margin:0 auto}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:20px 18px;text-align:center}
+  .card .ic{font-size:24px}
+  .card h3{margin:8px 0 4px;font-size:16.5px;color:var(--navy)}
+  .card p{margin:0;font-size:13.5px;color:var(--muted)}
+  .formbox{max-width:640px;margin:26px auto 0;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:28px 28px 24px;box-shadow:0 14px 34px rgba(10,42,82,.07)}
+  .formbox h2{text-align:center;color:var(--navy);font-size:22px;margin:0 0 4px}
+  .formbox .note{text-align:center;color:var(--muted);font-size:14px;margin:0 0 18px}
+  label{display:block;font-size:13.5px;font-weight:700;color:var(--navy);margin:14px 0 6px}
+  input{width:100%;font:inherit;font-size:16px;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px}
+  input:focus{outline:2px solid var(--gold);border-color:transparent}
+  .submit{width:100%;margin-top:22px;background:var(--gold);color:var(--navy-deep);border:0;border-radius:14px;font:inherit;font-size:17px;font-weight:800;padding:15px;cursor:pointer}
+  .submit:hover{background:var(--gold-deep)}
+  .submit:disabled{opacity:.55;cursor:default}
+  .done{display:none;text-align:center;padding:12px 0 4px}
+  .done .big{font-size:34px}
+  .done h3{color:var(--navy);margin:8px 0 6px;font-size:20px}
+  .done p{color:var(--muted);margin:0;font-size:15px}
+  .ctaband{background:var(--navy);border-radius:24px;color:#fff;text-align:center;padding:38px 26px;margin:44px auto 50px;max-width:1060px}
+  .ctaband h2{margin:0 0 8px;font-size:clamp(22px,3.4vw,30px);font-weight:800}
+  .ctaband p{margin:0 auto 20px;color:rgba(255,248,236,.85);max-width:44em}
+  .btn{display:inline-block;background:var(--gold);color:var(--navy-deep);font-weight:800;text-decoration:none;border-radius:999px;padding:13px 28px;font-size:16px}
+  .btn:hover{background:var(--gold-deep)}
+  .ctaband .phone{display:block;margin-top:16px;color:rgba(255,248,236,.85);font-size:14.5px}
+  .ctaband .phone a{color:var(--gold);font-weight:700;text-decoration:none}
+  footer{padding:6px 0 30px;text-align:center;color:var(--muted);font-size:13.5px}
+  footer .fl{display:flex;gap:10px;justify-content:center;margin-bottom:10px}
+  footer .fl a{display:inline-block;padding:6px 14px;border:1px solid var(--gold);border-radius:999px;color:var(--gold-deep);font-size:12.5px;font-weight:600;text-decoration:none}
+  @media (max-width:760px){
+    .cards{grid-template-columns:1fr 1fr}
+    nav.nav-links{margin-left:0;order:3;width:100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+    nav.nav-links::-webkit-scrollbar{display:none}
+    nav.nav-links a,nav.nav-links .soon{white-space:nowrap}
+    .langtoggle{margin-left:auto}
+    .formbox{padding:22px 18px 18px}
+  }
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap"><div class="header-in">
+  <a class="brand" href="/"><img src="/logo-lockup.png" alt="FiveStarsBoost"><span class="bsub">VELAGRID TECHNOLOGIES</span></a>
+  <nav class="nav-links">
+    <a href="/" data-i18n="nav_home">Home</a>
+    <a href="/#pricing" data-i18n="nav_reviews">Review Replies</a>
+    <a href="/services" data-i18n="nav_tech">Technology Service</a>
+    <a href="/industries" data-i18n="nav_industries">Industries</a>
+    <span class="soon"><span data-i18n="nav_resources">Resources</span><em data-i18n="res_soon">soon</em></span>
+  </nav>
+  <div class="langtoggle" role="group" aria-label="Language">
+    <button type="button" data-lang="en">EN</button><button type="button" data-lang="es">ES</button><button type="button" data-lang="zh">ZH</button><button type="button" data-lang="vi">VI</button>
+  </div>
+</div></div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="eyebrow" data-i18n="ck_eyebrow">FREE CHECKUP</div>
+  <h1 data-i18n="ck_h1">Free Google Review Checkup</h1>
+  <p data-i18n="ck_sub">Tell us your business name — we check your Google page and email you a simple one-page checkup.</p>
+</div></div>
+
+<section><div class="wrap">
+  <div class="cards">
+    <div class="card"><div class="ic">⭐</div><h3 data-i18n="w1_t">Your rating</h3><p data-i18n="w1_p">Where your stars stand today.</p></div>
+    <div class="card"><div class="ic">💬</div><h3 data-i18n="w2_t">Total reviews</h3><p data-i18n="w2_p">How many customers have spoken.</p></div>
+    <div class="card"><div class="ic">🔇</div><h3 data-i18n="w3_t">Unanswered reviews</h3><p data-i18n="w3_p">The ones still waiting for a reply.</p></div>
+    <div class="card"><div class="ic">📈</div><h3 data-i18n="w4_t">Your reply rate</h3><p data-i18n="w4_p">Plus the first fixes we would make.</p></div>
+  </div>
+
+  <div class="formbox">
+    <form id="ckForm">
+      <h2 data-i18n="form_h">Get my free checkup</h2>
+      <p class="note" data-i18n="form_note">Honest timing: a real person checks your page by hand — not an instant robot report. Your checkup arrives by email within 1 business day.</p>
+      <label for="fBiz" data-i18n="f_biz">Business name *</label>
+      <input id="fBiz" type="text" required autocomplete="organization">
+      <label for="fCity" data-i18n="f_city">City and state *</label>
+      <input id="fCity" type="text" required autocomplete="address-level2">
+      <label for="fName" data-i18n="f_name">Your name</label>
+      <input id="fName" type="text" autocomplete="name">
+      <label for="fEmail" data-i18n="f_email">Email — your checkup goes here *</label>
+      <input id="fEmail" type="email" required autocomplete="email">
+      <label for="fPhone" data-i18n="f_phone">Phone</label>
+      <input id="fPhone" type="tel" autocomplete="tel">
+      <button class="submit" id="ckSubmit" type="submit" data-i18n="btn_send">Send My Free Checkup</button>
+    </form>
+    <div class="done" id="ckDone">
+      <div class="big">✅</div>
+      <h3 data-i18n="done_h">Request received</h3>
+      <p id="doneText" data-i18n="done_p">We will check your page and email your checkup within 1 business day.</p>
+    </div>
+  </div>
+</div></section>
+
+<div class="wrap"><div class="ctaband">
+  <h2 data-i18n="cta_h">Want every review answered for you?</h2>
+  <p data-i18n="cta_p">Our done-for-you service runs your accounts, posts every week, and answers every review within one business day.</p>
+  <a class="btn" href="/services" data-i18n="cta_btn">See the service</a>
+  <span class="phone"><span data-i18n="cta_phone_label">Call or text:</span> <a href="tel:+16145935168">+1 614-593-5168</a></span>
+</div></div>
+
+<footer><div class="wrap">
+  <div class="fl"><a href="https://www.facebook.com/profile.php?id=61596334557261" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/fivestarsboost" target="_blank" rel="noopener">Instagram</a></div>
+  <div data-i18n="foot_line">FiveStarsBoost — by VelaGrid Technologies</div>
+</div></footer>
+
+<script>
+const I18N = {
+en:{nav_home:"Home",nav_reviews:"Review Replies",nav_tech:"Technology Service",nav_industries:"Industries",nav_resources:"Resources",res_soon:"soon",ck_eyebrow:"FREE CHECKUP",ck_h1:"Free Google Review Checkup",ck_sub:"Tell us your business name — we check your Google page and email you a simple one-page checkup.",w1_t:"Your rating",w1_p:"Where your stars stand today.",w2_t:"Total reviews",w2_p:"How many customers have spoken.",w3_t:"Unanswered reviews",w3_p:"The ones still waiting for a reply.",w4_t:"Your reply rate",w4_p:"Plus the first fixes we would make.",form_h:"Get my free checkup",form_note:"Honest timing: a real person checks your page by hand — not an instant robot report. Your checkup arrives by email within 1 business day.",f_biz:"Business name *",f_city:"City and state *",f_name:"Your name",f_email:"Email — your checkup goes here *",f_phone:"Phone",btn_send:"Send My Free Checkup",done_h:"Request received",done_p:"We will check your page and email your checkup within 1 business day.",cta_h:"Want every review answered for you?",cta_p:"Our done-for-you service runs your accounts, posts every week, and answers every review within one business day.",cta_btn:"See the service",cta_phone_label:"Call or text:",foot_line:"FiveStarsBoost — by VelaGrid Technologies"},
+es:{nav_home:"Inicio",nav_reviews:"Respuestas a reseñas",nav_tech:"Servicio tecnológico",nav_industries:"Industrias",nav_resources:"Recursos",res_soon:"pronto",ck_eyebrow:"REVISIÓN GRATIS",ck_h1:"Revisión gratuita de tus reseñas de Google",ck_sub:"Dinos el nombre de tu negocio: revisamos tu página de Google y te enviamos una revisión sencilla de una página.",w1_t:"Tu calificación",w1_p:"Dónde están tus estrellas hoy.",w2_t:"Reseñas totales",w2_p:"Cuántos clientes han opinado.",w3_t:"Reseñas sin respuesta",w3_p:"Las que aún esperan una respuesta.",w4_t:"Tu tasa de respuesta",w4_p:"Y los primeros arreglos que haríamos.",form_h:"Quiero mi revisión gratis",form_note:"Tiempo honesto: una persona real revisa tu página a mano, no es un informe instantáneo de un robot. Tu revisión llega por correo en 1 día laborable.",f_biz:"Nombre del negocio *",f_city:"Ciudad y estado *",f_name:"Tu nombre",f_email:"Correo — aquí llega tu revisión *",f_phone:"Teléfono",btn_send:"Enviar mi revisión gratis",done_h:"Solicitud recibida",done_p:"Revisaremos tu página y te enviaremos la revisión por correo en 1 día laborable.",cta_h:"¿Quieres que respondamos cada reseña por ti?",cta_p:"Nuestro servicio integral administra tus cuentas, publica cada semana y responde cada reseña en un día laborable.",cta_btn:"Ver el servicio",cta_phone_label:"Llama o escribe:",foot_line:"FiveStarsBoost — por VelaGrid Technologies"},
+zh:{nav_home:"首页",nav_reviews:"评价回复",nav_tech:"技术服务",nav_industries:"服务行业",nav_resources:"资源",res_soon:"即将上线",ck_eyebrow:"免费体检",ck_h1:"免费 Google 评价体检",ck_sub:"告诉我们店名 — 我们人工查看你的 Google 页面，把一页纸体检报告发到你邮箱。",w1_t:"你的评分",w1_p:"现在的星级到哪了。",w2_t:"评价总数",w2_p:"一共有多少顾客发了声。",w3_t:"未回复的评价",w3_p:"还在等你回复的那些。",w4_t:"你的回复率",w4_p:"还有我们会先改的三件事。",form_h:"领取免费体检",form_note:"实话实说：真人人工查看，不是机器秒出报告。体检报告 1 个工作日内发到你的邮箱。",f_biz:"店名 *",f_city:"城市和州 *",f_name:"你的名字",f_email:"邮箱 — 报告发到这里 *",f_phone:"电话",btn_send:"发送我的免费体检",done_h:"已收到你的申请",done_p:"我们会查看你的页面，1 个工作日内把体检报告发到你的邮箱。",cta_h:"想让每条评价都有人替你回？",cta_p:"全托管服务：账号我们运营、每周发帖、每条评价一个工作日内回复。",cta_btn:"看看服务",cta_phone_label:"电话/短信：",foot_line:"FiveStarsBoost — 由 VelaGrid Technologies 出品"},
+vi:{nav_home:"Trang chủ",nav_reviews:"Trả lời đánh giá",nav_tech:"Dịch vụ công nghệ",nav_industries:"Ngành nghề",nav_resources:"Tài nguyên",res_soon:"sắp có",ck_eyebrow:"KIỂM TRA MIỄN PHÍ",ck_h1:"Kiểm tra đánh giá Google miễn phí",ck_sub:"Cho chúng tôi biết tên doanh nghiệp — chúng tôi kiểm tra trang Google của bạn và gửi bản kiểm tra một trang qua email.",w1_t:"Điểm đánh giá của bạn",w1_p:"Số sao của bạn hôm nay.",w2_t:"Tổng số đánh giá",w2_p:"Có bao nhiêu khách đã lên tiếng.",w3_t:"Đánh giá chưa trả lời",w3_p:"Những đánh giá còn đang chờ phản hồi.",w4_t:"Tỷ lệ trả lời của bạn",w4_p:"Và những việc đầu tiên chúng tôi sẽ sửa.",form_h:"Nhận bản kiểm tra miễn phí",form_note:"Nói thật về thời gian: người thật kiểm tra thủ công — không phải báo cáo robot tức thì. Bản kiểm tra sẽ đến email của bạn trong 1 ngày làm việc.",f_biz:"Tên doanh nghiệp *",f_city:"Thành phố và bang *",f_name:"Tên của bạn",f_email:"Email — bản kiểm tra gửi đến đây *",f_phone:"Điện thoại",btn_send:"Gửi bản kiểm tra miễn phí",done_h:"Đã nhận yêu cầu",done_p:"Chúng tôi sẽ kiểm tra trang của bạn và gửi bản kiểm tra qua email trong 1 ngày làm việc.",cta_h:"Muốn mọi đánh giá đều được trả lời thay bạn?",cta_p:"Dịch vụ trọn gói của chúng tôi vận hành tài khoản, đăng bài mỗi tuần và trả lời mọi đánh giá trong một ngày làm việc.",cta_btn:"Xem dịch vụ",cta_phone_label:"Gọi hoặc nhắn tin:",foot_line:"FiveStarsBoost — bởi VelaGrid Technologies"}
+};
+function detectLang(){const p=new URLSearchParams(location.search).get("lang");if(p&&I18N[p])return p;const s=localStorage.getItem("fsb_lang");if(s&&I18N[s])return s;const n=(navigator.language||"en").toLowerCase();if(n.startsWith("es"))return"es";if(n.startsWith("zh"))return"zh";if(n.startsWith("vi"))return"vi";return"en"}
+let LANG=detectLang();
+function applyLang(l){LANG=l;const d=I18N[l];document.documentElement.lang=l==="zh"?"zh-CN":l;document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.getAttribute("data-i18n");if(d[k])el.textContent=d[k]});document.querySelectorAll(".langtoggle button").forEach(b=>b.classList.toggle("active",b.dataset.lang===l))}
+document.querySelectorAll(".langtoggle button").forEach(b=>b.addEventListener("click",()=>{localStorage.setItem("fsb_lang",b.dataset.lang);applyLang(b.dataset.lang)}));
+applyLang(LANG);
+const FORM_URL="https://docs.google.com/forms/d/e/1FAIpQLSdoxQEd0GdOqoxSw7Xnv5N7rtQHXkumFqWy-9j6jfWjAwqn4g/formResponse";
+document.getElementById("ckForm").addEventListener("submit",async e=>{
+  e.preventDefault();
+  const btn=document.getElementById("ckSubmit");btn.disabled=true;
+  const fd=new URLSearchParams();
+  fd.append("entry.2113487654",document.getElementById("fBiz").value.trim());
+  fd.append("entry.781251916",document.getElementById("fCity").value.trim());
+  fd.append("entry.1335728262",document.getElementById("fName").value.trim());
+  fd.append("entry.183112719",document.getElementById("fEmail").value.trim());
+  fd.append("entry.1208456306",document.getElementById("fPhone").value.trim());
+  fd.append("entry.516461437",LANG);
+  try{await Promise.race([fetch(FORM_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:fd.toString()}),new Promise(r=>setTimeout(r,2500))]);}catch(_){}
+  document.getElementById("ckForm").style.display="none";
+  document.getElementById("ckDone").style.display="block";
+});
+</script>
+</body>
+</html>
