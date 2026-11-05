@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Service Agreement — FiveStarsBoost</title>
+<style>
+  :root{
+    --navy:#0A2A52; --ink:#14213D; --gold:#E3A82B; --gold-soft:#F2C14E;
+    --cream:#FFF8EC; --paper:#FFFDF8;
+    --muted:#5A6B82; --line:rgba(20,33,61,.10);
+    --shadow:0 4px 18px rgba(10,42,82,.06);
+    --shadow-lg:0 12px 32px rgba(10,42,82,.12);
+    --radius:18px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:900px;margin:0 auto;padding:0 22px}
+  header{position:sticky;top:0;z-index:50;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.14)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px;max-width:1140px;margin:0 auto;padding:0 22px}
+  .brand{display:flex;align-items:center;gap:11px;color:#fff}
+  .brand img{width:42px;height:42px;border-radius:11px;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+  .brand .bname{font-size:20px;font-weight:800;letter-spacing:.2px;line-height:1.1}
+  .brand small{display:block;font-size:10px;font-weight:600;letter-spacing:2.4px;color:rgba(255,248,236,.65);text-transform:uppercase}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;min-height:50px;border-radius:999px;font-weight:700;font-size:15px;transition:background .15s ease,opacity .15s ease;cursor:pointer;border:none;font-family:inherit}
+  .btn-gold{background:var(--gold);color:var(--ink)}
+  .btn-gold:hover:not(:disabled){background:var(--gold-soft)}
+  .btn-gold:disabled{opacity:.45;cursor:not-allowed}
+  .backlink{font-size:14.5px;font-weight:600;color:rgba(255,248,236,.85)}
+  .backlink:hover{color:#fff}
+  main{padding:38px 0 20px}
+  .pagehead{text-align:center;max-width:720px;margin:0 auto 26px}
+  .pagehead h1{font-size:clamp(26px,3.4vw,36px);font-weight:800;color:var(--navy);letter-spacing:-.4px;line-height:1.25}
+  .pagehead p{margin-top:10px;color:var(--muted);font-size:16.5px}
+  .planbox{background:linear-gradient(160deg,var(--navy),var(--ink));color:#F4EFE3;border:1px solid rgba(227,168,43,.5);border-radius:20px;padding:26px 30px;box-shadow:var(--shadow-lg);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:26px}
+  .planbox .plabel{font-size:12.5px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--gold-soft)}
+  .planbox .pname{font-size:24px;font-weight:800;margin-top:4px}
+  .planbox .pprice{font-size:36px;font-weight:800;color:#fff;line-height:1.1;text-align:right}
+  .planbox .pprice small{font-size:15px;font-weight:600;color:rgba(255,248,236,.7)}
+  .planbox .pnote{width:100%;font-size:14.5px;color:rgba(255,248,236,.8);border-top:1px solid rgba(255,255,255,.16);padding-top:12px}
+  .agreement{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:38px 42px;margin-bottom:26px}
+  .agreement h1{font-size:21px;font-weight:800;color:var(--navy);text-align:center;letter-spacing:.4px;line-height:1.4;margin-bottom:18px}
+  .agreement h2{font-size:17.5px;font-weight:800;color:var(--navy);margin:24px 0 8px}
+  .agreement p{margin:8px 0;color:#2A3A55;font-size:15.5px}
+  .agreement ul,.agreement ol{margin:6px 0 10px 22px;color:#2A3A55;font-size:15.5px}
+  .agreement li{margin:5px 0}
+  .agreement .fill{border-bottom:1.5px solid var(--gold);padding:0 4px;font-weight:600;color:var(--navy);white-space:nowrap}
+  .agreement .fill.sig{font-family:"Segoe Script","Comic Sans MS",cursive;font-size:17px}
+  .sigcard{background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:var(--radius);box-shadow:var(--shadow);padding:32px 42px;margin-bottom:10px}
+  .sigcard h2{font-size:21px;font-weight:800;color:var(--navy);margin-bottom:6px}
+  .sigcard .sub{color:var(--muted);font-size:15px;margin-bottom:20px}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px}
+  .field input[type=text],.field input[type=email]{width:100%;padding:13px 15px;font-size:16px;font-family:inherit;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
+  .field input:focus{outline:none;border-color:var(--gold)}
+  .field input.siginput{font-family:"Segoe Script","Comic Sans MS",cursive;font-size:19px}
+  .ack{display:flex;gap:11px;align-items:flex-start;background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:15px 17px;margin:4px 0 20px;cursor:pointer}
+  .ack input{width:20px;height:20px;margin-top:2px;accent-color:var(--navy);flex:0 0 auto}
+  .ack span{font-size:15px;font-weight:600;color:var(--ink)}
+  .sigcard .btn{width:100%;font-size:16.5px;min-height:56px}
+  .signote{margin-top:14px;font-size:13.5px;color:var(--muted);text-align:center}
+  footer{padding:30px 0 44px;text-align:center;color:var(--muted);font-size:14px}
+  @media(max-width:640px){.agreement,.sigcard{padding:26px 20px}.planbox .pprice{text-align:left}}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a class="brand" href="https://fivestarsboost.com">
+      <img src="../logo-a.png" alt="FiveStarsBoost logo">
+      <span class="bname">FiveStarsBoost<small>Service Agreement</small></span>
+    </a>
+    <a class="backlink" href="/services#pricing">← Back to plans</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="pagehead">
+    <h1>Review &amp; sign your service agreement</h1>
+    <p>Please read the agreement below. When you sign and continue, you'll go to secure Stripe checkout to start your subscription.</p>
+  </div>
+  <div class="planbox">
+    <div>
+      <div class="plabel">Your plan</div>
+      <div class="pname" data-planname></div>
+    </div>
+    <div class="pprice"><span data-planprice></span><small> /month</small></div>
+    <div class="pnote">Billed monthly via Stripe. Cancel anytime with 30 days' notice.</div>
+  </div>
+  <div class="agreement">
+<h1>SOCIAL MEDIA &amp; REVIEW MANAGEMENT SERVICE AGREEMENT</h1>
+<p>This Agreement is between <strong>VelaGrid Technologies</strong> ("Provider," brand name FiveStarsBoost) and the business named below ("Client"). It covers management of Client's Google Business Profile, Facebook Page, and Instagram account.</p>
+<p><strong>Client business name:</strong> <span class="fill" data-fill="biz">______________________________</span></p>
+<p><strong>Client contact (name / phone / email):</strong> <span class="fill" data-fill="contact">______________________________</span></p>
+<p><strong>Start date:</strong> <span class="fill" data-fill="date">______________</span></p>
+<h2>1. Services — what Provider delivers every month</h2>
+<ol>
+<li><strong>Setup (first month):</strong> claim/build and fully complete all three accounts — business hours, menu/services, photos, attributes, contact buttons, and links.</li>
+<li><strong>Content:</strong> 8 posts per month on Facebook &amp; Instagram and 4 posts per month on Google, from photos and information Client provides.</li>
+<li><strong>Reviews:</strong> monitor new Google and Facebook reviews Monday–Saturday; reply to every review within 1 business day, professionally and in Client's voice.</li>
+<li><strong>Negative and fake reviews:</strong> notify Client the same day about any negative review, with a suggested reply; report fake or policy-violating reviews to the platform for removal review.</li>
+<li><strong>Comments &amp; messages:</strong> answer everyday comments and common questions (hours, location, menu). Sensitive matters (Section 5) are passed to Client the same day, never answered by Provider.</li>
+<li><strong>Review growth (white-hat only):</strong> in-store QR review cards and one review-invitation post per month.</li>
+<li><strong>Monthly report (by the 5th):</strong> new reviews, rating trend, response rate, post performance, next month's plan.</li>
+</ol>
+<h2>2. Fees and payment</h2>
+<ul>
+<li>Rates follow Provider's current tier sheet: <strong>one platform $500/month; three-platform plans $799 / $999 / $1,299 / $1,599 per month depending on the service volume (posts, review coverage, reports) in the chosen tier.</strong> No separate setup fee; billing starts with the first month of service — there is no free month.</li>
+<li>The $1,299 and $1,599 tiers also include a <strong>one-page starter website</strong> for Client's business (menu, hours, address, review and ordering links), built once in the first month; routine small updates are included in the content schedule.</li>
+<li><strong>Client's agreed plan (tier) and monthly fee: <span class="planfill"></span></strong>, due on the 1st of each month for that month's service.</li>
+<li>Payment method: Card — paid through Stripe checkout on the next step.</li>
+</ul>
+<h2>3. Provider's responsibilities</h2>
+<ul>
+<li>Reply to every review within 1 business day; alert Client to negative reviews and sensitive messages the same day.</li>
+<li>Follow each platform's rules at all times. Provider will <strong>never</strong> buy, write, or post fake reviews, and never offers incentives in exchange for positive reviews.</li>
+<li>Keep Client's account access and business information confidential; use access only for the services in this Agreement.</li>
+<li>Deliver the monthly report on time; promptly inform Client of anything that affects the accounts (platform changes, account warnings).</li>
+</ul>
+<h2>4. Provider's rights</h2>
+<ul>
+<li>If payment is over 7 days late, Provider may pause posting and replies until payment is received.</li>
+<li>Provider may decline requests outside Section 1 or anything that breaks platform rules or the law (including any request for fake reviews). If Client insists on such a request, Provider may end this Agreement immediately.</li>
+<li>Provider may adjust the service list or price for a future month with 30 days' written notice; Client may cancel instead of accepting the change.</li>
+<li>Provider is not responsible for platform outages, platform policy changes, or platform decisions (including whether a reported review is removed).</li>
+</ul>
+<h2>5. Client's cooperation and responsibilities</h2>
+<ul>
+<li><strong>One-time setup cooperation:</strong> grant Provider manager access to the three accounts, and provide any verification code sent to Client's phone during setup.</li>
+<li>Provide accurate business information and materials (menu, prices, hours, photos) at setup, and notify Provider promptly when they change. Provider is not responsible for errors in information Client supplied.</li>
+<li><strong>Respond to escalations:</strong> food-safety complaints, billing disputes, catering and event inquiries, job applications, legal or media inquiries are Client's decisions. Provider passes them to Client the same day; Client responds (or tells Provider how to respond) within 1 business day.</li>
+<li>Pay the monthly fee on time.</li>
+<li>Client's business operations — food, service quality, pricing, staffing, licenses — remain entirely Client's responsibility. Provider manages online presence only and makes no decisions for the business itself.</li>
+</ul>
+<h2>6. Client's rights</h2>
+<ul>
+<li><strong>Client owns the accounts, the content, and the data — 100%.</strong> All three accounts are registered under Client's business; Provider holds manager access only, never ownership.</li>
+<li>Client may view anything Provider publishes, and may ask for any post or reply to be corrected or removed.</li>
+<li>Client approves the reply style and templates at setup, and may request changes at any time.</li>
+<li>Client receives the monthly report by the 5th, every month.</li>
+<li>Client may cancel anytime with 30 days' written notice (see Section 8) and receive a full handover.</li>
+</ul>
+<h2>7. What is NOT included</h2>
+<ul>
+<li>Advertising spend or ad campaign management (available separately, in writing).</li>
+<li>Website work beyond the one-page starter website included in the All-Three plan (online ordering systems, e-commerce, custom design) — quoted separately.</li>
+<li>On-site photography, order taking, reservation handling.</li>
+<li>Any guarantee of a specific star rating, search ranking, review removal, or sales result — platform decisions are made by Google/Meta.</li>
+</ul>
+<h2>8. Term and cancellation</h2>
+<ul>
+<li>Month-to-month from the start date. Either side may cancel with <strong>30 days' written notice</strong> (email is fine). Fees are not refunded for a month already started.</li>
+<li>On cancellation, Provider hands over all credentials and content files and removes its own access within 7 days.</li>
+</ul>
+<h2>9. Liability</h2>
+<p>Each side is responsible for its own actions. Provider's total liability under this Agreement is limited to one month's service fee (the monthly fee the Client pays under Section 2; under the founding-client price, that amount is $600). Client is responsible for the accuracy of business information published on its accounts once provided by Client.</p>
+<h2>10. Legal compliance — both sides follow U.S. law</h2>
+<p>All work under this Agreement — posts, replies, messages, and review invitations — will comply with applicable United States federal and state laws and regulations for internet marketing and online reviews, including:</p>
+<ul>
+<li><strong>Section 5 of the FTC Act</strong> (15 U.S.C. § 45): no unfair or deceptive practices; no false or misleading claims in any post or reply.</li>
+<li><strong>FTC Rule on the Use of Consumer Reviews and Testimonials</strong> (16 C.F.R. Part 465): no fake or bought reviews, no incentives tied to a positive (or negative) review, no undisclosed insider reviews, no suppressing or threatening reviewers, no bought followers or fake engagement. Violations carry civil penalties of up to $53,088 per violation.</li>
+<li><strong>FTC Endorsement Guides</strong> (16 C.F.R. Part 255): any endorsement, sponsored content, or material connection is clearly disclosed; AI-generated content is labeled where the platform requires it.</li>
+<li><strong>Consumer Review Fairness Act</strong> (15 U.S.C. § 45b): customers' honest reviews are protected; nothing in Client's own terms may bar or penalize them.</li>
+<li><strong>Copyright Act / DMCA</strong> (17 U.S.C.): only photos, videos, and music that Client owns or that are properly licensed are published; no content is copied from other businesses.</li>
+<li><strong>CAN-SPAM Act</strong> (15 U.S.C. §§ 7701 et seq.) and <strong>TCPA</strong> (47 U.S.C. § 227): any promotional email or text is sent only with the required consent, identification, and opt-out.</li>
+<li><strong>State privacy laws</strong> (e.g., CCPA/CPRA where applicable): customer information received through messages is used only to operate Client's accounts and is never sold.</li>
+<li><strong>Platform rules:</strong> Google and Meta terms and content policies are followed at all times (Google additionally bans any incentive for reviews).</li>
+</ul>
+<p>Client confirms the materials and information it provides are accurate and lawful and do not infringe anyone's rights. Neither side may ask the other to break these rules; if a law or platform rule changes, both sides will cooperate to adjust the work.</p>
+<h2>11. General</h2>
+<p>This is the whole agreement for these services. Changes must be in writing (email is fine). Governed by the laws of the State of Ohio.</p>
+<p><strong>Provider:</strong> VelaGrid Technologies — Signature: <span class="fill">accepted electronically upon Client submission</span> · Date: <span class="fill" data-fill="date"></span></p>
+<p><strong>Client:</strong> <span class="fill" data-fill="biz"></span> — Signature: <span class="fill sig" data-fill="signer"></span> · Date: <span class="fill" data-fill="date"></span></p>
+  </div>
+  <form class="sigcard sigform" novalidate>
+    <h2>Sign here</h2>
+    <p class="sub">Type your full name to sign. Your signature is recorded with the date and your selected plan before payment.</p>
+    <div class="field">
+      <label>Business name</label>
+      <input type="text" name="biz" autocomplete="organization" required>
+    </div>
+    <div class="field">
+      <label>Your full name (type to sign)</label>
+      <input type="text" name="signer" class="siginput" autocomplete="name" required>
+    </div>
+    <div class="field">
+      <label>Email</label>
+      <input type="email" name="email" autocomplete="email" required>
+    </div>
+    <label class="ack">
+      <input type="checkbox" name="ack">
+      <span>I have read this agreement and agree to its terms.</span>
+    </label>
+    <button type="submit" class="btn btn-gold" disabled>Sign &amp; Continue to Payment</button>
+    <p class="signote">Your typed name is your electronic signature. A copy of this signing record is kept by VelaGrid Technologies.</p>
+  </form>
+</main>
+
+<footer>
+  FiveStarsBoost — by VelaGrid Technologies · Questions? <a href="mailto:info@fivestarsboost.com">info@fivestarsboost.com</a>
+</footer>
+
+<script>
+/* =====================================================================
+   CONFIG — signature-record form (owned by info@fivestarsboost.com).
+   Fill in formUrl + the entry.<id> for each field from that form, then
+   this page is ready to push live. Do NOT point this at any other form.
+   ===================================================================== */
+var CONFIG = {
+  formUrl: 'REPLACE_WITH_INFO_FORM_RESPONSE_URL',
+  entries: {
+    business: 'entry.REPLACE_BUSINESS',
+    signer:   'entry.REPLACE_SIGNER',
+    email:    'entry.REPLACE_EMAIL',
+    plan:     'entry.REPLACE_PLAN',
+    ack:      'entry.REPLACE_ACK',
+    language: 'entry.REPLACE_LANGUAGE'
+  },
+  ackText: 'I have read and agree to the FiveStarsBoost Service Agreement'
+};
+
+(function(){
+  var PLANS = {
+    single:  {priceTxt:'$500',   name:'Single Platform',       rec:'Single Platform — $500/month',  stripe:'https://buy.stripe.com/9B6bJ11Akcbyb2VbkPeZ200'},
+    basic:   {priceTxt:'$799',   name:'Basic — 3 Platforms',   rec:'Basic — $799/month',            stripe:'https://buy.stripe.com/dRm6oH1Ak6Reef7agLeZ201'},
+    standard:{priceTxt:'$999',   name:'Standard — 3 Platforms',rec:'Standard — $999/month',         stripe:'https://buy.stripe.com/6oU6oH0wgb7uef7agLeZ202'},
+    plus:    {priceTxt:'$1,299', name:'Plus — 3 Platforms',    rec:'Plus — $1,299/month',           stripe:'https://buy.stripe.com/eVq7sL4MwfnKfjb88DeZ203'},
+    premium: {priceTxt:'$1,599', name:'Premium — 3 Platforms', rec:'Premium — $1,599/month',        stripe:'https://buy.stripe.com/dRm3cv4Mw4J62wp9cHeZ204'}
+  };
+  var qs = new URLSearchParams(location.search);
+  var planKey = (qs.get('plan') || 'basic').toLowerCase();
+  if (!PLANS[planKey]) planKey = 'basic';
+  var plan = PLANS[planKey];
+  // ?lang= is NOT a display language (this page is English only). It records
+  // the client's preferred language for their welcome email.
+  var langParam = (qs.get('lang') || 'en').toLowerCase();
+  if (['en','es','zh','vi'].indexOf(langParam) < 0) langParam = 'en';
+
+  document.querySelector('[data-planname]').textContent = plan.name;
+  document.querySelector('[data-planprice]').textContent = plan.priceTxt;
+  document.querySelector('.planfill').textContent = plan.name + ' — ' + plan.priceTxt + '/month';
+  var today = new Date().toLocaleDateString('en-US', {year:'numeric', month:'long', day:'numeric'});
+  document.querySelectorAll('[data-fill="date"]').forEach(function(el){ el.textContent = today; });
+
+  function setFill(kind, val){
+    document.querySelectorAll('[data-fill="' + kind + '"]').forEach(function(el){
+      el.textContent = val || '________';
+    });
+  }
+
+  var form = document.querySelector('.sigform');
+  var biz = form.querySelector('[name=biz]'),
+      signer = form.querySelector('[name=signer]'),
+      email = form.querySelector('[name=email]'),
+      ack = form.querySelector('[name=ack]'),
+      btn = form.querySelector('button[type=submit]');
+  function sync(){
+    setFill('biz', biz.value.trim());
+    setFill('signer', signer.value.trim());
+    var contact = [signer.value.trim(), email.value.trim()].filter(Boolean).join(' / ');
+    setFill('contact', contact);
+    var ok = biz.value.trim().length >= 2 &&
+             signer.value.trim().length >= 3 &&
+             /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim()) &&
+             ack.checked;
+    btn.disabled = !ok;
+  }
+  [biz, signer, email].forEach(function(i){ i.addEventListener('input', sync); });
+  ack.addEventListener('change', sync);
+  sync();
+
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    if (btn.disabled) return;
+    btn.disabled = true;
+    btn.textContent = 'Recording your signature…';
+    var E = CONFIG.entries;
+    var body = new URLSearchParams();
+    body.set(E.business, biz.value.trim());
+    body.set(E.signer, signer.value.trim());
+    body.set(E.email, email.value.trim());
+    body.set(E.plan, plan.rec);
+    body.set(E.ack, CONFIG.ackText);
+    body.set(E.language, langParam);
+    var posted = fetch(CONFIG.formUrl, {method:'POST', mode:'no-cors', body: body}).catch(function(){});
+    var waited = new Promise(function(r){ setTimeout(r, 1500); });
+    Promise.race([posted, waited]).then(function(){ location.href = plan.stripe; });
+  });
+})();
+</script>
+</body>
+</html>
