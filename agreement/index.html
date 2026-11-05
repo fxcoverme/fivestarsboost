@@ -17,6 +17,7 @@
   *{margin:0;padding:0;box-sizing:border-box}
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
   a{color:inherit;text-decoration:none}
+  html,body{overflow-x:hidden}
   .wrap{max-width:900px;margin:0 auto;padding:0 22px}
   header{position:sticky;top:0;z-index:50;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.14)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px;max-width:1140px;margin:0 auto;padding:0 22px}
@@ -41,7 +42,8 @@
   .planbox .pprice small{font-size:15px;font-weight:600;color:rgba(255,248,236,.7)}
   .planbox .pnote{width:100%;font-size:14.5px;color:rgba(255,248,236,.8);border-top:1px solid rgba(255,255,255,.16);padding-top:12px}
   .agreement{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:0;margin-bottom:26px;overflow:hidden}
-  .terms-scroll{max-height:46vh;overflow-y:auto;padding:30px 38px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+  .terms-scroll{max-height:46vh;overflow-y:auto;overflow-x:hidden;padding:30px 38px;-webkit-overflow-scrolling:touch;scrollbar-width:thin;overflow-wrap:break-word;word-break:break-word;max-width:100%}
+  .terms-scroll *{max-width:100%}
   .scrollhint{border-top:1px solid var(--line);background:#FBF3DF;color:var(--muted);font-size:14px;font-weight:700;text-align:center;padding:11px 16px}
   .scrollhint.done{color:#7A5B12;background:#F7E8BC}
   .agreement h1{font-size:21px;font-weight:800;color:var(--navy);text-align:center;letter-spacing:.4px;line-height:1.4;margin-bottom:18px}
@@ -49,7 +51,7 @@
   .agreement p{margin:8px 0;color:#2A3A55;font-size:15.5px}
   .agreement ul,.agreement ol{margin:6px 0 10px 22px;color:#2A3A55;font-size:15.5px}
   .agreement li{margin:5px 0}
-  .agreement .fill{border-bottom:1.5px solid var(--gold);padding:0 4px;font-weight:600;color:var(--navy);white-space:nowrap}
+  .agreement .fill{border-bottom:1.5px solid var(--gold);padding:0 4px;font-weight:600;color:var(--navy);overflow-wrap:anywhere}
   .agreement .fill.sig{font-family:"Segoe Script","Comic Sans MS",cursive;font-size:17px}
   .sigcard{background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:var(--radius);box-shadow:var(--shadow);padding:32px 42px;margin-bottom:10px}
   .sigcard h2{font-size:21px;font-weight:800;color:var(--navy);margin-bottom:6px}
@@ -65,7 +67,7 @@
   .sigcard .btn{width:100%;font-size:16.5px;min-height:56px}
   .signote{margin-top:14px;font-size:13.5px;color:var(--muted);text-align:center}
   footer{padding:30px 0 44px;text-align:center;color:var(--muted);font-size:14px}
-  @media(max-width:640px){.agreement,.sigcard{padding:26px 20px}.planbox .pprice{text-align:left}}
+  @media(max-width:640px){.agreement,.sigcard{padding:26px 20px}.planbox .pprice{text-align:left}.terms-scroll{padding:22px 18px}}
 </style>
 </head>
 <body>
