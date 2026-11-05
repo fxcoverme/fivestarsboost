@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Industries We Serve — FiveStarsBoost</title>
+<meta name="description" content="FiveStarsBoost review and social management for restaurants, spas, salons, dental clinics, med spas, home services and auto repair — every review answered, in your voice.">
+<meta name="robots" content="index, follow">
+<style>
+  :root{
+    --navy:#0A2A52; --ink:#14213D; --gold:#E3A82B; --gold-soft:#F2C14E;
+    --cream:#FFF8EC; --paper:#FFFDF8;
+    --muted:#5A6B82; --line:rgba(20,33,61,.10);
+    --shadow:0 4px 18px rgba(10,42,82,.06);
+    --shadow-lg:0 12px 32px rgba(10,42,82,.12);
+    --radius:18px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  html,body{overflow-x:hidden}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+  header{position:sticky;top:0;z-index:50;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.14)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px;max-width:1140px;margin:0 auto;padding:0 22px}
+  .brand{display:flex;align-items:center;gap:11px;color:#fff}
+  .brand img{width:42px;height:42px;border-radius:11px;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+  .brand .bname{font-size:20px;font-weight:800;letter-spacing:.2px;line-height:1.1;color:#fff}
+  .brand small{display:block;font-size:10px;font-weight:600;letter-spacing:2.4px;color:rgba(255,248,236,.65);text-transform:uppercase}
+  .nav-links{display:flex;gap:24px;font-size:14.5px;font-weight:600;color:rgba(255,248,236,.85);align-items:center}
+  .nav-links a:hover{color:#fff}
+  .nav-links a.current{color:var(--gold)}
+  .nav-links .soon{color:rgba(255,248,236,.45);font-weight:600}
+  .nav-links .soon em{font-style:normal;font-size:10.5px;border:1px solid rgba(255,248,236,.35);border-radius:999px;padding:1px 7px;margin-left:5px;vertical-align:2px}
+  .langtoggle{display:flex;gap:4px}
+  .langtoggle button{background:transparent;border:1px solid rgba(255,255,255,.35);color:rgba(255,248,236,.85);font-size:12px;font-weight:700;padding:5px 9px;border-radius:999px;cursor:pointer;font-family:inherit}
+  .langtoggle button.active{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;min-height:50px;border-radius:999px;font-weight:700;font-size:15px;cursor:pointer;border:none;font-family:inherit;transition:background .15s ease}
+  .btn-gold{background:var(--gold);color:var(--ink)}
+  .btn-gold:hover{background:var(--gold-soft)}
+  .btn-ghost{border:1.5px solid var(--gold);color:var(--ink);background:transparent}
+  .btn-ghost:hover{background:var(--gold)}
+  .nav .btn{padding:10px 18px;font-size:14px;min-height:44px}
+  @media(max-width:960px){.nav-links{display:none}}
+  .hero{position:relative;overflow:hidden;color:#fff;background:var(--navy)}
+  .hero-inner{position:relative;max-width:1080px;padding:76px 40px 80px;margin:0 auto}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#fff;border:1px solid rgba(255,255,255,.35);padding:9px 18px;border-radius:999px;margin-bottom:26px}
+  .hero h1{font-size:clamp(30px,4.4vw,50px);line-height:1.16;font-weight:800;letter-spacing:-.5px;max-width:16em}
+  .hero p.sub{margin:24px 0 32px;font-size:17.5px;color:rgba(255,248,236,.82);max-width:40em}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+  section{padding:64px 0}
+  .sec-head{max-width:720px;margin:0 auto 36px;text-align:center}
+  .sec-head h2{font-size:clamp(26px,3.4vw,38px);font-weight:800;color:var(--navy);letter-spacing:-.3px}
+  .sec-head p{color:var(--muted);font-size:16.5px;margin-top:10px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px 24px;display:flex;flex-direction:column;gap:10px}
+  .card .num{font-size:13px;font-weight:800;letter-spacing:2px;color:var(--gold)}
+  .card h3{font-size:21px;font-weight:800;color:var(--navy)}
+  .card p{font-size:15px;color:var(--ink);flex:1}
+  .card .src{font-size:12px;color:var(--muted)}
+  .card a{font-weight:700;color:var(--navy);font-size:14.5px}
+  .card a:hover{color:var(--gold)}
+  .detail{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:34px 36px;margin-bottom:20px;scroll-margin-top:84px}
+  .detail h3{font-size:24px;font-weight:800;color:var(--navy);margin-bottom:14px}
+  .detail ul{list-style:none;display:grid;gap:10px;margin-bottom:14px}
+  .detail li{font-size:15.5px;padding-left:22px;position:relative}
+  .detail li:before{content:"★";position:absolute;left:0;color:var(--gold);font-size:12px;top:3px}
+  .detail li .ds{color:var(--muted);font-size:12.5px;white-space:nowrap}
+  .detail .pain{font-size:16px;font-weight:600;color:var(--navy);background:#FBF3DF;border-radius:12px;padding:14px 18px;margin-bottom:18px}
+  .cta-band{background:var(--navy);border-radius:24px;padding:44px 40px;text-align:center;color:#fff}
+  .cta-band h2{font-size:clamp(24px,3.2vw,34px);font-weight:800;margin-bottom:12px}
+  .cta-band p{color:rgba(255,248,236,.82);max-width:36em;margin:0 auto 24px;font-size:16.5px}
+  .cta-band .phone{margin-top:16px;font-size:15px;color:rgba(255,248,236,.85)}
+  .cta-band .phone a{color:var(--gold);font-weight:700}
+  footer{padding:38px 0 46px;text-align:center;color:var(--muted);font-size:14px}
+  footer .fbrand{font-weight:800;color:var(--navy);font-size:16px;margin-bottom:6px}
+  footer a.flink{color:var(--navy);font-weight:700}
+  @media(max-width:639px){
+    .hero-inner{padding:52px 22px 56px}
+    section{padding:46px 0}
+    .detail{padding:26px 20px}
+    .cta-band{padding:34px 22px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="/">
+      <img src="../logo-a.png" alt="FiveStarsBoost logo">
+      <span class="bname">FiveStarsBoost<small data-i18n="brand_small"></small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="/" data-i18n="nav_home"></a>
+      <a href="/" data-i18n="nav_reviews"></a>
+      <a href="/services" data-i18n="nav_tech"></a>
+      <a href="/industries" class="current" data-i18n="nav_industries"></a>
+      <span class="soon"><span data-i18n="nav_resources"></span><em data-i18n="soon"></em></span>
+    </nav>
+    <div style="display:flex;gap:12px;align-items:center">
+      <div class="langtoggle">
+        <button type="button" data-lang="en" class="active">EN</button>
+        <button type="button" data-lang="es">ES</button>
+        <button type="button" data-lang="zh">ZH</button>
+        <button type="button" data-lang="vi">VI</button>
+      </div>
+      <a class="btn btn-gold" href="mailto:info@fivestarsboost.com?subject=Free%20Review%20Check%20Request" data-i18n="header_cta"></a>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow" data-i18n="eyebrow"></span>
+    <h1 data-i18n="hero_h1"></h1>
+    <p class="sub" data-i18n="hero_sub"></p>
+    <div class="hero-ctas">
+      <a class="btn btn-gold" href="/services" data-i18n="cta_plans"></a>
+      <a class="btn btn-ghost" style="color:#FFF8EC" href="/" data-i18n="cta_tool"></a>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 data-i18n="cards_h2"></h2>
+      <p data-i18n="cards_sub"></p>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <div class="num">01</div>
+        <h3 data-i18n="i1_name"></h3>
+        <p data-i18n="i1_line"></p>
+        <div class="src" data-i18n="i1_src"></div>
+        <a href="#restaurants"><span data-i18n="detail_link"></span> ↓</a>
+      </article>
+      <article class="card">
+        <div class="num">02</div>
+        <h3 data-i18n="i2_name"></h3>
+        <p data-i18n="i2_line"></p>
+        <div class="src" data-i18n="i2_src"></div>
+        <a href="#spa"><span data-i18n="detail_link"></span> ↓</a>
+      </article>
+      <article class="card">
+        <div class="num">03</div>
+        <h3 data-i18n="i3_name"></h3>
+        <p data-i18n="i3_line"></p>
+        <div class="src" data-i18n="i3_src"></div>
+        <a href="#salons"><span data-i18n="detail_link"></span> ↓</a>
+      </article>
+      <article class="card">
+        <div class="num">04</div>
+        <h3 data-i18n="i4_name"></h3>
+        <p data-i18n="i4_line"></p>
+        <div class="src" data-i18n="i4_src"></div>
+        <a href="#dental"><span data-i18n="detail_link"></span> ↓</a>
+      </article>
+      <article class="card">
+        <div class="num">05</div>
+        <h3 data-i18n="i5_name"></h3>
+        <p data-i18n="i5_line"></p>
+        <div class="src" data-i18n="i5_src"></div>
+        <a href="#medspa"><span data-i18n="detail_link"></span> ↓</a>
+      </article>
+      <article class="card">
+        <div class="num">06</div>
+        <h3 data-i18n="i6_name"></h3>
+        <p data-i18n="i6_line"></p>
+        <div class="src" data-i18n="i6_src"></div>
+        <a href="#homeservices"><span data-i18n="detail_link"></span> ↓</a>
+      </article>
+      <article class="card">
+        <div class="num">07</div>
+        <h3 data-i18n="i7_name"></h3>
+        <p data-i18n="i7_line"></p>
+        <div class="src" data-i18n="i7_src"></div>
+        <a href="#autorepair"><span data-i18n="detail_link"></span> ↓</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+      <article class="detail" id="restaurants">
+        <h3 data-i18n="i1_name"></h3>
+        <ul>
+          <li><span data-i18n="i1_d1"></span> <span class="ds" data-i18n="i1_d1s"></span></li>
+          <li><span data-i18n="i1_d2"></span> <span class="ds" data-i18n="i1_d2s"></span></li>
+          <li><span data-i18n="i1_d3"></span> <span class="ds" data-i18n="i1_d3s"></span></li>
+        </ul>
+        <p class="pain" data-i18n="i1_pain"></p>
+        <a class="btn btn-gold" href="/services" data-i18n="detail_cta"></a>
+      </article>
+      <article class="detail" id="spa">
+        <h3 data-i18n="i2_name"></h3>
+        <ul>
+          <li><span data-i18n="i2_d1"></span> <span class="ds" data-i18n="i2_d1s"></span></li>
+          <li><span data-i18n="i2_d2"></span> <span class="ds" data-i18n="i2_d2s"></span></li>
+          <li><span data-i18n="i2_d3"></span> <span class="ds" data-i18n="i2_d3s"></span></li>
+        </ul>
+        <p class="pain" data-i18n="i2_pain"></p>
+        <a class="btn btn-gold" href="/services" data-i18n="detail_cta"></a>
+      </article>
+      <article class="detail" id="salons">
+        <h3 data-i18n="i3_name"></h3>
+        <ul>
+          <li><span data-i18n="i3_d1"></span> <span class="ds" data-i18n="i3_d1s"></span></li>
+          <li><span data-i18n="i3_d2"></span> <span class="ds" data-i18n="i3_d2s"></span></li>
+          <li><span data-i18n="i3_d3"></span> <span class="ds" data-i18n="i3_d3s"></span></li>
+        </ul>
+        <p class="pain" data-i18n="i3_pain"></p>
+        <a class="btn btn-gold" href="/services" data-i18n="detail_cta"></a>
+      </article>
+      <article class="detail" id="dental">
+        <h3 data-i18n="i4_name"></h3>
+        <ul>
+          <li><span data-i18n="i4_d1"></span> <span class="ds" data-i18n="i4_d1s"></span></li>
+          <li><span data-i18n="i4_d2"></span> <span class="ds" data-i18n="i4_d2s"></span></li>
+          <li><span data-i18n="i4_d3"></span> <span class="ds" data-i18n="i4_d3s"></span></li>
+        </ul>
+        <p class="pain" data-i18n="i4_pain"></p>
+        <a class="btn btn-gold" href="/services" data-i18n="detail_cta"></a>
+      </article>
+      <article class="detail" id="medspa">
+        <h3 data-i18n="i5_name"></h3>
+        <ul>
+          <li><span data-i18n="i5_d1"></span> <span class="ds" data-i18n="i5_d1s"></span></li>
+          <li><span data-i18n="i5_d2"></span> <span class="ds" data-i18n="i5_d2s"></span></li>
+          <li><span data-i18n="i5_d3"></span> <span class="ds" data-i18n="i5_d3s"></span></li>
+        </ul>
+        <p class="pain" data-i18n="i5_pain"></p>
+        <a class="btn btn-gold" href="/services" data-i18n="detail_cta"></a>
+      </article>
+      <article class="detail" id="homeservices">
+        <h3 data-i18n="i6_name"></h3>
+        <ul>
+          <li><span data-i18n="i6_d1"></span> <span class="ds" data-i18n="i6_d1s"></span></li>
+          <li><span data-i18n="i6_d2"></span> <span class="ds" data-i18n="i6_d2s"></span></li>
+          <li><span data-i18n="i6_d3"></span> <span class="ds" data-i18n="i6_d3s"></span></li>
+        </ul>
+        <p class="pain" data-i18n="i6_pain"></p>
+        <a class="btn btn-gold" href="/services" data-i18n="detail_cta"></a>
+      </article>
+      <article class="detail" id="autorepair">
+        <h3 data-i18n="i7_name"></h3>
+        <ul>
+          <li><span data-i18n="i7_d1"></span> <span class="ds" data-i18n="i7_d1s"></span></li>
+          <li><span data-i18n="i7_d2"></span> <span class="ds" data-i18n="i7_d2s"></span></li>
+          <li><span data-i18n="i7_d3"></span> <span class="ds" data-i18n="i7_d3s"></span></li>
+        </ul>
+        <p class="pain" data-i18n="i7_pain"></p>
+        <a class="btn btn-gold" href="/services" data-i18n="detail_cta"></a>
+      </article>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="cta-band">
+      <h2 data-i18n="cta_h"></h2>
+      <p data-i18n="cta_p"></p>
+      <a class="btn btn-gold" href="/services" data-i18n="cta_btn"></a>
+      <div class="phone"><span data-i18n="cta_phone_label"></span> <a href="tel:+16145935168">+1 614-593-5168</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand">FiveStarsBoost — by VelaGrid Technologies</div>
+    <div>© 2026 FiveStarsBoost · A VelaGrid Technologies brand · <a class="flink" href="https://fivestarsboost.com" data-i18n="foot_tool"></a></div>
+    <div style="margin-top:8px"><a class="flink" href="https://www.facebook.com/profile.php?id=61596334557261" target="_blank" rel="noopener">Facebook</a> · <a class="flink" href="https://www.instagram.com/fivestarsboost" target="_blank" rel="noopener">Instagram</a></div>
+  </div>
+</footer>
+
+<script>
+var I18N = {
+ "en": {
+  "page_title": "Industries We Serve — FiveStarsBoost",
+  "page_desc": "FiveStarsBoost review and social management for restaurants, spas, salons, dental clinics, med spas, home services and auto repair — every review answered, in your voice.",
+  "brand_small": "Industries",
+  "nav_home": "Home",
+  "nav_reviews": "Review Replies",
+  "nav_tech": "Technology Service",
+  "nav_industries": "Industries",
+  "nav_resources": "Resources",
+  "soon": "soon",
+  "header_cta": "Get a Free Review Check",
+  "eyebrow": "FIVESTARSBOOST · INDUSTRIES WE SERVE",
+  "hero_h1": "Your customers read reviews first. In every industry.",
+  "hero_sub": "Whatever you run — a kitchen, a clinic, a crew — the decision happens on your review page before it happens at your door. Pick your industry and see what changes when every review gets an answer.",
+  "cta_plans": "See the Plans",
+  "cta_tool": "Try the Free Tool First",
+  "cards_h2": "Industries we serve",
+  "cards_sub": "Seven industries, one pattern: the businesses that answer win the next customer.",
+  "detail_link": "See the numbers",
+  "detail_cta": "See done-for-you plans",
+  "cta_h": "We run it all for you.",
+  "cta_p": "Accounts built, posts every week, every review answered within one business day — pick a plan and we start this week.",
+  "cta_btn": "See the Plans",
+  "cta_phone_label": "Call or text:",
+  "foot_tool": "Free review reply tool",
+  "i1_name": "Restaurants",
+  "i1_line": "42% of customers avoid a business that never replies to reviews — and only 9.8% of 1-star reviews ever get an answer.",
+  "i1_src": "BrightLocal 2026 · UENI",
+  "i1_d1": "An independent restaurant gains about 5–9% more revenue for each extra star.",
+  "i1_d1s": "Harvard Business School",
+  "i1_d2": "Restaurants that reply to every review convert 16.4% better than those that reply to none.",
+  "i1_d2s": "ReplyOnTheFly 2026 (vendor study)",
+  "i1_d3": "Diners check reviews more than in any other industry — the top map results carry a median of 451 reviews.",
+  "i1_d3s": "Local Falcon",
+  "i1_pain": "The guests are out there. What's missing is someone catching every review — a bad one left hanging talks the next table out of coming.",
+  "i2_name": "Massage & Spa",
+  "i2_line": "Half of personal-care businesses have fewer than 20 reviews — and 47% of customers skip any business under 20.",
+  "i2_src": "BrightLocal SMB Survey · BrightLocal 2026",
+  "i2_d1": "The average spa visit is worth $110 — keeping a few more clients a month is real money.",
+  "i2_d1s": "ISPA 2025",
+  "i2_d2": "89% of customers expect the business to reply to its reviews.",
+  "i2_d2s": "BrightLocal 2026",
+  "i2_d3": "Replying to every review vs. replying to none: +16.4% conversion.",
+  "i2_d3s": "ReplyOnTheFly 2026 (vendor study)",
+  "i2_pain": "Your hands are with the client all day; the phone sits at the front desk. Reviews pile up unanswered — and the shop that answers gets the booking.",
+  "i3_name": "Beauty & Nail Salons",
+  "i3_line": "73% of salons ask for reviews — but only 57% ever reply. The asking works. The follow-through is what's missing.",
+  "i3_src": "BrightLocal SMB Survey",
+  "i3_d1": "Businesses that reply to their reviews earn 12% more new reviews on average.",
+  "i3_d1s": "BrightLocal",
+  "i3_d2": "68% of customers require at least 4 stars before they book.",
+  "i3_d2s": "BrightLocal 2026",
+  "i3_d3": "Half of personal-care businesses sit under 20 reviews — below the line where 47% of customers stop looking.",
+  "i3_d3s": "BrightLocal",
+  "i3_pain": "The photos get posted and the reviews get asked for. The last step — answering — is the one new clients actually judge you on.",
+  "i4_name": "Dental",
+  "i4_line": "75% of patients won't book a dentist rated under 4 stars — and top clinics hold four times the reviews of the average practice.",
+  "i4_src": "rater8 2026 · Local Falcon",
+  "i4_d1": "About 77% of patients start the search for a new dentist with online reviews.",
+  "i4_d1s": "rater8 2026",
+  "i4_d2": "The average practice has 81 Google reviews. The map leaders have 346.",
+  "i4_d2s": "Local Falcon",
+  "i4_d3": "79% of medical practices ask for reviews — the most of any industry — but reply to only 58%.",
+  "i4_d3s": "BrightLocal SMB Survey",
+  "i4_pain": "Clinics know reviews matter — they ask more than anyone. The front desk just has no time to answer every one, carefully and compliantly.",
+  "i5_name": "Med Spas",
+  "i5_line": "A first med spa visit is worth $527 — and clients decide from three strangers' reviews, and whether you answered them.",
+  "i5_src": "AmSpa 2024",
+  "i5_d1": "81% of med spas are single-location — the owner is often the injector, with no marketing staff.",
+  "i5_d1s": "AmSpa 2024",
+  "i5_d2": "68% of customers require at least 4 stars; 42% avoid businesses that never reply.",
+  "i5_d2s": "BrightLocal 2026",
+  "i5_d3": "High-ticket, self-pay treatments mean a long, careful look at reviews before anyone books.",
+  "i5_d3s": "Industry consensus",
+  "i5_pain": "One new client is worth $527 on day one, and thousands over time. She decides from your review page — including the answers you didn't write.",
+  "i6_name": "Home Services",
+  "i6_line": "91% of homeowners read reviews before hiring a contractor — while 54% of trades businesses have fewer than 20.",
+  "i6_src": "BrightLocal 2025 · BrightLocal SMB Survey",
+  "i6_d1": "Contractors already pay $50–230 per lead. Reviews keep the customers who found you for free.",
+  "i6_d1s": "LocaliQ 2026",
+  "i6_d2": "Only 9% of trades businesses have 50+ reviews; the map top-3 median for plumbers is 215.",
+  "i6_d2s": "BrightLocal SMB · Local Falcon",
+  "i6_d3": "An average HVAC job is worth $2,434 — one saved job a month pays for a year of this.",
+  "i6_d3s": "Data-Driven Trades 2026",
+  "i6_pain": "He spends thousands on leads, then lets an unanswered bad review hand the customer at his door to the shop next door.",
+  "i7_name": "Auto Repair",
+  "i7_line": "The average shop has 40 reviews. The shops in Google's top 3 have 188.",
+  "i7_src": "Local Falcon",
+  "i7_d1": "Auto repair has the highest self-reported reply rate of any industry — 63%. The leaders are already doing it.",
+  "i7_d1s": "BrightLocal SMB Survey",
+  "i7_d2": "42% of customers avoid a business that never replies to reviews.",
+  "i7_d2s": "BrightLocal 2026",
+  "i7_d3": "The average repair order runs $500–749 — a few extra jobs a month is thousands a year.",
+  "i7_d3s": "PartsTech 2025",
+  "i7_pain": "Drivers don't fear the repair — they fear being ripped off. Answered reviews are the cheapest honesty advertising there is."
+ },
+ "es": {
+  "page_title": "Industrias que atendemos — FiveStarsBoost",
+  "page_desc": "Gestión de reseñas y redes sociales de FiveStarsBoost para restaurantes, spas, salones, clínicas dentales, med spas, servicios del hogar y talleres mecánicos: cada reseña respondida, con tu voz.",
+  "brand_small": "Industrias",
+  "nav_home": "Inicio",
+  "nav_reviews": "Respuestas a reseñas",
+  "nav_tech": "Servicio tecnológico",
+  "nav_industries": "Industrias",
+  "nav_resources": "Recursos",
+  "soon": "pronto",
+  "header_cta": "Pide una revisión gratuita",
+  "eyebrow": "FIVESTARSBOOST · INDUSTRIAS QUE ATENDEMOS",
+  "hero_h1": "Tus clientes leen reseñas primero. En todas las industrias.",
+  "hero_sub": "Tengas una cocina, una clínica o un equipo de trabajo, la decisión se toma en tu página de reseñas antes que en tu puerta. Elige tu industria y mira lo que cambia cuando cada reseña recibe respuesta.",
+  "cta_plans": "Ver los planes",
+  "cta_tool": "Probar la herramienta gratuita",
+  "cards_h2": "Industrias que atendemos",
+  "cards_sub": "Siete industrias, un mismo patrón: los negocios que responden se quedan con el siguiente cliente.",
+  "detail_link": "Ver los números",
+  "detail_cta": "Ver los planes completos",
+  "cta_h": "Nosotros lo operamos todo por ti.",
+  "cta_p": "Cuentas creadas, publicaciones cada semana, cada reseña respondida en un día laborable: elige un plan y empezamos esta semana.",
+  "cta_btn": "Ver los planes",
+  "cta_phone_label": "Llama o escribe:",
+  "foot_tool": "Herramienta gratuita de respuestas",
+  "i1_name": "Restaurantes",
+  "i1_line": "El 42% de los clientes evita un negocio que nunca responde reseñas, y solo el 9,8% de las reseñas de 1 estrella recibe respuesta.",
+  "i1_src": "BrightLocal 2026 · UENI",
+  "i1_d1": "Un restaurante independiente gana alrededor de un 5–9% más de ingresos por cada estrella extra.",
+  "i1_d1s": "Harvard Business School",
+  "i1_d2": "Los restaurantes que responden todas las reseñas convierten un 16,4% mejor que los que no responden ninguna.",
+  "i1_d2s": "ReplyOnTheFly 2026 (estudio del proveedor)",
+  "i1_d3": "Los comensales revisan reseñas más que en cualquier otra industria: los primeros resultados del mapa tienen una mediana de 451 reseñas.",
+  "i1_d3s": "Local Falcon",
+  "i1_pain": "Los clientes están ahí fuera. Lo que falta es alguien que atienda cada reseña: una mala reseña sin respuesta convence a la siguiente mesa de no venir.",
+  "i2_name": "Masajes y spa",
+  "i2_line": "La mitad de los negocios de cuidado personal tiene menos de 20 reseñas, y el 47% de los clientes descarta cualquier negocio con menos de 20.",
+  "i2_src": "BrightLocal SMB Survey · BrightLocal 2026",
+  "i2_d1": "La visita promedio a un spa vale $110: retener unos pocos clientes más al mes es dinero real.",
+  "i2_d1s": "ISPA 2025",
+  "i2_d2": "El 89% de los clientes espera que el negocio responda a sus reseñas.",
+  "i2_d2s": "BrightLocal 2026",
+  "i2_d3": "Responder todas las reseñas frente a no responder ninguna: +16,4% de conversión.",
+  "i2_d3s": "ReplyOnTheFly 2026 (estudio del proveedor)",
+  "i2_pain": "Tus manos están con el cliente todo el día; el teléfono queda en recepción. Las reseñas se acumulan sin respuesta, y la reserva se la lleva el local que sí responde.",
+  "i3_name": "Salones de belleza y uñas",
+  "i3_line": "El 73% de los salones pide reseñas, pero solo el 57% responde. Pedir funciona; lo que falta es el seguimiento.",
+  "i3_src": "BrightLocal SMB Survey",
+  "i3_d1": "Los negocios que responden sus reseñas reciben en promedio un 12% más de reseñas nuevas.",
+  "i3_d1s": "BrightLocal",
+  "i3_d2": "El 68% de los clientes exige al menos 4 estrellas antes de reservar.",
+  "i3_d2s": "BrightLocal 2026",
+  "i3_d3": "La mitad de los negocios de cuidado personal está por debajo de 20 reseñas, el punto donde el 47% de los clientes deja de mirar.",
+  "i3_d3s": "BrightLocal",
+  "i3_pain": "Las fotos se publican y las reseñas se piden. El último paso, responder, es justo el que los clientes nuevos juzgan.",
+  "i4_name": "Dental",
+  "i4_line": "El 75% de los pacientes no reservará con un dentista de menos de 4 estrellas, y las clínicas líderes tienen cuatro veces más reseñas que la consulta promedio.",
+  "i4_src": "rater8 2026 · Local Falcon",
+  "i4_d1": "Alrededor del 77% de los pacientes empieza la búsqueda de un dentista nuevo con las reseñas en línea.",
+  "i4_d1s": "rater8 2026",
+  "i4_d2": "La consulta promedio tiene 81 reseñas en Google. Las líderes del mapa tienen 346.",
+  "i4_d2s": "Local Falcon",
+  "i4_d3": "El 79% de las consultas médicas pide reseñas, más que cualquier otra industria, pero responde solo el 58%.",
+  "i4_d3s": "BrightLocal SMB Survey",
+  "i4_pain": "Las clínicas saben que las reseñas importan: piden más que nadie. Recepción simplemente no tiene tiempo de responder cada una con cuidado y cumpliendo las normas.",
+  "i5_name": "Med Spas",
+  "i5_line": "La primera visita a un med spa vale $527, y los clientes deciden por las reseñas de tres desconocidos y por si respondiste.",
+  "i5_src": "AmSpa 2024",
+  "i5_d1": "El 81% de los med spas tiene una sola sede: la dueña suele ser quien inyecta, sin personal de marketing.",
+  "i5_d1s": "AmSpa 2024",
+  "i5_d2": "El 68% de los clientes exige al menos 4 estrellas; el 42% evita negocios que nunca responden.",
+  "i5_d2s": "BrightLocal 2026",
+  "i5_d3": "Los tratamientos caros y de pago directo hacen que la gente lea las reseñas con calma antes de reservar.",
+  "i5_d3s": "Consenso de la industria",
+  "i5_pain": "Una clienta nueva vale $527 el primer día y miles con el tiempo. Decide desde tu página de reseñas, incluidas las respuestas que no escribiste.",
+  "i6_name": "Servicios del hogar",
+  "i6_line": "El 91% de los propietarios lee reseñas antes de contratar, mientras el 54% de los negocios de oficios tiene menos de 20.",
+  "i6_src": "BrightLocal 2025 · BrightLocal SMB Survey",
+  "i6_d1": "Los contratistas ya pagan $50–230 por contacto. Las reseñas retienen a los clientes que te encontraron gratis.",
+  "i6_d1s": "LocaliQ 2026",
+  "i6_d2": "Solo el 9% de los oficios tiene más de 50 reseñas; la mediana del top 3 del mapa en fontanería es 215.",
+  "i6_d2s": "BrightLocal SMB · Local Falcon",
+  "i6_d3": "Un trabajo promedio de climatización vale $2,434: un trabajo salvado al mes paga un año de este servicio.",
+  "i6_d3s": "Data-Driven Trades 2026",
+  "i6_pain": "Gasta miles en contactos y luego deja que una mala reseña sin respuesta entregue al cliente de su puerta al taller de al lado.",
+  "i7_name": "Talleres mecánicos",
+  "i7_line": "El taller promedio tiene 40 reseñas. Los que están en el top 3 de Google tienen 188.",
+  "i7_src": "Local Falcon",
+  "i7_d1": "Los talleres tienen la tasa de respuesta autorreportada más alta de todas las industrias: 63%. Los líderes ya lo están haciendo.",
+  "i7_d1s": "BrightLocal SMB Survey",
+  "i7_d2": "El 42% de los clientes evita un negocio que nunca responde reseñas.",
+  "i7_d2s": "BrightLocal 2026",
+  "i7_d3": "La orden de reparación promedio es de $500–749: unos trabajos extra al mes son miles al año.",
+  "i7_d3s": "PartsTech 2025",
+  "i7_pain": "Los conductores no temen la reparación: temen que les cobren de más. Responder reseñas es la publicidad de honestidad más barata que existe."
+ },
+ "zh": {
+  "page_title": "我们服务的行业 — FiveStarsBoost",
+  "page_desc": "FiveStarsBoost 为餐馆、按摩水疗、美容美甲、牙科、医美、家政维修和汽修提供评价与社媒代运营：每条评价都有回复，用你自己的声音。",
+  "brand_small": "服务行业",
+  "nav_home": "首页",
+  "nav_reviews": "评价回复",
+  "nav_tech": "技术服务",
+  "nav_industries": "服务行业",
+  "nav_resources": "资源",
+  "soon": "即将上线",
+  "header_cta": "免费查一次评价",
+  "eyebrow": "FIVESTARSBOOST · 服务行业",
+  "hero_h1": "每个行业，顾客都是先看评价再上门。",
+  "hero_sub": "不管你开的是餐馆、诊所还是维修队，顾客的决定先发生在你的评价页上，然后才发生在你店门口。选你的行业，看看每条评价都有人回，会有什么不同。",
+  "cta_plans": "看套餐",
+  "cta_tool": "先试免费工具",
+  "cards_h2": "我们服务的行业",
+  "cards_sub": "七个行业，同一个规律：会回复的店，赢得下一位顾客。",
+  "detail_link": "看数字",
+  "detail_cta": "看全包套餐",
+  "cta_h": "剩下的都交给我们。",
+  "cta_p": "账号我们建、内容每周发、每条评价一个工作日内回复——选个套餐，这周就开始。",
+  "cta_btn": "看套餐",
+  "cta_phone_label": "电话/短信：",
+  "foot_tool": "免费评价回复工具",
+  "i1_name": "餐馆",
+  "i1_line": "42% 的顾客会避开从不回复评价的店；而 1 星差评里，只有 9.8% 能等到一句回复。",
+  "i1_src": "BrightLocal 2026 · UENI",
+  "i1_d1": "独立餐馆每多 1 星，收入约多 5–9%。",
+  "i1_d1s": "哈佛商学院",
+  "i1_d2": "每条评价都回的餐馆，转化率比一条不回的高 16.4%。",
+  "i1_d2s": "ReplyOnTheFly 2026（工具商研究）",
+  "i1_d3": "餐饮是顾客看评价最多的行业，地图前排的店评价数中位数是 451 条。",
+  "i1_d3s": "Local Falcon",
+  "i1_pain": "客流不缺，缺的是有人替他把每一条评价都接住——差评晾在那里，每天都在劝退下一桌客人。",
+  "i2_name": "按摩 / 水疗",
+  "i2_line": "一半的个人护理店评价少于 20 条；而 47% 的顾客直接跳过少于 20 条的店。",
+  "i2_src": "BrightLocal SMB 调查 · BrightLocal 2026",
+  "i2_d1": "spa 单次消费平均 $110——每个月多留住几位客人，就是几百美元实收。",
+  "i2_d1s": "ISPA 2025",
+  "i2_d2": "89% 的顾客期望商家回复评价。",
+  "i2_d2s": "BrightLocal 2026",
+  "i2_d3": "每条都回 vs 一条不回：转化率高 16.4%。",
+  "i2_d3s": "ReplyOnTheFly 2026（工具商研究）",
+  "i2_pain": "老板的手在客人身上，手机在柜台里——评价一整天没人管，客人就被回了评价的那家抢走。",
+  "i3_name": "美容美甲",
+  "i3_line": "73% 的美业店会主动求评，但只有 57% 会回复。求评有用，缺的是最后一步。",
+  "i3_src": "BrightLocal SMB 调查",
+  "i3_d1": "会回复评价的商家，平均多获得 12% 的新评价。",
+  "i3_d1s": "BrightLocal",
+  "i3_d2": "68% 的顾客要求至少 4 星才肯预约。",
+  "i3_d2s": "BrightLocal 2026",
+  "i3_d3": "一半的个人护理店评价少于 20 条——正好踩在 47% 顾客直接跳过的线下。",
+  "i3_d3s": "BrightLocal",
+  "i3_pain": "作品照发得勤，评价也求了，只差最后一步「接住」——而那一步恰恰是新客下单前看的。",
+  "i4_name": "牙科",
+  "i4_line": "75% 的患者不会预约低于 4 星的牙医；头部诊所的评价数是普通诊所的 4 倍。",
+  "i4_src": "rater8 2026 · Local Falcon",
+  "i4_d1": "约 77% 的患者找新牙医的第一步就是看在线评价。",
+  "i4_d1s": "rater8 2026",
+  "i4_d2": "普通诊所 Google 评价中位数 81 条，地图头部是 346 条。",
+  "i4_d2s": "Local Falcon",
+  "i4_d3": "79% 的医疗机构会求评（各行业最高），但回复率只有 58%。",
+  "i4_d3s": "BrightLocal SMB 调查",
+  "i4_pain": "诊所都知道评价重要——求评全行业最积极——但前台根本没时间逐条合规地回。",
+  "i5_name": "医美",
+  "i5_line": "医美新客第一次消费平均 $527——她来不来，先看三条陌生人评价和你回没回。",
+  "i5_src": "AmSpa 2024",
+  "i5_d1": "81% 的医美是单店经营，老板本人往往就是注射师，没有专门的市场人员。",
+  "i5_d1s": "AmSpa 2024",
+  "i5_d2": "68% 的顾客要求至少 4 星；42% 避开从不回复的店。",
+  "i5_d2s": "BrightLocal 2026",
+  "i5_d3": "高价自费项目决策链长，顾客会反复比对评价才下单。",
+  "i5_d3s": "行业共识",
+  "i5_pain": "一个新客值 $527、终身值几千美元，而她决定来不来，只看你的评价页——包括你没写的那几条回复。",
+  "i6_name": "家政 / 维修服务",
+  "i6_line": "91% 的房主雇人前先看评价；而 54% 的维修商家评价少于 20 条。",
+  "i6_src": "BrightLocal 2025 · BrightLocal SMB 调查",
+  "i6_d1": "承包商已经在为每条线索付 $50–230。评价管理接住的是免费找到你的那些顾客。",
+  "i6_d1s": "LocaliQ 2026",
+  "i6_d2": "只有 9% 的维修商家评价超过 50 条；水管工进地图前三的评价中位数是 215 条。",
+  "i6_d2s": "BrightLocal SMB · Local Falcon",
+  "i6_d3": "HVAC 平均客单 $2,434——每月少丢一单，就够付一年的服务。",
+  "i6_d3s": "Data-Driven Trades 2026",
+  "i6_pain": "他每月花几千美元买线索，却让没人回的差评把送到门口的客户推给隔壁家。",
+  "i7_name": "汽修",
+  "i7_line": "普通修理厂评价中位数 40 条；进 Google 前三的店有 188 条。",
+  "i7_src": "Local Falcon",
+  "i7_d1": "汽修是自报回复率最高的行业（63%）——头部店已经在做了。",
+  "i7_d1s": "BrightLocal SMB 调查",
+  "i7_d2": "42% 的顾客避开从不回复评价的店。",
+  "i7_d2s": "BrightLocal 2026",
+  "i7_d3": "平均工单 $500–749——每月多接几单，就是几千美元。",
+  "i7_d3s": "PartsTech 2025",
+  "i7_pain": "车主怕的不是修车，是被坑——回复评价就是最便宜的诚信广告。"
+ },
+ "vi": {
+  "page_title": "Các ngành chúng tôi phục vụ — FiveStarsBoost",
+  "page_desc": "FiveStarsBoost quản lý đánh giá và mạng xã hội cho nhà hàng, massage & spa, salon làm đẹp & nail, nha khoa, med spa, dịch vụ tại nhà và sửa chữa ô tô — mọi đánh giá đều được trả lời, bằng giọng văn của bạn.",
+  "brand_small": "Ngành nghề",
+  "nav_home": "Trang chủ",
+  "nav_reviews": "Trả lời đánh giá",
+  "nav_tech": "Dịch vụ công nghệ",
+  "nav_industries": "Ngành nghề",
+  "nav_resources": "Tài nguyên",
+  "soon": "sắp có",
+  "header_cta": "Nhận kiểm tra đánh giá miễn phí",
+  "eyebrow": "FIVESTARSBOOST · CÁC NGÀNH CHÚNG TÔI PHỤC VỤ",
+  "hero_h1": "Khách hàng đọc đánh giá trước. Ở mọi ngành nghề.",
+  "hero_sub": "Dù bạn vận hành một nhà bếp, một phòng khám hay một đội thợ, quyết định diễn ra trên trang đánh giá trước khi diễn ra tại cửa hàng. Chọn ngành của bạn và xem điều gì thay đổi khi mọi đánh giá đều được trả lời.",
+  "cta_plans": "Xem các gói",
+  "cta_tool": "Dùng thử công cụ miễn phí trước",
+  "cards_h2": "Các ngành chúng tôi phục vụ",
+  "cards_sub": "Bảy ngành nghề, một quy luật: doanh nghiệp nào trả lời, doanh nghiệp đó thắng khách hàng tiếp theo.",
+  "detail_link": "Xem số liệu",
+  "detail_cta": "Xem các gói trọn gói",
+  "cta_h": "Chúng tôi vận hành tất cả cho bạn.",
+  "cta_p": "Tài khoản được tạo sẵn, bài đăng mỗi tuần, mọi đánh giá được trả lời trong một ngày làm việc — chọn một gói và chúng tôi bắt đầu ngay tuần này.",
+  "cta_btn": "Xem các gói",
+  "cta_phone_label": "Gọi hoặc nhắn tin:",
+  "foot_tool": "Công cụ trả lời đánh giá miễn phí",
+  "i1_name": "Nhà hàng",
+  "i1_line": "42% khách hàng tránh những doanh nghiệp không bao giờ trả lời đánh giá — và chỉ 9,8% đánh giá 1 sao nhận được phản hồi.",
+  "i1_src": "BrightLocal 2026 · UENI",
+  "i1_d1": "Một nhà hàng độc lập tăng khoảng 5–9% doanh thu cho mỗi sao cộng thêm.",
+  "i1_d1s": "Harvard Business School",
+  "i1_d2": "Nhà hàng trả lời mọi đánh giá có tỷ lệ chuyển đổi cao hơn 16,4% so với nhà hàng không trả lời đánh giá nào.",
+  "i1_d2s": "ReplyOnTheFly 2026 (nghiên cứu của nhà cung cấp công cụ)",
+  "i1_d3": "Thực khách xem đánh giá nhiều hơn bất kỳ ngành nào khác — các kết quả hàng đầu trên bản đồ có trung vị 451 đánh giá.",
+  "i1_d3s": "Local Falcon",
+  "i1_pain": "Khách không thiếu. Điều còn thiếu là người tiếp nhận mọi đánh giá — một đánh giá xấu bị bỏ treo sẽ thuyết phục bàn khách tiếp theo đừng đến.",
+  "i2_name": "Massage & Spa",
+  "i2_line": "Một nửa doanh nghiệp chăm sóc cá nhân có dưới 20 đánh giá — và 47% khách hàng bỏ qua mọi doanh nghiệp dưới 20.",
+  "i2_src": "Khảo sát SMB của BrightLocal · BrightLocal 2026",
+  "i2_d1": "Mỗi lượt đến spa trị giá trung bình $110 — giữ thêm vài khách mỗi tháng là khoản tiền thật.",
+  "i2_d1s": "ISPA 2025",
+  "i2_d2": "89% khách hàng mong đợi doanh nghiệp trả lời đánh giá của họ.",
+  "i2_d2s": "BrightLocal 2026",
+  "i2_d3": "Trả lời mọi đánh giá so với không trả lời đánh giá nào: chuyển đổi +16,4%.",
+  "i2_d3s": "ReplyOnTheFly 2026 (nghiên cứu của nhà cung cấp công cụ)",
+  "i2_pain": "Tay bạn ở với khách cả ngày; điện thoại nằm ở quầy lễ tân. Đánh giá chất chồng không ai trả lời — và lịch hẹn rơi vào tay cửa hàng có trả lời.",
+  "i3_name": "Salon làm đẹp & nail",
+  "i3_line": "73% salon chủ động xin đánh giá — nhưng chỉ 57% trả lời. Xin đánh giá có hiệu quả; khâu còn thiếu là bước tiếp theo.",
+  "i3_src": "Khảo sát SMB của BrightLocal",
+  "i3_d1": "Doanh nghiệp trả lời đánh giá nhận được trung bình nhiều hơn 12% đánh giá mới.",
+  "i3_d1s": "BrightLocal",
+  "i3_d2": "68% khách hàng yêu cầu ít nhất 4 sao trước khi đặt lịch.",
+  "i3_d2s": "BrightLocal 2026",
+  "i3_d3": "Một nửa doanh nghiệp chăm sóc cá nhân dưới 20 đánh giá — ngay dưới ngưỡng mà 47% khách hàng ngừng xem xét.",
+  "i3_d3s": "BrightLocal",
+  "i3_pain": "Ảnh tác phẩm được đăng đều, đánh giá cũng được xin. Bước cuối cùng — trả lời — mới là điều khách hàng mới thực sự đánh giá bạn.",
+  "i4_name": "Nha khoa",
+  "i4_line": "75% bệnh nhân sẽ không đặt lịch với nha sĩ dưới 4 sao — và các phòng khám hàng đầu có số đánh giá gấp bốn lần phòng khám trung bình.",
+  "i4_src": "rater8 2026 · Local Falcon",
+  "i4_d1": "Khoảng 77% bệnh nhân bắt đầu tìm nha sĩ mới bằng cách đọc đánh giá trực tuyến.",
+  "i4_d1s": "rater8 2026",
+  "i4_d2": "Phòng khám trung bình có 81 đánh giá Google. Các phòng khám dẫn đầu bản đồ có 346.",
+  "i4_d2s": "Local Falcon",
+  "i4_d3": "79% cơ sở y tế chủ động xin đánh giá — cao nhất trong mọi ngành — nhưng chỉ trả lời 58%.",
+  "i4_d3s": "Khảo sát SMB của BrightLocal",
+  "i4_pain": "Các phòng khám đều biết đánh giá quan trọng — họ xin đánh giá nhiều hơn bất kỳ ai. Lễ tân chỉ đơn giản không có thời gian trả lời từng đánh giá một cách cẩn thận và đúng quy định.",
+  "i5_name": "Med Spa",
+  "i5_line": "Lần đến đầu tiên tại med spa trị giá $527 — và khách hàng quyết định dựa trên đánh giá của ba người lạ, cùng việc bạn có trả lời hay không.",
+  "i5_src": "AmSpa 2024",
+  "i5_d1": "81% med spa chỉ có một cơ sở — chủ cơ sở thường cũng là người tiêm, không có nhân viên marketing.",
+  "i5_d1s": "AmSpa 2024",
+  "i5_d2": "68% khách hàng yêu cầu ít nhất 4 sao; 42% tránh các doanh nghiệp không bao giờ trả lời.",
+  "i5_d2s": "BrightLocal 2026",
+  "i5_d3": "Các liệu trình giá cao, tự chi trả khiến khách xem xét đánh giá kỹ lưỡng trước khi đặt lịch.",
+  "i5_d3s": "Đồng thuận của ngành",
+  "i5_pain": "Một khách hàng mới trị giá $527 ngay ngày đầu và hàng nghìn đô theo thời gian. Cô ấy quyết định từ trang đánh giá của bạn — kể cả những phản hồi bạn đã không viết.",
+  "i6_name": "Dịch vụ tại nhà",
+  "i6_line": "91% chủ nhà đọc đánh giá trước khi thuê nhà thầu — trong khi 54% doanh nghiệp ngành nghề kỹ thuật có dưới 20 đánh giá.",
+  "i6_src": "BrightLocal 2025 · Khảo sát SMB của BrightLocal",
+  "i6_d1": "Nhà thầu đã trả $50–230 cho mỗi khách hàng tiềm năng. Đánh giá giữ lại những khách tìm thấy bạn miễn phí.",
+  "i6_d1s": "LocaliQ 2026",
+  "i6_d2": "Chỉ 9% doanh nghiệp ngành nghề kỹ thuật có trên 50 đánh giá; trung vị top 3 bản đồ cho thợ ống nước là 215.",
+  "i6_d2s": "BrightLocal SMB · Local Falcon",
+  "i6_d3": "Một công việc HVAC trung bình trị giá $2,434 — cứu được một việc mỗi tháng là đủ trả một năm dịch vụ này.",
+  "i6_d3s": "Data-Driven Trades 2026",
+  "i6_pain": "Anh ấy chi hàng nghìn đô mua khách hàng tiềm năng, rồi để một đánh giá xấu không được trả lời trao khách ngay trước cửa cho cửa hàng bên cạnh.",
+  "i7_name": "Sửa chữa ô tô",
+  "i7_line": "Cửa hàng trung bình có 40 đánh giá. Các cửa hàng trong top 3 của Google có 188.",
+  "i7_src": "Local Falcon",
+  "i7_d1": "Sửa chữa ô tô có tỷ lệ tự báo cáo trả lời đánh giá cao nhất mọi ngành — 63%. Các cửa hàng dẫn đầu đã làm việc này.",
+  "i7_d1s": "Khảo sát SMB của BrightLocal",
+  "i7_d2": "42% khách hàng tránh những doanh nghiệp không bao giờ trả lời đánh giá.",
+  "i7_d2s": "BrightLocal 2026",
+  "i7_d3": "Đơn sửa chữa trung bình là $500–749 — thêm vài việc mỗi tháng là hàng nghìn đô mỗi năm.",
+  "i7_d3s": "PartsTech 2025",
+  "i7_pain": "Người lái xe không sợ sửa xe — họ sợ bị tính giá quá cao. Trả lời đánh giá là quảng cáo về sự trung thực rẻ nhất."
+ }
+};
+var SUPPORTED = ["en", "es", "zh", "vi"];
+function lsGet(k){try{return localStorage.getItem(k);}catch(e){return null;}}
+function lsSet(k,v){try{localStorage.setItem(k,v);}catch(e){}}
+function detectBrowserLang(){
+  try{
+    var n = (navigator.language || (navigator.languages && navigator.languages[0]) || "").toLowerCase();
+    if(n.indexOf("es") === 0) return "es";
+    if(n.indexOf("zh") === 0) return "zh";
+    if(n.indexOf("vi") === 0) return "vi";
+    if(n.indexOf("en") === 0) return "en";
+  }catch(e){}
+  return "en";
+}
+function resolveLang(){
+  var p = null;
+  try{ p = new URLSearchParams(window.location.search).get("lang"); }catch(e){}
+  if(SUPPORTED.indexOf(p) >= 0) return p;
+  var s = lsGet("fsb_lang");
+  if(SUPPORTED.indexOf(s) >= 0) return s;
+  return detectBrowserLang();
+}
+var LANG = resolveLang();
+function T(key){ var d = I18N[LANG]; return (key in d) ? d[key] : I18N.en[key]; }
+function applyLang(lang, persist){
+  if(SUPPORTED.indexOf(lang) < 0) lang = "en";
+  LANG = lang;
+  if(persist) lsSet("fsb_lang", lang);
+  document.documentElement.lang = (lang === "zh") ? "zh-CN" : lang;
+  document.title = T("page_title");
+  var md = document.querySelector('meta[name="description"]');
+  if(md) md.setAttribute("content", T("page_desc"));
+  document.querySelectorAll(".langtoggle button").forEach(function(b){
+    b.classList.toggle("active", b.getAttribute("data-lang") === lang);
+  });
+  document.querySelectorAll("[data-i18n]").forEach(function(el){
+    var v = T(el.getAttribute("data-i18n"));
+    if(typeof v === "string") el.textContent = v;
+  });
+  document.querySelectorAll("[data-i18n-html]").forEach(function(el){
+    var v = T(el.getAttribute("data-i18n-html"));
+    if(typeof v === "string") el.innerHTML = v;
+  });
+}
+document.addEventListener("DOMContentLoaded", function(){
+  document.querySelectorAll(".langtoggle button").forEach(function(b){
+    b.addEventListener("click", function(){ applyLang(b.getAttribute("data-lang"), true); });
+  });
+  applyLang(LANG);
+});
+</script>
+
+</body>
+</html>
