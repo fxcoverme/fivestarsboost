@@ -40,7 +40,10 @@
   .planbox .pprice{font-size:36px;font-weight:800;color:#fff;line-height:1.1;text-align:right}
   .planbox .pprice small{font-size:15px;font-weight:600;color:rgba(255,248,236,.7)}
   .planbox .pnote{width:100%;font-size:14.5px;color:rgba(255,248,236,.8);border-top:1px solid rgba(255,255,255,.16);padding-top:12px}
-  .agreement{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:38px 42px;margin-bottom:26px}
+  .agreement{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:0;margin-bottom:26px;overflow:hidden}
+  .terms-scroll{max-height:46vh;overflow-y:auto;padding:30px 38px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+  .scrollhint{border-top:1px solid var(--line);background:#FBF3DF;color:var(--muted);font-size:14px;font-weight:700;text-align:center;padding:11px 16px}
+  .scrollhint.done{color:#7A5B12;background:#F7E8BC}
   .agreement h1{font-size:21px;font-weight:800;color:var(--navy);text-align:center;letter-spacing:.4px;line-height:1.4;margin-bottom:18px}
   .agreement h2{font-size:17.5px;font-weight:800;color:var(--navy);margin:24px 0 8px}
   .agreement p{margin:8px 0;color:#2A3A55;font-size:15.5px}
@@ -90,6 +93,7 @@
     <div class="pnote">Billed monthly via Stripe. Cancel anytime with 30 days' notice.</div>
   </div>
   <div class="agreement">
+    <div class="terms-scroll" id="termsScroll">
 <h1>SOCIAL MEDIA &amp; REVIEW MANAGEMENT SERVICE AGREEMENT</h1>
 <p>This Agreement is between <strong>VelaGrid Technologies</strong> ("Provider," brand name FiveStarsBoost) and the business named below ("Client"). It covers management of Client's Google Business Profile, Facebook Page, and Instagram account.</p>
 <p><strong>Client business name:</strong> <span class="fill" data-fill="biz">______________________________</span></p>
@@ -173,6 +177,8 @@
 <p>This is the whole agreement for these services. Changes must be in writing (email is fine). Governed by the laws of the State of Ohio.</p>
 <p><strong>Provider:</strong> VelaGrid Technologies — Signature: <span class="fill">accepted electronically upon Client submission</span> · Date: <span class="fill" data-fill="date"></span></p>
 <p><strong>Client:</strong> <span class="fill" data-fill="biz"></span> — Signature: <span class="fill sig" data-fill="signer"></span> · Date: <span class="fill" data-fill="date"></span></p>
+    </div>
+    <div class="scrollhint" id="scrollHint">&#8595; Scroll inside the box to read the full agreement</div>
   </div>
   <form class="sigcard sigform" novalidate>
     <h2>Sign here</h2>
@@ -190,8 +196,8 @@
       <input type="email" name="email" autocomplete="email" required>
     </div>
     <label class="ack">
-      <input type="checkbox" name="ack">
-      <span>I have read this agreement and agree to its terms.</span>
+      <input type="checkbox" name="ack" disabled>
+      <span>I have read this agreement and agree to its terms. <em id="ackNote">(Scroll to the end of the agreement above to enable.)</em></span>
     </label>
     <button type="submit" class="btn btn-gold" disabled>Sign &amp; Continue to Payment</button>
     <p class="signote">Your typed name is your electronic signature. A copy of this signing record is kept by VelaGrid Technologies.</p>
@@ -264,9 +270,22 @@ var CONFIG = {
     var ok = biz.value.trim().length >= 2 &&
              signer.value.trim().length >= 3 &&
              /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim()) &&
-             ack.checked;
+             ack.checked && !ack.disabled;
     btn.disabled = !ok;
   }
+  var scroller = document.getElementById('termsScroll');
+  var hint = document.getElementById('scrollHint');
+  var ackNote = document.getElementById('ackNote');
+  function checkScroll(){
+    if (!scroller || ack.disabled === false) { if(scroller && (scroller.scrollHeight <= scroller.clientHeight + 5) && ack.disabled){ ack.disabled=false; if(ackNote) ackNote.textContent=''; if(hint){hint.innerHTML='&#10003; You have reached the end of the agreement'; hint.classList.add('done');} } return; }
+    if (scroller.scrollTop + scroller.clientHeight >= scroller.scrollHeight - 30){
+      ack.disabled = false;
+      if (ackNote) ackNote.textContent = '';
+      if (hint){ hint.innerHTML = '&#10003; You have reached the end of the agreement'; hint.classList.add('done'); }
+    }
+  }
+  if (scroller){ scroller.addEventListener('scroll', checkScroll); window.addEventListener('resize', checkScroll); checkScroll(); }
+
   [biz, signer, email].forEach(function(i){ i.addEventListener('input', sync); });
   ack.addEventListener('change', sync);
   sync();
