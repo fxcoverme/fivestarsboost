@@ -1542,7 +1542,7 @@ function wireTool(root){
                 review:reviewEl.value,
                 stars:parseInt(radioVal(root,"stars"),10)||5,
                 tone:radioVal(root,"tone")||"professional",
-                lang:radioVal(root,"lang")||"en" };
+                lang:radioVal(root,"rlang")||"en" };
     if(!input.review.trim()){
       var box=root.querySelector("[data-results]"); box.innerHTML="";
       var warn=document.createElement("p"); warn.className="hint"; warn.style.fontWeight="700"; warn.textContent=TB("need_review");
@@ -1557,9 +1557,20 @@ function wireTool(root){
 }
 
 /* ---------- language ---------- */
+/* Reply-language default follows the interface language (Bernice, 2026-11-06):
+   EN interface = pure English; ZH = Chinese + English; ES = Spanish + English;
+   VI = English. Applied on load and whenever the visitor switches language;
+   the visitor can still override with the pills until the next switch. */
+function syncReplyLangDefault(){
+  var map={en:"en",zh:"zh",es:"es",vi:"en"};
+  var want=map[LANG]||"en";
+  document.querySelectorAll('input[type="radio"][name="rlang"]').forEach(function(r){
+    r.checked = (r.value===want);
+  });
+}
 function applyLang(lang,persist){
   LANG=lang;
-  if(persist) lsSet("fsb_lang",lang);
+  if(persist){ lsSet("fsb_lang",lang); syncReplyLangDefault(); }
   document.documentElement.lang = lang==="zh" ? "zh-CN" : lang;
   document.querySelectorAll(".langtoggle button").forEach(function(b){
     b.classList.toggle("active", b.getAttribute("data-lang")===lang);
@@ -1625,6 +1636,7 @@ document.addEventListener("DOMContentLoaded",function(){
   });
   moveTool("home");
   applyLang(LANG);
+  syncReplyLangDefault();
   showView("home");
 });
 </script>
