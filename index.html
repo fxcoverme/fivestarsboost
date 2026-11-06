@@ -516,6 +516,15 @@
             <label class="pill"><input type="radio" name="tone" value="warm" /><span data-i18n="tone_warm">Warm</span></label>
           </div>
         </div>
+        <div>
+          <label class="flabel" data-i18n="f_lang">Reply language</label>
+          <div class="pills" role="radiogroup" data-lang>
+            <label class="pill"><input type="radio" name="rlang" value="en" checked /><span data-i18n="rlang_en">English</span></label>
+            <label class="pill"><input type="radio" name="rlang" value="zh" /><span data-i18n="rlang_zh">Chinese + English</span></label>
+            <label class="pill"><input type="radio" name="rlang" value="es" /><span data-i18n="rlang_es">Spanish + English</span></label>
+            <label class="pill"><input type="radio" name="rlang" value="vi" /><span data-i18n="rlang_vi">Vietnamese + English</span></label>
+          </div>
+        </div>
       </div>
       <p class="hint" data-i18n="presets_note">↑ Already set for you — change only if you want to.</p>
 
@@ -1451,10 +1460,11 @@ function buildVI(band,kind,o){
     " Nếu bạn muốn chia sẻ thêm, xin hãy liên hệ trực tiếp với chúng tôi — và tôi thực sự hy vọng bạn sẽ cho chúng tôi thêm một cơ hội để làm trọn vẹn cả bữa ăn.";
 }
 
-/* Reply language rule (Bernice, 2026-11-06, clarified same day): there is NO
-   separate reply-language selector. The reply follows the interface language
-   the customer picked: English = English only; Chinese = Chinese + English;
-   Spanish = Spanish + English; Vietnamese = Vietnamese + English. */
+/* Reply language rule (Bernice, 2026-11-06, final): the Reply language row
+   shows only the choices for the interface language the customer picked —
+   English interface: English only. Chinese: Chinese + English, or English.
+   Spanish: Spanish + English, or English. Vietnamese: Vietnamese + English,
+   or English. Output is the chosen language + English; English = English only. */
 function generateReplies(input){
   var stars=input.stars|0, tone=input.tone||"professional", biz=(input.biz||"").trim(),
       band=stars>=4?"pos":(stars===3?"mid":"neg"),
@@ -1614,7 +1624,7 @@ function wireTool(root){
                 review:reviewEl.value,
                 stars:parseInt(radioVal(root,"stars"),10)||5,
                 tone:radioVal(root,"tone")||"professional",
-                lang:LANG||"en" };
+                lang:radioVal(root,"lang")||LANG||"en" };
     if(!input.review.trim()){
       var box=root.querySelector("[data-results]"); box.innerHTML="";
       var warn=document.createElement("p"); warn.className="hint"; warn.style.fontWeight="700"; warn.textContent=TB("need_review");
@@ -1629,9 +1639,32 @@ function wireTool(root){
 }
 
 /* ---------- language ---------- */
+/* Reply-language choices follow the interface language (Bernice, 2026-11-06):
+   EN interface shows only "English"; ZH shows "Chinese + English" + "English";
+   ES shows "Spanish + English" + "English"; VI shows "Vietnamese + English" +
+   "English". The bilingual option comes first and is the default. Runs when
+   the interface language changes; a choice made afterwards is left alone. */
+var lastToolLang=null;
+function scopeReplyLang(){
+  var map={en:["en"],zh:["zh","en"],es:["es","en"],vi:["vi","en"]};
+  var show=map[LANG]||["en"];
+  toolInstances.forEach(function(inst){
+    var wrap=inst.root.querySelector("[data-lang]");
+    if(!wrap) return;
+    wrap.querySelectorAll('input[type="radio"][name="rlang"]').forEach(function(r){
+      var on=show.indexOf(r.value)>=0, lab=r.closest(".pill");
+      if(lab){ lab.style.display=on?"":"none"; lab.style.order=(r.value===LANG)?"0":"1"; }
+    });
+    /* On an interface-language change the selection resets to that language's
+       bilingual default (or English on the EN interface). */
+    var def=wrap.querySelector('input[type="radio"][name="rlang"][value="'+show[0]+'"]');
+    if(def) def.checked=true;
+  });
+}
 function applyLang(lang,persist){
   LANG=lang;
   if(persist) lsSet("fsb_lang",lang);
+  if(lastToolLang!==lang){ lastToolLang=lang; scopeReplyLang(); }
   document.documentElement.lang = lang==="zh" ? "zh-CN" : lang;
   document.querySelectorAll(".langtoggle button").forEach(function(b){
     b.classList.toggle("active", b.getAttribute("data-lang")===lang);
