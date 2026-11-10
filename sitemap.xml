@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://fivestarsboost.com/</loc>
-  </url>
-  <url>
-    <loc>https://fivestarsboost.com/services</loc>
-  </url>
-  <url>
-    <loc>https://fivestarsboost.com/industries/</loc>
-  </url>
-  <url><loc>https://fivestarsboost.com/checkup/</loc></url>
-  <url><loc>https://fivestarsboost.com/privacy/</loc></url>
+  <url><loc>https://fivestarsboost.com/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://fivestarsboost.com/services/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://fivestarsboost.com/industries/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://fivestarsboost.com/checkup/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://fivestarsboost.com/postcard/</loc><lastmod>2026-11-10</lastmod></url>
 </urlset>
