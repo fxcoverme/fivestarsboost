@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paid Ads Management for Local Businesses — FiveStarsBoost</title>
+<meta name="description" content="FiveStarsBoost paid ads management: Google, Meta and TikTok campaigns run alongside your review management. From $499/month per platform. Your ad budget is paid by you, directly to the platform — and your account stays yours.">
+<link rel="canonical" href="https://fivestarsboost.com/ads/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fivestarsboost.com/ads/">
+<meta property="og:title" content="Paid Ads Management for Local Businesses — FiveStarsBoost">
+<meta property="og:description" content="FiveStarsBoost paid ads management: Google, Meta and TikTok campaigns run alongside your review management. From $499/month per platform. Your ad budget is paid by you, directly to the platform — and your account stays yours.">
+<meta property="og:image" content="https://fivestarsboost.com/assets/fb-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Paid Ads Management for Local Businesses — FiveStarsBoost">
+<meta name="twitter:description" content="FiveStarsBoost paid ads management: Google, Meta and TikTok campaigns run alongside your review management. From $499/month per platform. Your ad budget is paid by you, directly to the platform — and your account stays yours.">
+<meta name="twitter:image" content="https://fivestarsboost.com/assets/fb-cover.png">
+<style>
+  :root{
+    --navy:#0A2A52; --ink:#14213D; --gold:#E3A82B; --gold-soft:#F2C14E;
+    --cream:#FFF8EC; --paper:#FFFDF8;
+    --muted:#5A6B82; --line:rgba(20,33,61,.10);
+    --shadow:0 4px 18px rgba(10,42,82,.06);
+    --shadow-lg:0 12px 32px rgba(10,42,82,.12);
+    --radius:18px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+  .stars{color:var(--gold);letter-spacing:2px;font-size:.95em;white-space:nowrap}
+
+  /* ---------- Header ---------- */
+  header{position:sticky;top:0;z-index:50;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.14)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+  .brand{display:flex;align-items:center;gap:11px;color:#fff}
+  .brand img{width:42px;height:42px;border-radius:11px;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+  .brand .bname{font-size:20px;font-weight:800;letter-spacing:.2px;line-height:1.1}
+  .brand .bname span{color:#fff}
+  .brand small{display:block;font-size:10px;font-weight:600;letter-spacing:2.4px;color:rgba(255,248,236,.65);text-transform:uppercase}
+  .nav-links{display:flex;gap:26px;font-size:14.5px;font-weight:600;color:rgba(255,248,236,.85)}
+  .nav-links a:hover{color:#fff}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;min-height:50px;border-radius:999px;font-weight:700;font-size:15px;transition:transform .15s ease, box-shadow .15s ease, background .15s ease;cursor:pointer}
+  .btn-gold{background:var(--gold);color:var(--ink)}
+  .btn-gold:hover{background:var(--gold-soft)}
+  .btn-ghost{border:1.5px solid var(--gold);color:var(--navy);background:var(--gold)}
+  .btn-ghost:hover{background:var(--gold-soft);border-color:var(--gold-soft);color:var(--navy)}
+  .btn-navy{background:var(--gold);color:var(--ink)}
+  .btn-navy:hover{background:var(--gold-soft);transform:translateY(-2px)}
+  .nav .btn{padding:10px 18px;font-size:14px;min-height:44px}
+  @media(max-width:860px){.nav-links{display:none}}
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;overflow:hidden;color:#fff;background:var(--navy)}
+  .hero-inner{position:relative;max-width:1080px;padding:84px 40px 88px}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#fff;border:1px solid rgba(255,255,255,.35);background:transparent;padding:9px 18px;border-radius:999px;margin-bottom:28px}
+  .hero h1{font-size:clamp(32px,4.6vw,54px);line-height:1.15;font-weight:800;letter-spacing:-.5px}
+  .hero h1 em{font-style:normal;color:#fff}
+  .hero p.sub{margin:26px 0 34px;font-size:18px;color:rgba(255,248,236,.82);max-width:34em}
+  .hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
+  .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px;max-width:780px}
+  .chip{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:10px 16px;font-size:13.5px;font-weight:600;color:rgba(255,248,236,.92);text-align:center}
+  .chip b{color:var(--gold)}
+  @media(max-width:920px){.hero-inner{padding:64px 28px 68px}}
+  @media(max-width:639px){
+    .hero-inner{padding:54px 22px 58px}
+    .eyebrow{margin-bottom:24px;font-size:11px;letter-spacing:1px;padding:8px 14px}
+    .hero h1{font-size:31px}
+    .hero p.sub{margin:22px 0 26px}
+    .hero-ctas{flex-direction:column;gap:12px}
+    .hero-ctas .btn{width:100%}
+    .hero-stats{grid-template-columns:1fr;gap:10px;margin-top:28px;max-width:none}
+  }
+  @media(min-width:1024px){
+    section{padding:96px 0}
+    .hero-inner{padding:104px 40px 110px}
+    .hero h1{font-size:60px}
+    .tiers{gap:26px}
+    .tiers-row2{max-width:780px}
+  }
+
+
+  /* ---------- Sections ---------- */
+  section{padding:76px 0}
+  .sec-head{max-width:720px;margin:0 auto 44px;text-align:center}
+  .sec-tag{font-size:12.5px;font-weight:800;letter-spacing:2.4px;text-transform:uppercase;color:var(--navy);margin-bottom:10px}
+  h2{font-size:clamp(27px,3.4vw,38px);font-weight:800;letter-spacing:-.4px;line-height:1.2;color:var(--navy)}
+  .sec-head p{margin-top:12px;color:var(--muted);font-size:17px}
+
+  .rows{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:8px 28px;max-width:820px;margin:0 auto}
+  .row{display:flex;align-items:baseline;gap:12px;padding:15px 0;border-bottom:1px solid var(--line);font-size:16.5px;color:var(--muted)}
+  .row:last-child{border-bottom:none}
+  .row b{color:var(--navy);font-weight:800}
+  .row .n{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:var(--gold);color:var(--navy);font-weight:800;font-size:14px;display:inline-flex;align-items:center;justify-content:center;transform:translateY(5px)}
+
+  .agree-line{text-align:center;color:var(--muted);font-size:15px;margin-top:20px}
+
+  /* steps use the merged .rows block above */
+
+  /* ---------- Pricing ---------- */
+  #pricing{background:linear-gradient(180deg,#FDF3DC, var(--cream))}
+  .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+  .tiers-row2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:22px;max-width:760px;margin-left:auto;margin-right:auto}
+  @media(max-width:920px){.tiers,.tiers-row2{grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto}}
+  .tier{background:rgba(255,253,248,.92);border:1px solid var(--line);border-radius:20px;padding:30px 28px;box-shadow:var(--shadow);display:flex;flex-direction:column;position:relative;transition:transform .18s ease, box-shadow .18s ease}
+  .tier:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+  .tier .tname{font-size:13px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;color:var(--navy)}
+  .tier .price{font-size:42px;font-weight:800;color:var(--navy);line-height:1.1;margin:8px 0 2px}
+  .tier .price small{font-size:16px;font-weight:600;color:var(--muted)}
+  .tier .tdesc{font-size:14.5px;color:var(--muted);margin-bottom:16px}
+  .tier ul{list-style:none;flex:1}
+  .tier li{font-size:14.5px;padding:5px 0 5px 26px;position:relative;color:#33455E}
+  .tier li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:800}
+  .tier.pop{background:linear-gradient(160deg,var(--navy),var(--ink));color:#F4EFE3;border:1px solid rgba(227,168,43,.5)}
+  .tier.pop .tname{color:var(--gold-soft)}
+  .tier.pop .price{color:#fff}
+  .tier.pop .price small,.tier.pop .tdesc{color:rgba(255,248,236,.7)}
+  .tier.pop li{color:rgba(255,248,236,.9)}
+  .tier.pop li::before{color:var(--gold)}
+  .tier-cta{margin-top:18px;text-align:center}
+  .badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--gold-soft),var(--gold));color:var(--ink);font-size:12px;font-weight:800;letter-spacing:1.4px;padding:6px 16px;border-radius:999px;box-shadow:0 8px 20px rgba(227,168,43,.4);white-space:nowrap}
+  .pricing-note{max-width:820px;margin:30px auto 0;text-align:center;color:var(--muted);font-size:15.5px}
+  .pricing-note b{color:var(--navy)}
+
+  /* ---------- DIY band ---------- */
+  .diy-band{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:30px 34px;box-shadow:var(--shadow);display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+  .diy-band img{width:74px;height:74px;border-radius:16px;box-shadow:var(--shadow)}
+  .diy-band .txt{flex:1;min-width:260px}
+  .diy-band h3{font-size:21px;font-weight:800;color:var(--navy);margin-bottom:4px}
+  .diy-band p{color:var(--muted);font-size:15.5px}
+
+  /* ---------- Trust ---------- */
+  .rows.gold-top{border-top:4px solid var(--gold)}
+
+  /* ---------- FAQ ---------- */
+  .faq{max-width:820px;margin:0 auto}
+  details{background:var(--paper);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;box-shadow:0 4px 14px rgba(10,42,82,.06)}
+  summary{cursor:pointer;font-weight:700;font-size:16.5px;color:var(--navy);padding:18px 22px;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";float:right;color:var(--gold);font-weight:800;font-size:20px;line-height:1}
+  details[open ] summary::after{content:"–"}
+  details p{padding:0 22px 18px;color:var(--muted);font-size:15.5px}
+
+  /* ---------- Contact / footer ---------- */
+  .cta-band{background:var(--navy);color:#fff;border-radius:24px;padding:52px 40px;text-align:center;position:relative;overflow:hidden}
+  .cta-band h2{color:#fff;position:relative}
+  .cta-band p{color:rgba(255,248,236,.8);margin:14px auto 26px;max-width:36em;position:relative}
+  .cta-band .btn{position:relative}
+  footer{padding:38px 0 46px;text-align:center;color:var(--muted);font-size:14px}
+  footer .fbrand{font-weight:800;color:var(--navy);font-size:16px;margin-bottom:6px}
+  footer a.flink{color:var(--navy);font-weight:700}
+
+  .langtoggle{display:flex;border:1.5px solid rgba(255,255,255,.35);border-radius:999px;overflow:hidden;margin-left:10px;flex:none}
+  .langtoggle button{background:transparent;border:0;color:rgba(255,248,236,.85);font-weight:700;font-size:12.5px;padding:7px 11px;cursor:pointer;font-family:inherit}
+  .langtoggle button.active{background:var(--gold);color:var(--navy)}
+  .langtoggle button + button{border-left:1px solid rgba(255,248,236,.25)}
+  @media(max-width:700px){.nav .btn{display:none}}
+
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="https://fivestarsboost.com">
+      <img src="../logo-a.png" alt="FiveStarsBoost logo">
+      <span class="bname">FiveStars<span>Boost</span><small data-i18n="brand_small">Paid Ads Management</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="https://fivestarsboost.com" data-i18n="nav_home">Home</a>
+      <a href="#services" data-i18n="nav_services">What We Do</a>
+      <a href="#pricing" data-i18n="nav_pricing">Pricing</a>
+      <a href="#platform" data-i18n="nav_platform">Which Platform</a>
+      <a href="#faq" data-i18n="nav_faq">FAQ</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+      <a href="https://fivestarsboost.com" data-i18n="nav_reviews">Review Replies</a>
+      <a href="/industries" data-i18n="nav_industries">Industries</a>
+      <a href="/articles/">Articles</a>
+    </nav>
+    <div class="langtoggle" role="group" aria-label="Language">
+      <button type="button" data-lang="en" class="active">EN</button>
+      <button type="button" data-lang="es">ES</button>
+      <button type="button" data-lang="zh">ZH</button>
+      <button type="button" data-lang="vi">VI</button>
+    </div>
+    <!-- Contact email: info@fivestarsboost.com (Google Workspace, live 2026-11-04). -->
+    <a class="btn btn-gold" href="mailto:info@fivestarsboost.com?subject=Ads%20Management%20%E2%80%94%20My%20Business" data-i18n="header_cta">Ask About Ads</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero" id="top">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="eyebrow" data-i18n="eyebrow">FIVESTARSBOOST · PAID ADS MANAGEMENT</span>
+      <h1 data-i18n-html="hero_h1">Ads bring the clicks. <em>Reviews close the sale.</em></h1>
+      <p class="sub" data-i18n="hero_sub">Running ads without managing your reviews is paying for visitors who then check your ratings — and call the next business. We run both sides: campaigns that put you in front of ready-to-book customers, and review management that makes sure what they find convinces them.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-gold" href="#pricing" data-i18n="cta_pricing">See Pilot Pricing</a>
+        <a class="btn btn-ghost" href="/services/" data-i18n="cta_reviews">See Review Management</a>
+      </div>
+      <div class="hero-stats">
+        <span class="chip" data-i18n-html="chip1"><b>$499/mo</b> for your first platform</span>
+        <span class="chip" data-i18n-html="chip2">Your ad account <b>stays yours</b></span>
+        <span class="chip" data-i18n-html="chip3">Weekly <b>search-term reviews</b></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT WE DO -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-tag" data-i18n="what_tag">Ads Management</div>
+      <h2 data-i18n="h2_what">What We Do</h2>
+      <p data-i18n="what_sub">Ads management for local businesses — dental practices, restaurants, med spas, salons, home services, and auto repair shops — run alongside your review management, not instead of it.</p>
+    </div>
+    <div class="rows">
+      <div class="row"><span class="n">1</span><span data-i18n-html="row1"><b>Keyword research for your trade and your town</b> — the exact services and cities your customers search, grouped by intent, with irrelevant searches blocked from day one.</span></div>
+      <div class="row"><span class="n">2</span><span data-i18n-html="row2"><b>Campaign build</b> — search campaigns structured by service, targeted to the area you actually serve, shown only during the hours you can answer the phone.</span></div>
+      <div class="row"><span class="n">3</span><span data-i18n-html="row3"><b>Ad copy written to the rules</b> — factual, compliant with platform advertising policies for your industry, matched to your own website. No hype we can't back up.</span></div>
+      <div class="row"><span class="n">4</span><span data-i18n-html="row4"><b>Conversion tracking set up before spend starts</b> — calls and form submissions measured from day one, so every dollar is accounted for.</span></div>
+      <div class="row"><span class="n">5</span><span data-i18n-html="row5"><b>Weekly search-term reviews</b> — we read what people actually typed, cut the wasted spend, and keep your budget pointed at searches that turn into calls.</span></div>
+      <div class="row"><span class="n">6</span><span data-i18n-html="row6"><b>A monthly report you'll actually read</b> — spend, clicks, calls, cost per call, the real search terms that worked, what we changed, and what's next. Plain language, honest about what didn't work.</span></div>
+    </div>
+    <p class="agree-line" data-i18n="pilot_line">Now offered as a 3-month pilot, starting with one platform (Google), to a limited number of businesses.</p>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 data-i18n="h2_pricing">Pilot pricing — simple, per platform</h2>
+      <p data-i18n="pricing_sub">One management fee per ad platform. Your ad budget is separate — and never passes through us.</p>
+    </div>
+    <div class="tiers">
+      <div class="tier pop">
+        <span class="badge" data-i18n="badge_start">★ START HERE</span>
+        <div class="tname" data-i18n="p1_name">First Platform</div>
+        <div class="price">$499<small data-i18n="per_mo">/mo</small></div>
+        <p class="tdesc" data-i18n="p1_desc">Google Ads, Meta, or TikTok — we tell you honestly which one fits your trade.</p>
+        <ul>
+          <li data-i18n="li_platforms">One ad system: Google, Meta (Facebook &amp; Instagram), or TikTok</li>
+          <li data-i18n="li_pick">Honest advice on the right platform for your trade</li>
+          <li data-i18n="li_tracking">Conversion tracking set up before spend starts</li>
+          <li data-i18n="li_weekly">Weekly search-term reviews</li>
+          <li data-i18n="li_report">Monthly report in plain language</li>
+        </ul>
+        <a class="btn btn-gold tier-cta" href="mailto:info@fivestarsboost.com?subject=Ads%20Management%20%E2%80%94%20My%20Business" data-i18n="p1_cta">Start with One Platform</a>
+      </div>
+      <div class="tier">
+        <div class="tname" data-i18n="p2_name">Each Additional Platform</div>
+        <div class="price">+$299<small data-i18n="per_mo">/mo</small></div>
+        <p class="tdesc" data-i18n="p2_desc">Add a platform when the first one is working — not before.</p>
+        <ul>
+          <li data-i18n="li_same">The same weekly attention and monthly reporting</li>
+          <li data-i18n="li_budget">A separate budget per platform, set by you</li>
+        </ul>
+        <a class="btn btn-navy tier-cta" href="mailto:info@fivestarsboost.com?subject=Ads%20Management%20%E2%80%94%20My%20Business" data-i18n="p2_cta">Ask About Adding a Platform</a>
+      </div>
+      <div class="tier">
+        <div class="tname" data-i18n="p3_name">All Three Platforms</div>
+        <div class="price">$1,097<small data-i18n="per_mo">/mo</small></div>
+        <p class="tdesc" data-i18n="p3_desc">Google + Meta + TikTok, fully covered.</p>
+        <ul>
+          <li data-i18n="li_allthree">Every major ad channel, one manager</li>
+          <li data-i18n="li_sync">Ads and reviews run together, one monthly report</li>
+        </ul>
+        <a class="btn btn-navy tier-cta" href="mailto:info@fivestarsboost.com?subject=Ads%20Management%20%E2%80%94%20My%20Business" data-i18n="p3_cta">Ask About All Three</a>
+      </div>
+    </div>
+    <p class="pricing-note" data-i18n-html="pricing_note">Ad budget: paid by you directly to the platform — for Google we recommend starting at <b>$500/month</b>, a hard cap that never goes up without your written approval. &nbsp;·&nbsp; <b>Save 5%</b> paying quarterly · <b>Save 12%</b> paying annually — on the management fee. &nbsp;·&nbsp; Cancel anytime with 30 days' notice; your account and data stay with you.</p>
+  </div>
+</section>
+
+<!-- WHICH PLATFORM -->
+<section id="platform" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-tag" data-i18n="plat_tag">Start Smart</div>
+      <h2 data-i18n="h2_plat">Which platform should you start with?</h2>
+      <p data-i18n="plat_sub">It depends on your trade — we'd rather advise you than sell you all three.</p>
+    </div>
+    <div class="rows">
+      <div class="row"><span data-i18n-html="plat1"><b>Dental practices</b> — Google first. People search "dentist near me" when they already need one. Meta comes second, for staying in front of them.</span></div>
+      <div class="row"><span data-i18n-html="plat2"><b>Med spas and restaurants</b> — TikTok genuinely fits: visual businesses people discover by scrolling. Google still matters for "near me" searches.</span></div>
+      <div class="row"><span data-i18n-html="plat3"><b>Everyone else</b> — start with Google. Add a platform when the first one is working, not before.</span></div>
+    </div>
+    <p class="agree-line" data-i18n="plat_line">If one platform will do the job, that's what we'll recommend.</p>
+  </div>
+</section>
+
+<!-- YOUR ACCOUNT STAYS YOURS -->
+<section id="account" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-tag" data-i18n="acct_tag">Your Account, Your Asset</div>
+      <h2 data-i18n="h2_acct">Your account stays yours</h2>
+    </div>
+    <div class="rows gold-top">
+      <div class="row"><span data-i18n-html="acct1"><b>Created in your name</b> — the ad account is created in your business's name, under your account, with your payment method.</span></div>
+      <div class="row"><span data-i18n-html="acct2"><b>Manager access only</b> — you grant us manager access to run the campaigns. Access, not ownership. We never hold your card details, and your ad money never passes through us.</span></div>
+      <div class="row"><span data-i18n-html="acct3"><b>Cancel and keep everything</b> — with 30 days' notice, the account, its data, and its history stay with you. We remove our access, and everything we built in your account remains yours.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-tag" data-i18n="faq_tag">FAQ</div>
+      <h2 data-i18n="h2_faq">Questions, answered straight</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary data-i18n="faq1_q">Who pays for the ads?</summary>
+        <p data-i18n="faq1_a">You do — directly to the platform (Google, Meta, or TikTok), from your own ad account and your own card. Our management fee is separate. The two never mix.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq2_q">Do you guarantee results?</summary>
+        <p data-i18n="faq2_a">No — and be careful with anyone who does. Ad performance depends on your market, your budget, your competition, and your reviews. What we guarantee is the work: careful setup, weekly attention, wasted spend cut, and an honest monthly account of what your money did.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq3_q">How much ad budget do I need?</summary>
+        <p data-i18n="faq3_a">For the pilot we recommend $500/month to start. That's enough to learn what works in most local markets without risking real money finding out.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq4_q">What happens if I cancel?</summary>
+        <p data-i18n="faq4_a">Give us 30 days' notice. Your Ads account, campaigns, and data stay with you — they were always yours. We remove our manager access and hand over a summary of what was running and what we'd learned.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq5_q">Why combine ads with review management?</summary>
+        <p data-i18n="faq5_a">Because the click is only half the job. A customer who finds your ad will almost always look at your reviews before calling. Ads decide whether they find you; reviews decide whether they choose you. We make sure both answers are yes.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq6_q">What do you need from me to start?</summary>
+        <p data-i18n="faq6_a">A Google account for your business, 15 minutes to set up your Ads account and add your payment method, and your answers to three questions: what services to advertise, what area you serve, and what hours you answer the phone. We handle the rest.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta-band">
+      <span class="stars" style="font-size:20px">★★★★★</span>
+      <h2 data-i18n="cta_h">Start with one platform — we'll tell you honestly which one fits your trade.</h2>
+      <p data-i18n="cta_p">Email us your business name and what you do — we reply within one business day with the pilot details and next steps. Already a review client? Ads management runs right alongside it.</p>
+      <!-- Contact email: info@fivestarsboost.com (Google Workspace, live 2026-11-04). -->
+    <a class="btn btn-gold" href="mailto:info@fivestarsboost.com?subject=Ads%20Management%20%E2%80%94%20My%20Business" data-i18n="cta_btn">Email Us About Ads</a>
+    <p style="margin:16px 0 0;font-size:17px"><span data-i18n="cta_phone_label">Call or text:</span> <a href="tel:+16145935168" style="color:#E3A82B;font-weight:800;text-decoration:none">+1 614-593-5168</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- SHARE BAR -->
+<div class="fsb-share" style="text-align:center;padding:18px 12px 6px;font-family:inherit;color:#0A2A52">
+  <span style="font-size:13px;font-weight:600;margin-right:4px">Share this page:</span>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffivestarsboost.com%2Fads%2F" target="_blank" rel="noopener" style="display:inline-block;margin:2px 3px;padding:4px 10px;border:1px solid #0A2A52;border-radius:999px;color:#0A2A52;text-decoration:none;font-size:13px;background:#fff">Facebook</a>
+  <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ffivestarsboost.com%2Fads%2F&amp;text=Paid%20Ads%20Management%20%E2%80%94%20FiveStarsBoost" target="_blank" rel="noopener" style="display:inline-block;margin:2px 3px;padding:4px 10px;border:1px solid #0A2A52;border-radius:999px;color:#0A2A52;text-decoration:none;font-size:13px;background:#fff">X</a>
+  <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ffivestarsboost.com%2Fads%2F" target="_blank" rel="noopener" style="display:inline-block;margin:2px 3px;padding:4px 10px;border:1px solid #0A2A52;border-radius:999px;color:#0A2A52;text-decoration:none;font-size:13px;background:#fff">LinkedIn</a>
+  <a href="https://wa.me/?text=Paid%20Ads%20Management%20%E2%80%94%20FiveStarsBoost%20https%3A%2F%2Ffivestarsboost.com%2Fads%2F" target="_blank" rel="noopener" style="display:inline-block;margin:2px 3px;padding:4px 10px;border:1px solid #0A2A52;border-radius:999px;color:#0A2A52;text-decoration:none;font-size:13px;background:#fff">WhatsApp</a>
+  <a href="mailto:?subject=Paid%20Ads%20Management%20%E2%80%94%20FiveStarsBoost&amp;body=Paid%20Ads%20Management%20%E2%80%94%20FiveStarsBoost%20https%3A%2F%2Ffivestarsboost.com%2Fads%2F" style="display:inline-block;margin:2px 3px;padding:4px 10px;border:1px solid #0A2A52;border-radius:999px;color:#0A2A52;text-decoration:none;font-size:13px;background:#fff">Email</a>
+  <button type="button" onclick="fsbCopyLink(this)" data-url="https://fivestarsboost.com/ads/" style="display:inline-block;margin:2px 3px;padding:4px 10px;border:1px solid #0A2A52;border-radius:999px;color:#0A2A52;font-size:13px;background:#E3A82B;cursor:pointer;font-family:inherit">Copy link</button>
+</div>
+<script>function fsbCopyLink(btn){var u=btn.getAttribute('data-url');function done(){var o=btn.textContent;btn.textContent='Copied \u2713';setTimeout(function(){btn.textContent=o;},1800);}function fb(){var ta=document.createElement('textarea');ta.value=u;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done();}catch(e){}document.body.removeChild(ta);}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(u).then(done).catch(fb);}else{fb();}}</script>
+<!-- /SHARE BAR -->
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand">FiveStarsBoost — by VelaGrid Technologies</div>
+    <div>© 2026 FiveStarsBoost · A VelaGrid Technologies brand · <a class="flink" href="https://fivestarsboost.com" data-i18n="foot_tool">Free review reply tool</a> · <a class="flink" href="/checkup/">Free Review Checkup</a></div>
+    <div style="margin-top:8px"><a class="flink" href="https://www.facebook.com/profile.php?id=61596334557261" target="_blank" rel="noopener">Facebook</a> · <a class="flink" href="https://www.instagram.com/fivestarsboost" target="_blank" rel="noopener">Instagram</a> · <a class="flink" href="https://www.tiktok.com/@fivestarsboost" target="_blank" rel="noopener">TikTok</a> · <a class="flink" href="https://www.youtube.com/@FiveStarsBoost" target="_blank" rel="noopener">YouTube</a></div>
+  </div>
+</footer>
+
+<script>
+/* Language: shared with the homepage - same localStorage key "fsb_lang".
+   Resolution order: ?lang= URL param -> localStorage fsb_lang (manual choice) -> browser language -> "en".
+   Browser-detected language is NOT saved; only a manual toggle click writes fsb_lang. */
+var I18N = {
+ "en": {
+  "acct1": "<b>Created in your name</b> — the ad account is created in your business's name, under your account, with your payment method.",
+  "acct2": "<b>Manager access only</b> — you grant us manager access to run the campaigns. Access, not ownership. We never hold your card details, and your ad money never passes through us.",
+  "acct3": "<b>Cancel and keep everything</b> — with 30 days' notice, the account, its data, and its history stay with you. We remove our access, and everything we built in your account remains yours.",
+  "acct_tag": "Your Account, Your Asset",
+  "badge_start": "★ START HERE",
+  "brand_small": "Paid Ads Management",
+  "chip1": "<b>$499/mo</b> for your first platform",
+  "chip2": "Your ad account <b>stays yours</b>",
+  "chip3": "Weekly <b>search-term reviews</b>",
+  "cta_btn": "Email Us About Ads",
+  "cta_h": "Start with one platform — we'll tell you honestly which one fits your trade.",
+  "cta_p": "Email us your business name and what you do — we reply within one business day with the pilot details and next steps. Already a review client? Ads management runs right alongside it.",
+  "cta_phone_label": "Call or text:",
+  "cta_pricing": "See Pilot Pricing",
+  "cta_reviews": "See Review Management",
+  "eyebrow": "FIVESTARSBOOST · PAID ADS MANAGEMENT",
+  "faq1_a": "You do — directly to the platform (Google, Meta, or TikTok), from your own ad account and your own card. Our management fee is separate. The two never mix.",
+  "faq1_q": "Who pays for the ads?",
+  "faq2_a": "No — and be careful with anyone who does. Ad performance depends on your market, your budget, your competition, and your reviews. What we guarantee is the work: careful setup, weekly attention, wasted spend cut, and an honest monthly account of what your money did.",
+  "faq2_q": "Do you guarantee results?",
+  "faq3_a": "For the pilot we recommend $500/month to start. That's enough to learn what works in most local markets without risking real money finding out.",
+  "faq3_q": "How much ad budget do I need?",
+  "faq4_a": "Give us 30 days' notice. Your Ads account, campaigns, and data stay with you — they were always yours. We remove our manager access and hand over a summary of what was running and what we'd learned.",
+  "faq4_q": "What happens if I cancel?",
+  "faq5_a": "Because the click is only half the job. A customer who finds your ad will almost always look at your reviews before calling. Ads decide whether they find you; reviews decide whether they choose you. We make sure both answers are yes.",
+  "faq5_q": "Why combine ads with review management?",
+  "faq6_a": "A Google account for your business, 15 minutes to set up your Ads account and add your payment method, and your answers to three questions: what services to advertise, what area you serve, and what hours you answer the phone. We handle the rest.",
+  "faq6_q": "What do you need from me to start?",
+  "faq_tag": "FAQ",
+  "foot_tool": "Free review reply tool",
+  "h2_acct": "Your account stays yours",
+  "h2_faq": "Questions, answered straight",
+  "h2_plat": "Which platform should you start with?",
+  "h2_pricing": "Pilot pricing — simple, per platform",
+  "h2_what": "What We Do",
+  "header_cta": "Ask About Ads",
+  "hero_h1": "Ads bring the clicks. <em>Reviews close the sale.</em>",
+  "hero_sub": "Running ads without managing your reviews is paying for visitors who then check your ratings — and call the next business. We run both sides: campaigns that put you in front of ready-to-book customers, and review management that makes sure what they find convinces them.",
+  "li_allthree": "Every major ad channel, one manager",
+  "li_budget": "A separate budget per platform, set by you",
+  "li_pick": "Honest advice on the right platform for your trade",
+  "li_platforms": "One ad system: Google, Meta (Facebook & Instagram), or TikTok",
+  "li_report": "Monthly report in plain language",
+  "li_same": "The same weekly attention and monthly reporting",
+  "li_sync": "Ads and reviews run together, one monthly report",
+  "li_tracking": "Conversion tracking set up before spend starts",
+  "li_weekly": "Weekly search-term reviews",
+  "nav_contact": "Contact",
+  "nav_faq": "FAQ",
+  "nav_home": "Home",
+  "nav_industries": "Industries",
+  "nav_platform": "Which Platform",
+  "nav_pricing": "Pricing",
+  "nav_reviews": "Review Replies",
+  "nav_services": "What We Do",
+  "p1_cta": "Start with One Platform",
+  "p1_desc": "Google Ads, Meta, or TikTok — we tell you honestly which one fits your trade.",
+  "p1_name": "First Platform",
+  "p2_cta": "Ask About Adding a Platform",
+  "p2_desc": "Add a platform when the first one is working — not before.",
+  "p2_name": "Each Additional Platform",
+  "p3_cta": "Ask About All Three",
+  "p3_desc": "Google + Meta + TikTok, fully covered.",
+  "p3_name": "All Three Platforms",
+  "page_desc": "FiveStarsBoost paid ads management: Google, Meta and TikTok campaigns run alongside your review management. From $499/month per platform. Your ad budget is paid by you, directly to the platform — and your account stays yours.",
+  "page_title": "Paid Ads Management for Local Businesses — FiveStarsBoost",
+  "per_mo": "/mo",
+  "pilot_line": "Now offered as a 3-month pilot, starting with one platform (Google), to a limited number of businesses.",
+  "plat1": "<b>Dental practices</b> — Google first. People search \"dentist near me\" when they already need one. Meta comes second, for staying in front of them.",
+  "plat2": "<b>Med spas and restaurants</b> — TikTok genuinely fits: visual businesses people discover by scrolling. Google still matters for \"near me\" searches.",
+  "plat3": "<b>Everyone else</b> — start with Google. Add a platform when the first one is working, not before.",
+  "plat_line": "If one platform will do the job, that's what we'll recommend.",
+  "plat_sub": "It depends on your trade — we'd rather advise you than sell you all three.",
+  "plat_tag": "Start Smart",
+  "pricing_note": "Ad budget: paid by you directly to the platform — for Google we recommend starting at <b>$500/month</b>, a hard cap that never goes up without your written approval. &nbsp;·&nbsp; <b>Save 5%</b> paying quarterly · <b>Save 12%</b> paying annually — on the management fee. &nbsp;·&nbsp; Cancel anytime with 30 days' notice; your account and data stay with you.",
+  "pricing_sub": "One management fee per ad platform. Your ad budget is separate — and never passes through us.",
+  "row1": "<b>Keyword research for your trade and your town</b> — the exact services and cities your customers search, grouped by intent, with irrelevant searches blocked from day one.",
+  "row2": "<b>Campaign build</b> — search campaigns structured by service, targeted to the area you actually serve, shown only during the hours you can answer the phone.",
+  "row3": "<b>Ad copy written to the rules</b> — factual, compliant with platform advertising policies for your industry, matched to your own website. No hype we can't back up.",
+  "row4": "<b>Conversion tracking set up before spend starts</b> — calls and form submissions measured from day one, so every dollar is accounted for.",
+  "row5": "<b>Weekly search-term reviews</b> — we read what people actually typed, cut the wasted spend, and keep your budget pointed at searches that turn into calls.",
+  "row6": "<b>A monthly report you'll actually read</b> — spend, clicks, calls, cost per call, the real search terms that worked, what we changed, and what's next. Plain language, honest about what didn't work.",
+  "what_sub": "Ads management for local businesses — dental practices, restaurants, med spas, salons, home services, and auto repair shops — run alongside your review management, not instead of it.",
+  "what_tag": "Ads Management"
+ },
+ "es": {
+  "acct1": "<b>Creada a tu nombre</b> — la cuenta publicitaria se crea bajo tu negocio, con tu método de pago.",
+  "acct2": "<b>Solo acceso de gestión</b> — nos das acceso para gestionar las campañas. Acceso, no propiedad. Nunca guardamos los datos de tu tarjeta, y tu dinero publicitario nunca pasa por nosotros.",
+  "acct3": "<b>Cancela y quédate con todo</b> — con 30 días de aviso, la cuenta, sus datos y su historial se quedan contigo. Retiramos nuestro acceso; todo lo que construimos en tu cuenta sigue siendo tuyo.",
+  "acct_tag": "Tu Cuenta, Tu Activo",
+  "badge_start": "★ EMPIEZA AQUÍ",
+  "brand_small": "Anuncios Pagados",
+  "chip1": "<b>$499/mes</b> por tu primera plataforma",
+  "chip2": "Tu cuenta publicitaria <b>sigue siendo tuya</b>",
+  "chip3": "Revisión <b>semanal</b> de términos de búsqueda",
+  "cta_btn": "Escríbenos sobre Anuncios",
+  "cta_h": "Empieza con una plataforma — te diremos con honestidad cuál le conviene a tu oficio.",
+  "cta_p": "Envíanos por email el nombre de tu negocio y a qué te dedicas — respondemos en un día laborable con los detalles del piloto y los siguientes pasos. ¿Ya eres cliente de reseñas? La gestión de anuncios funciona justo al lado.",
+  "cta_phone_label": "Llama o escribe:",
+  "cta_pricing": "Ver Precios del Piloto",
+  "cta_reviews": "Ver Gestión de Reseñas",
+  "eyebrow": "FIVESTARSBOOST · GESTIÓN DE ANUNCIOS PAGADOS",
+  "faq1_a": "Tú — directamente a la plataforma (Google, Meta o TikTok), desde tu propia cuenta publicitaria y tu propia tarjeta. Nuestra tarifa de gestión va aparte. Las dos cosas nunca se mezclan.",
+  "faq1_q": "¿Quién paga los anuncios?",
+  "faq2_a": "No — y desconfía de quien lo haga. El rendimiento depende de tu mercado, tu presupuesto, tu competencia y tus reseñas. Lo que garantizamos es el trabajo: una configuración cuidadosa, atención semanal, recorte del gasto desperdiciado y un informe mensual honesto de lo que hizo tu dinero.",
+  "faq2_q": "¿Garantizan resultados?",
+  "faq3_a": "Para el piloto recomendamos empezar con $500/mes. Es suficiente para aprender qué funciona en la mayoría de los mercados locales sin arriesgar dinero de verdad en el intento.",
+  "faq3_q": "¿Cuánto presupuesto publicitario necesito?",
+  "faq4_a": "Avísanos con 30 días. Tu cuenta de anuncios, tus campañas y tus datos se quedan contigo — siempre fueron tuyos. Retiramos nuestro acceso de gestión y te entregamos un resumen de lo que estaba activo y lo que aprendimos.",
+  "faq4_q": "¿Qué pasa si cancelo?",
+  "faq5_a": "Porque el clic es solo la mitad del trabajo. Un cliente que encuentra tu anuncio casi siempre mirará tus reseñas antes de llamar. Los anuncios deciden si te encuentran; las reseñas deciden si te eligen. Nosotros nos aseguramos de que ambas respuestas sean sí.",
+  "faq5_q": "¿Por qué combinar anuncios con gestión de reseñas?",
+  "faq6_a": "Una cuenta de Google para tu negocio, 15 minutos para crear tu cuenta de anuncios y añadir tu método de pago, y tus respuestas a tres preguntas: qué servicios anunciar, qué zona atiendes y en qué horario contestas el teléfono. Del resto nos encargamos nosotros.",
+  "faq6_q": "¿Qué necesitas de mí para empezar?",
+  "faq_tag": "Preguntas Frecuentes",
+  "foot_tool": "Herramienta gratis de respuestas a reseñas",
+  "h2_acct": "Tu cuenta sigue siendo tuya",
+  "h2_faq": "Preguntas, respondidas sin rodeos",
+  "h2_plat": "¿Con qué plataforma deberías empezar?",
+  "h2_pricing": "Precios del piloto — simples, por plataforma",
+  "h2_what": "Qué Hacemos",
+  "header_cta": "Pregunta por los Anuncios",
+  "hero_h1": "Los anuncios traen los clics. <em>Las reseñas cierran la venta.</em>",
+  "hero_sub": "Hacer anuncios sin gestionar tus reseñas es pagar por visitantes que luego miran tus calificaciones — y llaman al siguiente negocio. Nosotros gestionamos ambos lados: campañas que te ponen frente a clientes listos para reservar, y una gestión de reseñas que asegura que lo que encuentren los convenza.",
+  "li_allthree": "Todos los canales principales, un solo gestor",
+  "li_budget": "Presupuesto separado por plataforma, fijado por ti",
+  "li_pick": "Te recomendamos la plataforma adecuada para tu oficio",
+  "li_platforms": "Un sistema publicitario: Google, Meta (Facebook e Instagram) o TikTok",
+  "li_report": "Informe mensual en lenguaje claro",
+  "li_same": "La misma atención semanal y el mismo informe mensual",
+  "li_sync": "Anuncios y reseñas juntos, un solo informe mensual",
+  "li_tracking": "Medición de conversiones instalada antes de gastar",
+  "li_weekly": "Revisión semanal de términos de búsqueda",
+  "nav_contact": "Contacto",
+  "nav_faq": "FAQ",
+  "nav_home": "Inicio",
+  "nav_industries": "Industrias",
+  "nav_platform": "Qué Plataforma",
+  "nav_pricing": "Precios",
+  "nav_reviews": "Respuestas",
+  "nav_services": "Qué Hacemos",
+  "p1_cta": "Empezar con Una Plataforma",
+  "p1_desc": "Google Ads, Meta o TikTok — te decimos con honestidad cuál le conviene a tu oficio.",
+  "p1_name": "Primera Plataforma",
+  "p2_cta": "Preguntar por Añadir una Plataforma",
+  "p2_desc": "Añade una plataforma cuando la primera ya funcione — no antes.",
+  "p2_name": "Cada Plataforma Adicional",
+  "p3_cta": "Preguntar por las Tres",
+  "p3_desc": "Google + Meta + TikTok, cobertura completa.",
+  "p3_name": "Las Tres Plataformas",
+  "page_desc": "Gestión de anuncios pagados de FiveStarsBoost: campañas de Google, Meta y TikTok junto con la gestión de tus reseñas. Desde $499/mes por plataforma. Tu presupuesto publicitario lo pagas tú, directamente a la plataforma — y tu cuenta sigue siendo tuya.",
+  "page_title": "Gestión de Anuncios Pagados para Negocios Locales — FiveStarsBoost",
+  "per_mo": "/mes",
+  "pilot_line": "Ahora en piloto de 3 meses, empezando con una plataforma (Google), para un número limitado de negocios.",
+  "plat1": "<b>Consultorios dentales</b> — Google primero. La gente busca «dentista cerca de mí» cuando ya necesita uno. Meta va segundo, para seguir presente ante ellos.",
+  "plat2": "<b>Spas médicos y restaurantes</b> — TikTok sí encaja: negocios visuales que la gente descubre deslizando. Google sigue importando para las búsquedas de «cerca de mí».",
+  "plat3": "<b>Todos los demás</b> — empieza con Google. Añade una plataforma cuando la primera funcione, no antes.",
+  "plat_line": "Si una plataforma basta para el trabajo, eso es lo que recomendaremos.",
+  "plat_sub": "Depende de tu oficio — preferimos asesorarte antes que venderte las tres.",
+  "plat_tag": "Empieza Bien",
+  "pricing_note": "Presupuesto publicitario: lo pagas tú directamente a la plataforma — para Google recomendamos empezar con <b>$500/mes</b>, un tope fijo que nunca sube sin tu aprobación por escrito. &nbsp;·&nbsp; <b>Ahorra 5%</b> pagando trimestralmente · <b>Ahorra 12%</b> pagando anualmente — sobre la tarifa de gestión. &nbsp;·&nbsp; Cancela cuando quieras con 30 días de aviso; tu cuenta y tus datos se quedan contigo.",
+  "pricing_sub": "Una tarifa de gestión por plataforma publicitaria. Tu presupuesto de anuncios va aparte — y nunca pasa por nosotros.",
+  "row1": "<b>Investigación de palabras clave para tu oficio y tu ciudad</b> — los servicios y ciudades exactos que buscan tus clientes, agrupados por intención, con las búsquedas irrelevantes bloqueadas desde el primer día.",
+  "row2": "<b>Creación de campañas</b> — campañas de búsqueda estructuradas por servicio, dirigidas a la zona que realmente atiendes, visibles solo en las horas en que puedes contestar el teléfono.",
+  "row3": "<b>Textos publicitarios según las reglas</b> — veraces, conformes a las políticas publicitarias de cada plataforma para tu sector, y alineados con tu propio sitio web. Nada de exageraciones que no podamos respaldar.",
+  "row4": "<b>Medición de conversiones antes de gastar</b> — llamadas y formularios medidos desde el primer día, para que cada dólar quede contabilizado.",
+  "row5": "<b>Revisión semanal de términos de búsqueda</b> — leemos lo que la gente escribió realmente, recortamos el gasto desperdiciado y mantenemos tu presupuesto apuntando a las búsquedas que se convierten en llamadas.",
+  "row6": "<b>Un informe mensual que sí leerás</b> — gasto, clics, llamadas, costo por llamada, los términos reales que funcionaron, qué cambiamos y qué sigue. En lenguaje claro, honesto también sobre lo que no funcionó.",
+  "what_sub": "Gestión de anuncios para negocios locales — consultorios dentales, restaurantes, spas médicos, salones, servicios para el hogar y talleres mecánicos — junto con la gestión de tus reseñas, no en su lugar.",
+  "what_tag": "Gestión de Anuncios"
+ },
+ "vi": {
+  "acct1": "<b>Được tạo dưới tên của bạn</b> — tài khoản quảng cáo được tạo dưới tên doanh nghiệp của bạn, với phương thức thanh toán của bạn.",
+  "acct2": "<b>Chỉ quyền quản lý</b> — bạn cấp cho chúng tôi quyền truy cập để chạy chiến dịch. Là quyền truy cập, không phải quyền sở hữu. Chúng tôi không bao giờ giữ thông tin thẻ của bạn, và tiền quảng cáo của bạn không bao giờ đi qua chúng tôi.",
+  "acct3": "<b>Hủy và giữ lại mọi thứ</b> — với thông báo trước 30 ngày, tài khoản, dữ liệu và lịch sử của nó ở lại với bạn. Chúng tôi gỡ quyền truy cập của mình; mọi thứ chúng tôi xây trong tài khoản của bạn vẫn là của bạn.",
+  "acct_tag": "Tài Khoản của Bạn, Tài Sản của Bạn",
+  "badge_start": "★ BẮT ĐẦU TẠI ĐÂY",
+  "brand_small": "Quảng Cáo Trả Phí",
+  "chip1": "<b>$499/tháng</b> cho nền tảng đầu tiên",
+  "chip2": "Tài khoản quảng cáo <b>luôn thuộc về bạn</b>",
+  "chip3": "Kiểm tra <b>từ khóa tìm kiếm hằng tuần</b>",
+  "cta_btn": "Gửi Email Hỏi về Quảng Cáo",
+  "cta_h": "Bắt đầu với một nền tảng — chúng tôi sẽ nói thẳng nền tảng nào hợp với ngành của bạn.",
+  "cta_p": "Gửi email cho chúng tôi tên doanh nghiệp và ngành nghề của bạn — chúng tôi trả lời trong một ngày làm việc với chi tiết chương trình thí điểm và các bước tiếp theo. Đã là khách hàng đánh giá? Quản lý quảng cáo chạy ngay bên cạnh.",
+  "cta_phone_label": "Gọi hoặc nhắn tin:",
+  "cta_pricing": "Xem Giá Thí Điểm",
+  "cta_reviews": "Xem Quản Lý Đánh Giá",
+  "eyebrow": "FIVESTARSBOOST · QUẢN LÝ QUẢNG CÁO TRẢ PHÍ",
+  "faq1_a": "Bạn — trực tiếp cho nền tảng (Google, Meta hoặc TikTok), từ tài khoản quảng cáo và thẻ của chính bạn. Phí quản lý của chúng tôi tách riêng. Hai khoản không bao giờ trộn lẫn.",
+  "faq1_q": "Ai trả tiền quảng cáo?",
+  "faq2_a": "Không — và hãy cẩn thận với bất kỳ ai hứa điều đó. Hiệu quả quảng cáo phụ thuộc vào thị trường, ngân sách, đối thủ và đánh giá của bạn. Điều chúng tôi đảm bảo là công việc: cài đặt cẩn thận, chăm sóc hằng tuần, cắt chi tiêu lãng phí, và một báo cáo tháng trung thực về việc tiền của bạn đã làm được gì.",
+  "faq2_q": "Bạn có đảm bảo kết quả không?",
+  "faq3_a": "Cho giai đoạn thí điểm, chúng tôi khuyên bắt đầu ở $500/tháng. Mức đó đủ để học được điều gì hiệu quả ở hầu hết các thị trường địa phương mà không phải mạo hiểm tiền thật để tìm ra.",
+  "faq3_q": "Tôi cần ngân sách quảng cáo bao nhiêu?",
+  "faq4_a": "Hãy báo trước 30 ngày. Tài khoản quảng cáo, các chiến dịch và dữ liệu của bạn ở lại với bạn — chúng vốn luôn là của bạn. Chúng tôi gỡ quyền quản lý và bàn giao bản tóm tắt những gì đã chạy và những gì đã học được.",
+  "faq4_q": "Nếu tôi hủy thì sao?",
+  "faq5_a": "Vì lượt nhấp chỉ là một nửa công việc. Khách hàng thấy quảng cáo của bạn gần như luôn sẽ xem đánh giá trước khi gọi. Quảng cáo quyết định họ có tìm thấy bạn hay không; đánh giá quyết định họ có chọn bạn hay không. Chúng tôi đảm bảo cả hai câu trả lời đều là có.",
+  "faq5_q": "Vì sao kết hợp quảng cáo với quản lý đánh giá?",
+  "faq6_a": "Một tài khoản Google cho doanh nghiệp của bạn, 15 phút để lập tài khoản quảng cáo và thêm phương thức thanh toán, và câu trả lời cho ba câu hỏi: quảng cáo dịch vụ nào, phục vụ khu vực nào, và bạn nghe điện thoại vào giờ nào. Phần còn lại chúng tôi lo.",
+  "faq6_q": "Bạn cần gì ở tôi để bắt đầu?",
+  "faq_tag": "Câu Hỏi Thường Gặp",
+  "foot_tool": "Công cụ trả lời đánh giá miễn phí",
+  "h2_acct": "Tài khoản luôn thuộc về bạn",
+  "h2_faq": "Câu hỏi, trả lời thẳng thắn",
+  "h2_plat": "Bạn nên bắt đầu với nền tảng nào?",
+  "h2_pricing": "Giá thí điểm — đơn giản, tính theo nền tảng",
+  "h2_what": "Chúng Tôi Làm Gì",
+  "header_cta": "Hỏi về Quảng Cáo",
+  "hero_h1": "Quảng cáo mang đến lượt nhấp. <em>Đánh giá chốt khách.</em>",
+  "hero_sub": "Chạy quảng cáo mà không quản lý đánh giá là trả tiền cho khách ghé thăm, để rồi họ xem điểm đánh giá của bạn — và gọi cho đối thủ. Chúng tôi làm cả hai phía: chiến dịch đưa bạn đến trước khách hàng sẵn sàng đặt lịch, và quản lý đánh giá để những gì họ thấy đủ sức thuyết phục họ.",
+  "li_allthree": "Mọi kênh quảng cáo chính, một đội quản lý",
+  "li_budget": "Ngân sách riêng cho từng nền tảng, do bạn đặt",
+  "li_pick": "Tư vấn trung thực nền tảng phù hợp với ngành của bạn",
+  "li_platforms": "Một hệ thống quảng cáo: Google, Meta (Facebook và Instagram) hoặc TikTok",
+  "li_report": "Báo cáo tháng bằng ngôn ngữ dễ hiểu",
+  "li_same": "Cùng mức chăm sóc hằng tuần và báo cáo tháng",
+  "li_sync": "Quảng cáo và đánh giá chạy cùng nhau, một báo cáo tháng",
+  "li_tracking": "Đo lường chuyển đổi được gắn trước khi chi tiền",
+  "li_weekly": "Kiểm tra từ khóa tìm kiếm hằng tuần",
+  "nav_contact": "Liên hệ",
+  "nav_faq": "FAQ",
+  "nav_home": "Trang chủ",
+  "nav_industries": "Ngành nghề",
+  "nav_platform": "Chọn Nền Tảng",
+  "nav_pricing": "Bảng Giá",
+  "nav_reviews": "Trả lời đánh giá",
+  "nav_services": "Chúng Tôi Làm Gì",
+  "p1_cta": "Bắt Đầu với Một Nền Tảng",
+  "p1_desc": "Google Ads, Meta hoặc TikTok — chúng tôi sẽ nói thẳng nền tảng nào hợp với ngành của bạn.",
+  "p1_name": "Nền Tảng Đầu Tiên",
+  "p2_cta": "Hỏi về Việc Thêm Nền Tảng",
+  "p2_desc": "Thêm nền tảng khi nền tảng đầu tiên đã chạy tốt — không thêm trước.",
+  "p2_name": "Mỗi Nền Tảng Thêm",
+  "p3_cta": "Hỏi về Cả Ba Nền Tảng",
+  "p3_desc": "Google + Meta + TikTok, bao phủ toàn diện.",
+  "p3_name": "Cả Ba Nền Tảng",
+  "page_desc": "Quản lý quảng cáo trả phí của FiveStarsBoost: các chiến dịch Google, Meta và TikTok chạy song song với quản lý đánh giá. Từ $499/tháng cho mỗi nền tảng. Ngân sách quảng cáo do bạn trả trực tiếp cho nền tảng — và tài khoản luôn thuộc về bạn.",
+  "page_title": "Quản Lý Quảng Cáo Trả Phí cho Doanh Nghiệp Địa Phương — FiveStarsBoost",
+  "per_mo": "/tháng",
+  "pilot_line": "Hiện đang mở thí điểm 3 tháng, bắt đầu với một nền tảng (Google), cho một số lượng doanh nghiệp giới hạn.",
+  "plat1": "<b>Phòng khám nha khoa</b> — Google trước. Mọi người tìm «nha sĩ gần tôi» khi họ đã thực sự cần. Meta đứng thứ hai, để tiếp tục xuất hiện trước họ.",
+  "plat2": "<b>Spa y tế và nhà hàng</b> — TikTok thực sự phù hợp: những ngành trực quan mà khách khám phá qua việc lướt xem. Google vẫn quan trọng cho các tìm kiếm «gần tôi».",
+  "plat3": "<b>Mọi ngành còn lại</b> — bắt đầu với Google. Thêm nền tảng khi nền tảng đầu tiên đã hoạt động tốt, không thêm trước.",
+  "plat_line": "Nếu một nền tảng là đủ cho công việc, đó là điều chúng tôi sẽ khuyên.",
+  "plat_sub": "Tùy thuộc vào ngành của bạn — chúng tôi thà tư vấn còn hơn bán cho bạn cả ba.",
+  "plat_tag": "Bắt Đầu Đúng Cách",
+  "pricing_note": "Ngân sách quảng cáo: do bạn trả trực tiếp cho nền tảng — với Google, chúng tôi khuyên bắt đầu ở <b>$500/tháng</b>, một mức trần cố định không bao giờ tăng nếu không có sự đồng ý bằng văn bản của bạn. &nbsp;·&nbsp; <b>Tiết kiệm 5%</b> khi trả theo quý · <b>Tiết kiệm 12%</b> khi trả theo năm — áp dụng cho phí quản lý. &nbsp;·&nbsp; Hủy bất cứ lúc nào với thông báo trước 30 ngày; tài khoản và dữ liệu ở lại với bạn.",
+  "pricing_sub": "Một phí quản lý cho mỗi nền tảng quảng cáo. Ngân sách quảng cáo tách riêng — và không bao giờ đi qua chúng tôi.",
+  "row1": "<b>Nghiên cứu từ khóa theo ngành nghề và thành phố của bạn</b> — đúng những dịch vụ và khu vực khách hàng tìm kiếm, nhóm theo ý định, chặn các tìm kiếm không liên quan ngay từ ngày đầu.",
+  "row2": "<b>Xây dựng chiến dịch</b> — chiến dịch tìm kiếm cấu trúc theo dịch vụ, nhắm đúng khu vực bạn thực sự phục vụ, chỉ hiển thị trong giờ bạn có thể nghe điện thoại.",
+  "row3": "<b>Nội dung quảng cáo viết đúng quy định</b> — trung thực, tuân thủ chính sách quảng cáo của nền tảng cho ngành của bạn, khớp với website của chính bạn. Không thổi phồng những điều không chứng minh được.",
+  "row4": "<b>Gắn đo lường chuyển đổi trước khi chi tiền</b> — cuộc gọi và biểu mẫu được đo từ ngày đầu, để mọi đồng đều có sổ sách.",
+  "row5": "<b>Kiểm tra từ khóa tìm kiếm hằng tuần</b> — chúng tôi đọc những gì khách thực sự gõ, cắt chi tiêu lãng phí, và giữ ngân sách hướng vào những tìm kiếm trở thành cuộc gọi.",
+  "row6": "<b>Một báo cáo tháng bạn sẽ thực sự đọc</b> — chi tiêu, lượt nhấp, cuộc gọi, chi phí mỗi cuộc gọi, những từ khóa thực sự hiệu quả, chúng tôi đã thay đổi gì, và bước tiếp theo. Ngôn ngữ dễ hiểu, trung thực cả về những gì chưa hiệu quả.",
+  "what_sub": "Quản lý quảng cáo cho doanh nghiệp địa phương — phòng khám nha khoa, nhà hàng, spa y tế, salon, dịch vụ tại nhà và tiệm sửa ô tô — chạy song song với quản lý đánh giá, không phải thay thế nó.",
+  "what_tag": "Quản Lý Quảng Cáo"
+ },
+ "zh": {
+  "acct1": "<b>以您的名义创建</b>——广告账号建在您的商家名下，用您的支付方式。",
+  "acct2": "<b>只有管理权限</b>——您授予我们权限来运营广告，只是权限，不是所有权。我们从不保管您的卡信息，广告费也从不经过我们。",
+  "acct3": "<b>取消后一切留给您</b>——提前 30 天通知，账号、数据和历史都归您。我们移除自己的权限；我们在您账号里做的一切都还是您的。",
+  "acct_tag": "您的账号，您的资产",
+  "badge_start": "★ 从这里开始",
+  "brand_small": "付费广告代投",
+  "chip1": "首个平台 <b>$499/月</b>",
+  "chip2": "广告账号<b>永远归您</b>",
+  "chip3": "<b>每周</b>检查搜索词",
+  "cta_btn": "发邮件咨询广告代投",
+  "cta_h": "先从一个平台开始——我们会如实告诉您哪个适合您的行业。",
+  "cta_p": "把商家名和主营业务发邮件给我们——一个工作日内回复试点细节和下一步。已经是评价客户了？广告代投就在旁边一起跑。",
+  "cta_phone_label": "电话或短信：",
+  "cta_pricing": "查看试点价格",
+  "cta_reviews": "查看评价管理",
+  "eyebrow": "FIVESTARSBOOST · 付费广告代投",
+  "faq1_a": "您付——直接付给平台（Google、Meta 或 TikTok），用您自己的广告账号和您自己的卡。我们的管理费是另一笔，两者从不混在一起。",
+  "faq1_q": "广告费谁付？",
+  "faq2_a": "不保证——谁向您保证，谁就值得警惕。广告效果取决于您的市场、预算、竞争和评价。我们保证的是工作本身：认真的搭建、每周的关注、砍掉浪费的支出，以及一份如实汇报钱花到哪儿的月报。",
+  "faq2_q": "你们保证效果吗？",
+  "faq3_a": "试点建议从 $500/月开始。这个数足够在大多数本地市场摸清什么有效，又不至于拿真金白银冒险。",
+  "faq3_q": "广告预算需要多少？",
+  "faq4_a": "提前 30 天通知我们即可。您的广告账号、系列和数据都归您——本来就是您的。我们移除管理权限，并给您一份总结：当时在跑什么、我们学到了什么。",
+  "faq4_q": "如果我取消会怎样？",
+  "faq5_a": "因为点击只是一半。看到您广告的客户，几乎都会先看评价再打电话。广告决定他们能不能找到您，评价决定他们选不选您。我们让两个答案都是「是」。",
+  "faq5_q": "为什么广告要和评价管理一起做？",
+  "faq6_a": "一个商家用的 Google 账号、15 分钟（建广告账号并添加支付方式），再回答三个问题：主推哪些服务、服务哪个区域、几点到几点接电话。剩下的我们来做。",
+  "faq6_q": "开始需要我提供什么？",
+  "faq_tag": "常见问题",
+  "foot_tool": "免费评价回复工具",
+  "h2_acct": "账号永远归您",
+  "h2_faq": "问题，直说",
+  "h2_plat": "应该先从哪个平台开始？",
+  "h2_pricing": "试点价格——简单，按平台计费",
+  "h2_what": "我们做什么",
+  "header_cta": "咨询广告代投",
+  "hero_h1": "广告带来点击。<em>评价促成成交。</em>",
+  "hero_sub": "只投广告、不管评价，等于花钱请来访客，他们看完您的评分就打给了下一家。我们两边一起做：广告让您出现在准备下单的客户面前，评价管理让他们看到的内容足以说服他们。",
+  "li_allthree": "主要广告渠道齐全，一个团队管",
+  "li_budget": "每个平台预算分开，由您设定",
+  "li_pick": "如实推荐适合您行业的平台",
+  "li_platforms": "一个广告系统：Google、Meta（Facebook 和 Instagram）或 TikTok",
+  "li_report": "每月一份说人话的月报",
+  "li_same": "同样的每周关注和月报",
+  "li_sync": "广告与评价一起跑，一份月报",
+  "li_tracking": "花钱之前先装好转化跟踪",
+  "li_weekly": "每周检查搜索词",
+  "nav_contact": "联系我们",
+  "nav_faq": "FAQ",
+  "nav_home": "首页",
+  "nav_industries": "服务行业",
+  "nav_platform": "选哪个平台",
+  "nav_pricing": "价格",
+  "nav_reviews": "评价回复",
+  "nav_services": "服务内容",
+  "p1_cta": "从一个平台开始",
+  "p1_desc": "Google Ads、Meta 或 TikTok——我们会如实告诉您哪个适合您的行业。",
+  "p1_name": "首个平台",
+  "p2_cta": "咨询增加平台",
+  "p2_desc": "等第一个平台跑顺了再加——不要提前加。",
+  "p2_name": "每加一个平台",
+  "p3_cta": "咨询三平台全包",
+  "p3_desc": "Google + Meta + TikTok，全面覆盖。",
+  "p3_name": "三个平台全包",
+  "page_desc": "FiveStarsBoost 付费广告代投：Google、Meta、TikTok 广告与评价管理一起运营。首个平台 $499/月起。广告预算由您直接付给平台——账号永远归您所有。",
+  "page_title": "本地商家付费广告代投 — FiveStarsBoost",
+  "per_mo": "/月",
+  "pilot_line": "现以 3 个月试点形式提供，从一个平台（Google）开始，名额有限。",
+  "plat1": "<b>牙科诊所</b>——先 Google。人们搜「我附近的牙医」时，往往是已经需要看牙了。Meta 排第二，用来持续出现在他们面前。",
+  "plat2": "<b>医美和餐馆</b>——TikTok 确实适合：靠刷视频被发现的视觉型生意。Google 对「附近」类搜索同样重要。",
+  "plat3": "<b>其他行业</b>——先从 Google 开始。第一个平台跑顺了，再加下一个。",
+  "plat_line": "如果一个平台就够用，我们就只推荐一个。",
+  "plat_sub": "看行业——我们宁可给您建议，也不硬卖三个平台。",
+  "plat_tag": "选对起点",
+  "pricing_note": "广告预算：由您直接付给平台——Google 建议从 <b>$500/月</b>开始，这是硬上限，没有您的书面同意绝不提高。&nbsp;·&nbsp; 季付<b>省 5%</b> · 年付<b>省 12%</b>——只针对管理费。&nbsp;·&nbsp; 提前 30 天通知即可取消；账号和数据都归您。",
+  "pricing_sub": "每个广告平台一份管理费。广告预算单独走——永远不经过我们。",
+  "row1": "<b>按您的行业和城市做关键词研究</b>——客户真正搜索的服务和城市，按意图分组，无关搜索第一天就屏蔽。",
+  "row2": "<b>搭建广告系列</b>——按服务结构搭建搜索广告，只投您真正服务的区域，只在您能接电话的时段展示。",
+  "row3": "<b>广告文案按规则写</b>——真实、符合各平台对您行业的广告政策，与您自己的网站一致。不写无法兑现的夸大话。",
+  "row4": "<b>花钱之前先装好转化跟踪</b>——电话和表单提交从第一天起就计量，每一分钱都有账可查。",
+  "row5": "<b>每周检查搜索词</b>——我们看用户实际输入了什么，砍掉浪费的支出，让预算对准能变成电话的搜索。",
+  "row6": "<b>一份您真会看的月报</b>——花费、点击、电话、每个电话的成本、真正有效的搜索词、我们改了什么、下一步做什么。说人话，没效果的地方也照实说。",
+  "what_sub": "为本地商家做广告代投——牙科诊所、餐馆、医美、美发美甲、家政服务、汽修店——与评价管理一起运营，而不是二选一。",
+  "what_tag": "广告代投"
+ }
+};
+var SUPPORTED = ["en", "es", "zh", "vi"];
+function lsGet(k){try{return localStorage.getItem(k);}catch(e){return null;}}
+function lsSet(k,v){try{localStorage.setItem(k,v);}catch(e){}}
+function detectBrowserLang(){
+  try{
+    var n = (navigator.language || (navigator.languages && navigator.languages[0]) || "").toLowerCase();
+    if(n.indexOf("es") === 0) return "es";
+    if(n.indexOf("zh") === 0) return "zh";
+    if(n.indexOf("vi") === 0) return "vi";
+    if(n.indexOf("en") === 0) return "en";
+  }catch(e){}
+  return "en";
+}
+function resolveLang(){
+  var p = null;
+  try{ p = new URLSearchParams(window.location.search).get("lang"); }catch(e){}
+  if(SUPPORTED.indexOf(p) >= 0) return p;
+  var s = lsGet("fsb_lang");
+  if(SUPPORTED.indexOf(s) >= 0) return s;
+  return detectBrowserLang();
+}
+var LANG = resolveLang();
+function T(key){ var d = I18N[LANG]; return (key in d) ? d[key] : I18N.en[key]; }
+function applyLang(lang, persist){
+  if(SUPPORTED.indexOf(lang) < 0) lang = "en";
+  LANG = lang;
+  if(persist) lsSet("fsb_lang", lang);
+  document.documentElement.lang = (lang === "zh") ? "zh-CN" : lang;
+  document.title = T("page_title");
+  var md = document.querySelector('meta[name="description"]');
+  if(md) md.setAttribute("content", T("page_desc"));
+  document.querySelectorAll(".langtoggle button").forEach(function(b){
+    b.classList.toggle("active", b.getAttribute("data-lang") === lang);
+  });
+  document.querySelectorAll("[data-i18n]").forEach(function(el){
+    var v = T(el.getAttribute("data-i18n"));
+    if(typeof v === "string") el.textContent = v;
+  });
+  document.querySelectorAll("[data-i18n-html]").forEach(function(el){
+    var v = T(el.getAttribute("data-i18n-html"));
+    if(typeof v === "string") el.innerHTML = v;
+  });
+}
+document.addEventListener("DOMContentLoaded", function(){
+  document.querySelectorAll(".langtoggle button").forEach(function(b){
+    b.addEventListener("click", function(){ applyLang(b.getAttribute("data-lang"), true); });
+  });
+  applyLang(LANG);
+});
+</script>
+
+</body>
+</html>
