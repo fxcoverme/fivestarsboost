@@ -481,6 +481,14 @@ page = f"""<!DOCTYPE html>
 <meta name="description" content="FiveStarsBoost review and social management for restaurants, spas, salons, dental clinics, med spas, home services and auto repair — every review answered, in your voice.">
 <meta name="robots" content="index, follow">
 <style>{CSS}</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JRZPJVFL4P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JRZPJVFL4P');
+</script>
 </head>
 <body>
 
